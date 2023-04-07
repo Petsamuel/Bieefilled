@@ -5,7 +5,7 @@
 
 
 :root {
-  font-family:"Montserrat", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   line-height: 1.5;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -17,6 +17,10 @@
 .brandname {
   font-family: "Dancing Script"
 }
+
+/* .Typewriter__wrapper {
+  position: fixed;
+} */
 
 body {
   margin: 0;
