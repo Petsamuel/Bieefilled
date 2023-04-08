@@ -1,6 +1,6 @@
 import { useState } from "react";
 function Header() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   return (
     <>
       <nav class=" w-screen fixed z-50">

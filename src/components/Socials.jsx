@@ -2,7 +2,7 @@ import React from "react";
 
 function Socials() {
   return (
-    <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+    <div class="flex py-4 space-x-6 sm:mt-0 leading-normal">
       <a
         href="#"
         class="text-gray-500 hover:text-gray-900 dark:hover:text-white"

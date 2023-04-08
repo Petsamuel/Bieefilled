@@ -21,7 +21,7 @@ function Hero() {
               }
             />
           </div>
-          <div className="lg:w-2/4 dark:text-white sm:text-center">
+          <div className="lg:w-2/4 dark:text-white">
             <span className="text-white font-[Poppins]  text-2xl font-extrabold  md:text-5xl lg:text-6xl leading-loose">
               Hi There,
             </span>{" "}
@@ -44,9 +44,10 @@ function Hero() {
                 }}
               />
             </span>
-            <div class="text-sm font-normal text-gray-500 lg:text-xl dark:text-gray-400 w-4/5 py-4 place-items-center">
+            <div class="text-sm font-normal text-gray-500 lg:text-xl dark:text-gray-400 w-4/5 py-4 place-items-center leading-normal">
               I'm a skilled software engineer creating efficient and
               user-friendly solutions to enhance productivity.
+              <Socials />
             </div>
             <div className="">
               <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-md shadow-purple-500/50">
