@@ -5,7 +5,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <section className="mx-16">{children}</section>
+      <section className="lg:mx-16 sm:mx-2 py-10">{children}</section>
       <Footer />
     </>
   );

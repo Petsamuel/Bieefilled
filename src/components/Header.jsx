@@ -1,9 +1,11 @@
+import { useState } from "react";
 function Header() {
+  const [toggle, setToggle] = useState(false);
   return (
     <>
       <nav class=" w-screen fixed z-50">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4 ">
-          <a href="https://flowbite.com" class="flex items-center">
+          <a href="/" class="flex items-center">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white brandname">
               Samuel Peters
             </span>
@@ -21,6 +23,9 @@ function Header() {
               class="inline-flex items-center p-2 ml-1 text-sm text-blue-600 rounded-lg md:hidden outline-none focus:outline-none hover:text-gray-700"
               aria-controls="mega-menu"
               aria-expanded="false"
+              onClick={() => {
+                setToggle(!toggle);
+              }}
             >
               <span class="sr-only">Open main menu</span>
               <svg
@@ -40,7 +45,11 @@ function Header() {
           </div>
           <div
             id="mega-menu"
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            class={
+              toggle
+                ? "items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                : "items-center justify-between  w-full md:flex md:w-auto md:order-1 bg-[#242424]"
+            }
           >
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
               <li>
