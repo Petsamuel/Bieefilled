@@ -8,7 +8,7 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-black bg-[#242424]">
       <Router>
         <Layout>
           <Routes>
