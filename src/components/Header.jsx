@@ -1,10 +1,27 @@
 import { useState } from "react";
 function Header() {
   const [toggle, setToggle] = useState(true);
+  const [active, setActive] = useState();
+  const [updateNavbar, setUpdateNavbar] = useState();
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      setUpdateNavbar(true);
+    } else {
+      setUpdateNavbar(false);
+    }
+  }
+  window.addEventListener("scroll", scrollHandler);
+
   return (
     <>
-      <nav class=" w-screen fixed z-50">
-        <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4 ">
+      <nav
+        class={
+          updateNavbar
+            ? " w-screen fixed z-50 bg-[#242424] bg-opacity-[0.9]"
+            : " w-screen fixed z-50 "
+        }
+      >
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
           <a href="/" class="flex items-center">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white brandname">
               Samuel Peters
@@ -12,7 +29,7 @@ function Header() {
           </a>
           <div class="flex items-center md:order-2">
             <a
-              href="#"
+              href="/blog"
               class="text-white  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 focus:outline-none"
             >
               Blog
@@ -54,34 +71,51 @@ function Header() {
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
               <li>
                 <a
-                  href="#"
-                  class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  href="/"
+                  class={
+                    active === "home"
+                      ? "block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                      : ""
+                  }
                   aria-current="page"
+                  onClick={() => {
+                    setActive("home");
+                  }}
                 >
                   Home
                 </a>
               </li>
               <li>
                 <a
+                  href="/about"
                   id="mega-menu-dropdown-a"
                   data-dropdown-toggle="mega-menu-dropdown"
                   class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  onClick={() => {
+                    setActive("about");
+                  }}
                 >
                   About{" "}
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/projects"
                   class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  onClick={() => {
+                    setActive("projects");
+                  }}
                 >
                   Projects
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/contact"
                   class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  onClick={() => {
+                    setActive("contact");
+                  }}
                 >
                   Contact
                 </a>
