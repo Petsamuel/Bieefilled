@@ -30,7 +30,9 @@ function Content({ eventState }) {
         </p>
       </div>
       <div
-        className={eventState === 2 ? "text-justify leading-normal " : "hidden"}
+        className={
+          eventState === 2 ? "text-justify leading-normal " : "hidden"
+        }
       >
         <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl  bg-gradient-to-r from-purple-600 to-blue-500">
           Education & Experience
@@ -38,18 +40,22 @@ function Content({ eventState }) {
         <Experience />
       </div>
       <div
-        className={eventState === 3 ? "text-justify leading-normal " : "hidden"}
+        className={
+          eventState === 3 ? "text-justify leading-normal " : "hidden"
+        }
       >
         <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl bg-gradient-to-r from-purple-600 to-blue-500">
           Certification
         </h1>
-        <div>
+        <div className="">
           <Certification />
         </div>
       </div>
       <div
         className={
-          eventState === 4 ? "text-justify leading-normal  " : "hidden"
+          eventState === 4
+            ? "text-justify leading-normal  "
+            : "hidden"
         }
       >
         <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl bg-gradient-to-r from-purple-600 to-blue-500">
