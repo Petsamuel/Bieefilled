@@ -2,6 +2,7 @@ import { useState } from "react";
 function Header() {
   const [toggle, setToggle] = useState(true);
   // const [active, setActive] = useState();
+
   const [updateNavbar, setUpdateNavbar] = useState();
   function scrollHandler() {
     if (window.scrollY >= 20) {
