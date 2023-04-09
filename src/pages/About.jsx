@@ -16,7 +16,7 @@ function About() {
         <div className="hidden lg:block">
           <Stepper handleEvent={handleEvent} />
         </div>
-        <div className="lg:hidden ">
+        <div className="lg:hidden">
           <Stepper2 handleEvent={handleEvent} />
         </div>
       </div>

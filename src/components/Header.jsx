@@ -1,7 +1,7 @@
 import { useState } from "react";
 function Header() {
   const [toggle, setToggle] = useState(true);
-  const [active, setActive] = useState();
+  // const [active, setActive] = useState();
   const [updateNavbar, setUpdateNavbar] = useState();
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -72,15 +72,8 @@ function Header() {
               <li>
                 <a
                   href="/"
-                  class={
-                    active === "home"
-                      ? "block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                      : ""
-                  }
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
-                  onClick={() => {
-                    setActive("home");
-                  }}
                 >
                   Home
                 </a>
@@ -91,20 +84,14 @@ function Header() {
                   id="mega-menu-dropdown-a"
                   data-dropdown-toggle="mega-menu-dropdown"
                   class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                  onClick={() => {
-                    setActive("about");
-                  }}
                 >
-                  About{" "}
+                  About
                 </a>
               </li>
               <li>
                 <a
                   href="/projects"
                   class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                  onClick={() => {
-                    setActive("projects");
-                  }}
                 >
                   Projects
                 </a>
@@ -113,9 +100,6 @@ function Header() {
                 <a
                   href="/contact"
                   class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                  onClick={() => {
-                    setActive("contact");
-                  }}
                 >
                   Contact
                 </a>
