@@ -7,7 +7,7 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import "./index.css";
 
-function App() {
+export const App=()=> {
   return (
     <div className="App dark:bg-black bg-[#242424]">
       <BrowserRouter>
@@ -25,5 +25,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
