@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import { Layout } from "./components/Layout";
 import Error from "./components/Error";
 import Home from "./pages/Home";
@@ -11,16 +12,18 @@ export const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="*" element={<Error />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Project />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Home />} />
-          </Routes>
-        </Layout>
+        <AnimatePresence mode="wait" initial={false}>
+          <Layout>
+            <Routes>
+              <Route path="*" element={<Error />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Project />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Home />} />
+            </Routes>
+          </Layout>
+        </AnimatePresence>
       </BrowserRouter>
     </div>
   );

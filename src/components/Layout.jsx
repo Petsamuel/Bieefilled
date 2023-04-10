@@ -5,7 +5,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <section className="relative lg:mx-16 sm:mx-2 pt-5 h-full">
+      <section className="relative lg:mx-16 sm:mx-2 pt-5 h-screen">
         <div className="mt-5 ">{children}</div>
       </section>
       <Footer />

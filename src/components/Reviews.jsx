@@ -41,6 +41,16 @@ function Reviews() {
           </figure>
         </span>
       ))}
+      <label
+        for="remember"
+        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 float-right"
+      >
+        Send{" "}
+        <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">
+          Recommendations
+        </a>
+        .
+      </label>
     </figure>
   );
 }
