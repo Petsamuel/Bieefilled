@@ -4,11 +4,8 @@ function Reviews() {
   return (
     <figure class=" relativemax-w-screen-md mx-auto text-left ">
       {Review.map((index, key) => (
-        <>
-          <figure
-            class="relative max-w-screen-md mx-auto text-left py-2"
-            key={key}
-          >
+        <span key={key}>
+          <figure class="relative max-w-screen-md mx-auto text-left py-2">
             <svg
               aria-hidden="true"
               class="absolute w-6 h-6 mx-auto mb-3 left-0  text-gray-400 dark:text-gray-600"
@@ -42,7 +39,7 @@ function Reviews() {
               </div>
             </figcaption>
           </figure>
-        </>
+        </span>
       ))}
     </figure>
   );

@@ -28,7 +28,7 @@ function Hero() {
 
   return (
     <>
-      <section>
+      <section className="flex flex-col items-center">
         <div className="lg:pt-20 flex lg:flex-row flex-col justify-center items-center px-16">
           <div
             className="flex-auto"
@@ -49,8 +49,8 @@ function Hero() {
               Samuel Peters
             </span>{" "}
             <br />
-            <span className="font-[Poppins]  lg:text-3xl flex  sm:text-1xl md:text-2xl">
-              I'm &nbsp;
+            <span className="font-[Poppins]  lg:text-3xl flex  sm:text-1xl md:text-2xl items-center">
+              <span className="w-12">I'm</span>
               <span className=" px-2 bg-gradient-to-r from-purple-600 to-blue-500  ">
                 <Typewriter
                   options={{ loop: true }}
