@@ -1,9 +1,7 @@
 import sololearn from "../../assets/sololearn.svg";
 import zuri from "../../assets/zuri.svg";
 import jm from "../../assets/jm.svg";
-import gruvly from "../../assets/gruvly.png";
-import koinfunds from "../../assets/koinfuds.png";
-import varena from "../../assets/varena.png";
+
 
 export const certification = [
   {
@@ -97,7 +95,8 @@ export const Review = [
 
 export const projects = [
   {
-    image: `${koinfunds}`,
+    image:
+      "http://drive.google.com/uc?export=view&id=14BI93_0YOKHZC1lH4fUb8iLpGXsTRIRo",
     name: "Koinfund",
     year: "Mar 2023 - Present",
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
@@ -105,7 +104,8 @@ export const projects = [
     description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
   },
   {
-    image: `${gruvly}`,
+    image:
+      "http://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
     name: "Gruvly Music",
     year: "Jan 2022 - Present",
     link: "http://gruvlymusic.com/",
@@ -114,7 +114,8 @@ export const projects = [
       "Gruvly Music: Platform designed for forward-looking music musical talents...",
   },
   {
-    image: `${varena}`,
+    image:
+      "http://drive.google.com/uc?export=view&id=1cVzwlSy6WDAB3HxMEhZdxnkgL2vkTKtU",
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
     link: "http://varena.app/",
