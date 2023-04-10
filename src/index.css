@@ -33,12 +33,14 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  background-color: black;
 
 }
 
 * {
   scrollbar-width: thin;
   scrollbar-color: #fff;
+
 }
 
 /* Chrome, Edge, and Safari */

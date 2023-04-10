@@ -9,7 +9,7 @@ import "./index.css";
 
 export const App = () => {
   return (
-    <div className="App dark:bg-black bg-[#242424]">
+    <div className="App">
       <BrowserRouter>
         <Layout>
           <Routes>

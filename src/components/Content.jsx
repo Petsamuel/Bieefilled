@@ -2,6 +2,7 @@ import Certification from "./Certification";
 import Experience from "./Experience";
 import Reviews from "./Reviews";
 
+
 function Content({ eventState }) {
   return (
     <section className=" dark:gray-500">

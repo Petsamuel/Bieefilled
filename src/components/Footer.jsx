@@ -1,9 +1,9 @@
-
-
 function Footer() {
-    return (
-        <></>
-    )
+  return (
+    <section className="fixed  bottom-0 text-white text-center">
+      <div> &copy; Bieefilled 2023</div>
+    </section>
+  );
 }
 
-export default Footer
+export default Footer;
