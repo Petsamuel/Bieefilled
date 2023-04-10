@@ -1,7 +1,10 @@
 function Footer() {
   return (
-    <section className="relative  bottom-0 text-white text-center mt-8">
-      <div> &copy; Bieefilled 2023</div>
+    <section className="relative text-white mt-8 w-full pt-8">
+      <div className="absolute bottom-0 text-center w-screen">
+        {" "}
+        &copy; Bieefilled 2023
+      </div>
     </section>
   );
 }

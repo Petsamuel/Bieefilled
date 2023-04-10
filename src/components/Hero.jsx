@@ -50,7 +50,7 @@ function Hero() {
             </span>{" "}
             <br />
             <span className="font-[Poppins]  lg:text-3xl flex  sm:text-1xl md:text-2xl items-center">
-              <span className="w-12">I'm</span>
+              <span className="">I'm&nbsp;</span>
               <span className=" px-2 bg-gradient-to-r from-purple-600 to-blue-500  ">
                 <Typewriter
                   options={{ loop: true }}

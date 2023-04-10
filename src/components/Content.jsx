@@ -2,7 +2,6 @@ import Certification from "./Certification";
 import Experience from "./Experience";
 import Reviews from "./Reviews";
 
-
 function Content({ eventState }) {
   return (
     <section className=" dark:gray-500">
@@ -13,8 +12,11 @@ function Content({ eventState }) {
             : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl clip-text  bg-gradient-to-r from-purple-600 to-blue-500">
-          Personal info
+        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-gray-200">
+            Personal{" "}
+          </span>
+          Info
         </h1>
         <p className="text-sm">
           Hello! My Name is Samuel I'm a competent Software Engineer with a
@@ -38,8 +40,11 @@ function Content({ eventState }) {
             : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl  bg-gradient-to-r from-purple-600 to-blue-500">
-          Education & Experience
+        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2 ">
+            Education &{" "}
+          </span>
+          Experience
         </h1>
         <Experience />
       </div>
@@ -50,8 +55,11 @@ function Content({ eventState }) {
             : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl bg-gradient-to-r from-purple-600 to-blue-500">
-          Certification
+        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2">
+            Certifi
+          </span>
+          cations
         </h1>
         <div className="">
           <Certification />
@@ -62,10 +70,15 @@ function Content({ eventState }) {
           eventState === 4 ? "text-justify leading-normal  " : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl bg-gradient-to-r from-purple-600 to-blue-500">
-          Reviews
+        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2">
+            Top&nbsp;
+          </span>
+          Recommendations
         </h1>
-        <div><Reviews/></div>
+        <div>
+          <Reviews />
+        </div>
       </div>
     </section>
   );

@@ -40,18 +40,18 @@ body {
 * {
   scrollbar-width: thin;
   /* scrollbar-color: red; */
-  overflow-x: hidden;
+  
 
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   /* background: white; */
 }
 
 *::-webkit-scrollbar-track {
   /* background: black; */
   /* background-image: linear-gradient(#242424, #101010); */
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }

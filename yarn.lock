@@ -454,6 +454,11 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
   integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
 
+"@types/tinycolor2@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@types/tinycolor2/-/tinycolor2-1.4.3.tgz#ed4a0901f954b126e6a914b4839c77462d56e706"
+  integrity sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ==
+
 "@vitejs/plugin-react@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-3.1.0.tgz#d1091f535eab8b83d6e74034d01e27d73c773240"
@@ -612,6 +617,11 @@ csstype@^3.0.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
+
+date-fns@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
+  integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
 debug@^4.1.0:
   version "4.3.4"
@@ -1055,6 +1065,15 @@ raf@^3.4.0:
   dependencies:
     performance-now "^2.1.0"
 
+react-activity-calendar@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/react-activity-calendar/-/react-activity-calendar-1.7.0.tgz#2b0bb6c364de67949f89ff19756957565d056f16"
+  integrity sha512-iyUNhnYYM2zuSI5KUD4xjTbWH4wBFYFm7M1FwZ1J+g8jK7o48730n9v7OemcP++PouH9f4G/oVSGF4Nk3BBcnQ==
+  dependencies:
+    "@types/tinycolor2" "^1.4.3"
+    date-fns "^2.29.3"
+    tinycolor2 "^1.4.0"
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
@@ -1062,6 +1081,13 @@ react-dom@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-github-calendar@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-3.4.0.tgz#89a1f75f238c9fadb18c592c02b1a096defeefe0"
+  integrity sha512-3HiUjZAivwcDhNdL3Nwz5MNSUolOwsIuyrBnq6fYfJJE7l0CONHKX9N0lJ/4wpJWZBBYMHOmvFM10sNCRPpYaQ==
+  dependencies:
+    react-activity-calendar "^1.7.0"
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -1221,6 +1247,11 @@ thenify-all@^1.0.0:
   integrity sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==
   dependencies:
     any-promise "^1.0.0"
+
+tinycolor2@^1.4.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.6.0.tgz#f98007460169b0263b97072c5ae92484ce02d09e"
+  integrity sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
