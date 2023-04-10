@@ -8,7 +8,7 @@ function About() {
     setEventState(num);
   }
   return (
-    <section>
+    <section className="grid grid-cols-1 place-content-center">
       <div className="pt-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-x-8">
         <div className="col-span-2 items-end flex flex-col text-right ">
           <Content eventState={eventState} />

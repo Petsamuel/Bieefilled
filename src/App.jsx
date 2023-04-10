@@ -7,7 +7,7 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import "./index.css";
 
-export const App=()=> {
+export const App = () => {
   return (
     <div className="App dark:bg-black bg-[#242424]">
       <BrowserRouter>
@@ -16,7 +16,7 @@ export const App=()=> {
             <Route path="*" element={<Error />} />
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/project" element={<Project />} />
+            <Route path="/projects" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Home />} />
           </Routes>
@@ -24,4 +24,4 @@ export const App=()=> {
       </BrowserRouter>
     </div>
   );
-}
+};

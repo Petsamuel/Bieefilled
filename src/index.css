@@ -10,13 +10,14 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-image: #242424; */
-  
+
   background-position: center center;
 
 
 }
-.blured{
-   filter: blur(8px);
+
+.blured {
+  filter: blur(8px);
   -webkit-filter: blur(8px);
 }
 
@@ -33,4 +34,19 @@ body {
   display: flex;
   flex-direction: column;
 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 5px;
 }

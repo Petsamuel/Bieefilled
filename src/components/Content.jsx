@@ -1,5 +1,6 @@
 import Certification from "./Certification";
 import Experience from "./Experience";
+import Reviews from "./Reviews";
 
 function Content({ eventState }) {
   return (
@@ -31,7 +32,9 @@ function Content({ eventState }) {
       </div>
       <div
         className={
-          eventState === 2 ? "text-justify leading-normal " : "hidden"
+          eventState === 2
+            ? "text-justify leading-normal overflow-y-scroll h-5/6"
+            : "hidden"
         }
       >
         <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl  bg-gradient-to-r from-purple-600 to-blue-500">
@@ -41,7 +44,9 @@ function Content({ eventState }) {
       </div>
       <div
         className={
-          eventState === 3 ? "text-justify leading-normal " : "hidden"
+          eventState === 3
+            ? "text-justify leading-normal overflow-y-scroll h-5/6"
+            : "hidden"
         }
       >
         <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl bg-gradient-to-r from-purple-600 to-blue-500">
@@ -53,15 +58,13 @@ function Content({ eventState }) {
       </div>
       <div
         className={
-          eventState === 4
-            ? "text-justify leading-normal  "
-            : "hidden"
+          eventState === 4 ? "text-justify leading-normal  " : "hidden"
         }
       >
         <h1 className="py-4 px-2 mb-3 text-white  text-semibold font-[Poppins] text-2xl bg-gradient-to-r from-purple-600 to-blue-500">
           Reviews
         </h1>
-        <div></div>
+        <div><Reviews/></div>
       </div>
     </section>
   );
