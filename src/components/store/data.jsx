@@ -8,13 +8,13 @@ import varena from "../../assets/varena.png";
 export const certification = [
   {
     name: "REACT + REDUX Certification",
-    svg: sololearn,
+    svg: `${sololearn}`,
     year: "2023",
     link: "https://www.sololearn.com/certificates/course/en/18019527/1097/landscape/png",
   },
   {
     name: "Developing SQL Databases",
-    svg: sololearn,
+    svg: `${sololearn}`,
     year: "2023",
     link: "https://www.sololearn.com/certificates/course/en/18019527/1060/landscape/png",
   },
@@ -32,7 +32,7 @@ export const certification = [
   },
   {
     name: "Responsive Web Design ",
-    svg: sololearn,
+    svg: `${sololearn}`,
     year: "2022",
     link: "https://drive.google.com/file/d/1Qw3LOt0-6eU7a_YVW4urPu9HnKckHG_H/view?usp=drivesdk",
   },
@@ -97,7 +97,7 @@ export const Review = [
 
 export const projects = [
   {
-    image: koinfunds,
+    image: `${koinfunds}`,
     name: "Koinfund",
     year: "Mar 2023 - Present",
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
@@ -105,7 +105,7 @@ export const projects = [
     description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
   },
   {
-    image: gruvly,
+    image: `${gruvly}`,
     name: "Gruvly Music",
     year: "Jan 2022 - Present",
     link: "http://gruvlymusic.com/",
@@ -114,7 +114,7 @@ export const projects = [
       "Gruvly Music: Platform designed for forward-looking music musical talents...",
   },
   {
-    image: varena,
+    image: `${varena}`,
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
     link: "http://varena.app/",
