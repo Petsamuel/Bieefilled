@@ -103,7 +103,9 @@ function Hero() {
             </div>
           </div>
         </div>
-        {serveModal ? <Modal /> : ""}
+        <div className="absolute top-0 w-full">
+          {serveModal ? <Modal /> : ""}
+        </div>
       </section>
     </>
   );

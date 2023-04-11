@@ -10,9 +10,11 @@ function Contact() {
               Get in touch&nbsp;
             </span>
           </h1>
-          <p>I’d love to hear from you! Please fill out the form bellow.</p>
+          <p>I’d love to hear from you! Please fill out the form below.</p>
         </div>
-        <div className="mt-12 max-w-lg mx-auto"><ContactForm/></div>
+        <div className="mt-12 max-w-lg mx-auto">
+          <ContactForm />
+        </div>
       </div>
     </main>
   );
