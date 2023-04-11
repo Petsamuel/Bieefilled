@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Modal } from "./Modal";
 import Typewriter from "typewriter-effect";
 import Socials from "./Socials";
 import smile from "../assets/smile.svg";
@@ -8,6 +9,7 @@ import left from "../assets/left.svg";
 
 function Hero() {
   const [imgChange, setImgChange] = useState(smiles);
+  const [serveModal, setServeModal] = useState(false);
 
   const checker = (e) => {
     var y = e.movementY;
@@ -28,7 +30,7 @@ function Hero() {
 
   return (
     <>
-      <section className="flex flex-col items-center">
+      <section className="place-content-center">
         <div className="lg:pt-20 flex lg:flex-row flex-col justify-center items-center px-16">
           <div
             className="flex-auto"
@@ -72,14 +74,14 @@ function Hero() {
                 />
               </span>
             </span>
-            <div class="text-sm font-normal text-gray-500 lg:text-xl dark:text-gray-400 lg:w-4/5 py-4 place-items-center leading-normal ">
+            <div className="text-sm font-normal text-gray-500 lg:text-xl dark:text-gray-400 lg:w-4/5 py-4 place-items-center leading-normal ">
               I'm a skilled software engineer creating efficient and
               user-friendly solutions to enhance productivity.
               <Socials />
             </div>
             <div className="">
               <button
-                class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-sm shadow-purple-500/50"
+                className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-sm shadow-purple-500/50"
                 onMouseEnter={() => setImgChange(smile)}
                 onMouseLeave={() => setImgChange(smiles)}
               >
@@ -88,8 +90,11 @@ function Hero() {
                 </span>
               </button>
               <button
-                class="relative inline-flex items-center ju
+                className="relative inline-flex items-center ju
               stify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-sm shadow-purple-500/50"
+                onClick={() => {
+                  setServeModal(!serveModal);
+                }}
               >
                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-[#242424] rounded-md group-hover:bg-opacity-0">
                   QUOTES
@@ -98,6 +103,7 @@ function Hero() {
             </div>
           </div>
         </div>
+        {serveModal ? <Modal /> : ""}
       </section>
     </>
   );

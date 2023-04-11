@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Loading from "./Loading";
 export const InputField = ({ type, label }) => {
   return (
     <>
@@ -5,7 +7,7 @@ export const InputField = ({ type, label }) => {
         <input
           type={type}
           id="floating_outlined"
-          class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1  outline-none border shadow-sm border-gray-600 appearance-none dark:text-white dark:border-gray-700 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1  outline-none border shadow-sm border-gray-600 appearance-none dark:text-white dark:border-gray-700 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
           placeholder=" "
         />
         <label
@@ -20,9 +22,16 @@ export const InputField = ({ type, label }) => {
 };
 
 export const ContactForm = () => {
+  const [status, setStatus] = useState(false);
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setStatus(true);
+        }}
+        className="space-y-5"
+      >
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
           <InputField type="text" label="Full Name" />
 
@@ -39,13 +48,33 @@ export const ContactForm = () => {
             className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-gray-600 focus:border-indigo-600 shadow-sm rounded-lg"
           ></textarea>
         </div>
-        <button className="w-full px-4 py-2 text-white font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150">
-          Submit
+        <button className="w-full px-4 py-2 text-white font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 ">
+          {!status ? `Submit` : <Loading />}
         </button>
       </form>
     </>
   );
 };
-export const NewletterForm = () => {
-  return <></>;
+export const NewsletterForm = () => {
+  return (
+    <>
+      <div class="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50">
+        <form action="#" class="flex flex-col items-center w-full md:flex-row">
+          <label
+            for="email"
+            class="flex-shrink-0 mb-2 mr-auto text-sm font-medium text-gray-500 md:mb-0 md:mr-4 dark:text-gray-400 md:m-0"
+          >
+            Sign up for our newsletter
+          </label>
+          <InputField type="email" label="Email" />
+          <button
+            type="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </>
+  );
 };
