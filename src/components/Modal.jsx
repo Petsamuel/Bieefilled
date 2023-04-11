@@ -4,10 +4,6 @@ import Loading from "./Loading";
 export const Modal = () => {
   const [close, setClose] = useState(true);
   const [loader, setLoader] = useState(false);
-  const Submit = () => {
-    setLoader;
-    !loader;
-  };
 
   return (
     <div
@@ -60,25 +56,18 @@ export const Modal = () => {
               <div className="flex">
                 <button
                   type="button"
-                  className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
-                  onClick={() => {
-                    setClose(!close);
-                  }}
+                  class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
                 >
-                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
-                    Cancel
-                  </span>
+                  Cancel
                 </button>
                 <button
                   type="button"
-                  className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-2 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                  class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"
                   onClick={() => {
-                    Submit;
+                    setLoader(!loader);
                   }}
                 >
-                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
-                    {!loader ? `Proceed` : <Loading />}
-                  </span>
+                  {!loader ? `Proceed` : <Loading />}
                 </button>
               </div>
             </form>
