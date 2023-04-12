@@ -5,11 +5,13 @@ import jm from "../../assets/jm.svg";
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
 const template_id = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID;
 const mail_service_id = import.meta.env.VITE_APP_MAIL_SERVICE_ID;
+const reCAPTCHA_site_key = import.meta.env.VITE_APP_RECAPTCHA_SITE_KEY;
 
 export const secret_key = {
   mail_public_key: public_key,
   mail_template_id: template_id,
   mail_service_id: mail_service_id,
+  reCAPTCHA: reCAPTCHA_site_key,
 };
 
 export const certification = [

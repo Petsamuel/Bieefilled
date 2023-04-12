@@ -1,7 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, createRef } from "react";
 import { FailedAlert, SuccessAlerts } from "./Alerts";
 import emailjs from "@emailjs/browser";
 import Loading from "./Loading";
+import ReCAPTCHA from "react-google-recaptcha";
 import { secret_key } from "./store/data";
 export const InputField = ({ type, label, name }) => {
   return (
@@ -44,7 +45,7 @@ export const TextField = () => {
 export const ContactForm = () => {
   const [status, setStatus] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
-
+  const recaptchaRef = createRef();
   const form = useRef();
   useEffect(() => {
     let timeout;
@@ -59,13 +60,14 @@ export const ContactForm = () => {
     return () => {
       if (timeout) {
         clearTimeout(timeout);
+        setStatus(!status);
       }
     };
   }, [status]);
- 
 
   const SubmitForm = (e) => {
     e.preventDefault();
+    recaptchaRef.current.execute();
     setStatus(true);
     emailjs
       .sendForm(
@@ -83,6 +85,7 @@ export const ContactForm = () => {
         (error) => {
           console.log(error.text);
           setAlertMessage(false);
+          setStatus(!status);
         }
       );
   };
@@ -103,6 +106,7 @@ export const ContactForm = () => {
         ref={form}
         onSubmit={(e) => {
           SubmitForm(e);
+          recaptchaRef.current.execute();
         }}
         className="space-y-5"
       >
@@ -112,6 +116,11 @@ export const ContactForm = () => {
           <InputField type="email" label="Email" name="user_email" />
         </div>
         <TextField />
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
+          sitekey={secret_key.reCAPTCHA}
+        />
 
         <button className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 ">
           {!status ? `Submit` : <Loading />}
