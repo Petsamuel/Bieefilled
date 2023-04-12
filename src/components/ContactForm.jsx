@@ -68,7 +68,15 @@ export const ContactForm = () => {
   const SubmitForm = (e) => {
     e.preventDefault();
     recaptchaRef.current.execute();
-    setStatus(true);
+
+    // recaptcher v2
+    const SubmitCaptcha = (captchaValue) => {
+      const params = {
+        ...formState,
+        "g-recaptcha-response": captchaValue,
+      };
+    };
+
     emailjs
       .sendForm(
         secret_key.mail_service_id,
@@ -102,14 +110,7 @@ export const ContactForm = () => {
           </div>
         )}
       </div>
-      <form
-        ref={form}
-        onSubmit={(e) => {
-          SubmitForm(e);
-          recaptchaRef.current.execute();
-        }}
-        className="space-y-5"
-      >
+      <form ref={form} className="space-y-5">
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
           <InputField type="text" label="Full Name" name="user_name" />
 
@@ -120,9 +121,12 @@ export const ContactForm = () => {
           ref={recaptchaRef}
           size="invisible"
           sitekey={secret_key.reCAPTCHA}
+          onChange={() => {
+            SubmitCaptcha;
+          }}
         />
 
-        <button className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 ">
+        <button className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 " onClick={()=>{SubmitForm;}}>
           {!status ? `Submit` : <Loading />}
         </button>
       </form>
