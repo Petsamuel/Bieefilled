@@ -62,12 +62,7 @@ export const ContactForm = () => {
       }
     };
   }, [status]);
-  console.log(
-    secret_key.mail_service_id,
-    secret_key.mail_template_id,
-
-    secret_key.mail_public_key
-  );
+ 
 
   const SubmitForm = (e) => {
     e.preventDefault();
