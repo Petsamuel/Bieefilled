@@ -46,17 +46,12 @@ export const Modal = ({ message }) => {
           <div className="p-6 text-center grid place-items-center">
             <div className="grid place-items-center">
               {" "}
-              Kindly Enter 
+              Kindly Enter
               <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                 The Email Address to send the {message} to
               </h3>
             </div>
-            <form
-              onSubmit={(e) => {
-                SubmitForm(e);
-              }}
-              class=""
-            >
+            <form class="">
               <div className="grid place-items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row bg-black rounded-lg my-4 w-md">
                 <InputField type="email" label="email" name="user_email" />
               </div>
@@ -71,6 +66,9 @@ export const Modal = ({ message }) => {
                   Cancel
                 </button>
                 <button
+                  onClick={(e) => {
+                    SubmitForm(e);
+                  }}
                   type="button"
                   class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 w-lg"
                 >
