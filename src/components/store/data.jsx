@@ -2,13 +2,13 @@ import sololearn from "../../assets/sololearn.svg";
 import zuri from "../../assets/zuri.svg";
 import jm from "../../assets/jm.svg";
 
-const public_key = import.meta.env.VITE_APP_YOUR_PUBLIC_KEY;
-const template_id = import.meta.env.VITE_APP_TEMPLATE_ID;
-const  mail_service_id = import.meta.env.VITE_APP_MAIL_SERVICE_ID;
+const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
+const template_id = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID;
+const mail_service_id = import.meta.env.VITE_APP_MAIL_SERVICE_ID;
 
 export const secret_key = {
-  public_key: public_key,
-  template_id: template_id,
+  mail_public_key: public_key,
+  mail_template_id: template_id,
   mail_service_id: mail_service_id,
 };
 

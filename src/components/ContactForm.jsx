@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { FailedAlert, SuccessAlerts } from "./Alerts";
 import emailjs from "@emailjs/browser";
 import Loading from "./Loading";
 import { secret_key } from "./store/data";
@@ -42,7 +43,25 @@ export const TextField = () => {
 
 export const ContactForm = () => {
   const [status, setStatus] = useState(false);
+  const [alertMessage, setAlertMessage] = useState(null);
+
   const form = useRef();
+  useEffect(() => {
+    let timeout;
+
+    if (status) {
+      // Show the info message for 2 seconds
+      timeout = setTimeout(() => {
+        setAlertMessage(null);
+      }, 4000);
+    }
+
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    };
+  }, [status]);
 
   const SubmitForm = (e) => {
     e.preventDefault();
@@ -50,24 +69,35 @@ export const ContactForm = () => {
     emailjs
       .sendForm(
         secret_key.mail_service_id,
-        secret_key.template_id,
+        secret_key.mail_template_id,
         form.current,
-        secret_key.public_key
+        secret_key.mail_public_key
       )
       .then(
         (result) => {
           console.log(result.text);
           setStatus(false);
-          alert("sent Successfully");
+          setAlertMessage(true);
         },
         (error) => {
           console.log(error.text);
-          setStatus(false);
+          setAlertMessage(false);
         }
       );
   };
   return (
     <>
+      <div className={alertMessage === null ? "hidden" : ""}>
+        {alertMessage ? (
+          <div>
+            <SuccessAlerts message="Sent" />
+          </div>
+        ) : (
+          <div>
+            <FailedAlert message="Failed to send" />
+          </div>
+        )}
+      </div>
       <form
         ref={form}
         onSubmit={(e) => {
