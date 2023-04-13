@@ -127,8 +127,9 @@ export const ContactForm = () => {
         />
 
         <button
+          type="submit"
           className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
-          onClick={(e) => {
+          onSubmit={(e) => {
             SubmitForm(e);
           }}
         >
