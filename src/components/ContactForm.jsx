@@ -119,7 +119,6 @@ export const ContactForm = () => {
         <TextField />
         <ReCAPTCHA
           ref={recaptchaRef}
-          size="invisible"
           sitekey={secret_key.reCAPTCHA}
           onChange={() => {
             SubmitCaptcha();
