@@ -11,7 +11,7 @@ export const InputField = ({ type, label, name }) => {
         <input
           type={type}
           name={name}
-          class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1  outline-none border shadow-sm border-gray-600 appearance-none dark:text-white dark:border-gray-700 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
+          class="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent bg-black dark:bg-black rounded-lg border-1  outline-none border shadow-sm border-gray-600 appearance-none text-white dark:text-white dark:border-gray-700 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
           placeholder=" "
           required
           minLength="4"
@@ -122,11 +122,16 @@ export const ContactForm = () => {
           size="invisible"
           sitekey={secret_key.reCAPTCHA}
           onChange={() => {
-            SubmitCaptcha;
+            SubmitCaptcha();
           }}
         />
 
-        <button className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 " onClick={()=>{SubmitForm;}}>
+        <button
+          className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
+          onClick={(e) => {
+            SubmitForm(e);
+          }}
+        >
           {!status ? `Submit` : <Loading />}
         </button>
       </form>

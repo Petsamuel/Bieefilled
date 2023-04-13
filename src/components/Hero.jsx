@@ -47,13 +47,13 @@ function Hero() {
             />
           </div>
           <div className="lg:w-2/4 dark:text-white flex-auto ">
-            <span className="text-white font-[Poppins]  text-3xl font-extrabold  md:text-2xl lg:text-5xl leading-loose">
+            <span className="text-white font-[Poppins]  text-2xl font-extrabold  md:text-2xl lg:text-5xl leading-loose">
               Samuel Peters
             </span>{" "}
             <br />
-            <span className="font-[Poppins]  lg:text-3xl flex  sm:text-1xl md:text-2xl items-center">
+            <span className="font-[Poppins]  lg:text-3xl flex  sm:text-2xl md:text-2xl items-center">
               <span className="">I'm&nbsp;</span>
-              <span className=" px-2 bg-gradient-to-r from-purple-600 to-blue-500  ">
+              <span className=" px-2 bg-gradient-to-r from-purple-600 to-blue-500  sm:text-sm">
                 <Typewriter
                   options={{ loop: true }}
                   onInit={(writer) => {
