@@ -69,9 +69,8 @@ export const ContactForm = () => {
 
   const SubmitForm = (e) => {
     e.preventDefault();
-    recaptchaRef.current.execute();
+    // recaptchaRef.current.execute();
 
-    // recaptcher v2
     const SubmitCaptcha = (captchaValue) => {
       const params = {
         ...formState,
@@ -120,6 +119,7 @@ export const ContactForm = () => {
         className="space-y-5"
         onSubmit={(e) => {
           e.preventDefault;
+          SubmitForm(e);
         }}
       >
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
@@ -142,6 +142,8 @@ export const ContactForm = () => {
           className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
           onClick={(e) => {
             SubmitForm(e);
+
+            setStatus(!status);
           }}
         >
           {!status ? `Submit` : <Loading />}
