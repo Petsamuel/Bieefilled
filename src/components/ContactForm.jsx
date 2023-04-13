@@ -45,8 +45,6 @@ export const TextField = () => {
 export const ContactForm = () => {
   const [status, setStatus] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
-  const [Message, setMessage] = useState(null);
-
   const recaptchaRef = createRef();
   const form = useRef();
   useEffect(() => {
@@ -71,6 +69,7 @@ export const ContactForm = () => {
     e.preventDefault();
     // recaptchaRef.current.execute();
 
+    // recaptcher v2
     const SubmitCaptcha = (captchaValue) => {
       const params = {
         ...formState,
@@ -88,14 +87,11 @@ export const ContactForm = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setMessage(result.text);
           setStatus(false);
           setAlertMessage(true);
         },
         (error) => {
           console.log(error.text);
-          setMessage(result.text);
-
           setAlertMessage(false);
           setStatus(!status);
         }
@@ -106,22 +102,15 @@ export const ContactForm = () => {
       <div className={alertMessage === null ? "hidden" : ""}>
         {alertMessage ? (
           <div>
-            <SuccessAlerts message={Message} />
+            <SuccessAlerts message="Sent" />
           </div>
         ) : (
           <div>
-            <FailedAlert message={Message} />
+            <FailedAlert message="Failed to send" />
           </div>
         )}
       </div>
-      <form
-        ref={form}
-        className="space-y-5"
-        onSubmit={(e) => {
-          e.preventDefault;
-          SubmitForm(e);
-        }}
-      >
+      <form ref={form} className="space-y-5">
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
           <InputField type="text" label="Full Name" name="user_name" />
 
@@ -130,20 +119,17 @@ export const ContactForm = () => {
         <TextField />
         <ReCAPTCHA
           ref={recaptchaRef}
-          sitekey={secret_key.reCAPTCHA}
           theme="dark"
+          sitekey={secret_key.reCAPTCHA}
           onChange={() => {
             SubmitCaptcha;
           }}
         />
 
         <button
-          type="button"
           className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
-          onClick={(e) => {
-            SubmitForm(e);
-
-            setStatus(!status);
+          onClick={() => {
+            SubmitForm;
           }}
         >
           {!status ? `Submit` : <Loading />}
