@@ -45,6 +45,8 @@ export const TextField = () => {
 export const ContactForm = () => {
   const [status, setStatus] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
+  const [Message, setMessage] = useState(null);
+
   const recaptchaRef = createRef();
   const form = useRef();
   useEffect(() => {
@@ -87,11 +89,14 @@ export const ContactForm = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setMessage(result.text);
           setStatus(false);
           setAlertMessage(true);
         },
         (error) => {
           console.log(error.text);
+          setMessage(result.text);
+
           setAlertMessage(false);
           setStatus(!status);
         }
@@ -102,15 +107,21 @@ export const ContactForm = () => {
       <div className={alertMessage === null ? "hidden" : ""}>
         {alertMessage ? (
           <div>
-            <SuccessAlerts message="Sent" />
+            <SuccessAlerts message={Message} />
           </div>
         ) : (
           <div>
-            <FailedAlert message="Failed to send" />
+            <FailedAlert message={Message} />
           </div>
         )}
       </div>
-      <form ref={form} className="space-y-5">
+      <form
+        ref={form}
+        className="space-y-5"
+        onSubmit={(e) => {
+          e.preventDefault;
+        }}
+      >
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
           <InputField type="text" label="Full Name" name="user_name" />
 
@@ -120,15 +131,16 @@ export const ContactForm = () => {
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={secret_key.reCAPTCHA}
+          theme="dark"
           onChange={() => {
-            SubmitCaptcha();
+            SubmitCaptcha;
           }}
         />
 
         <button
-          type="submit"
+          type="button"
           className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
-          onSubmit={(e) => {
+          onClick={(e) => {
             SubmitForm(e);
           }}
         >
