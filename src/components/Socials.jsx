@@ -1,10 +1,10 @@
-import React from "react";
+
 
 function Socials() {
   return (
     <div className="flex py-4 space-x-6 sm:mt-0 leading-normal">
       <a
-        href="#"
+        href="https://facebook.com/sirmhuel.peter"
         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -17,7 +17,7 @@ function Socials() {
         <span className="sr-only">Facebook page</span>
       </a>
       <a
-        href="#"
+        href="https://instagram.com/bieefilled"
         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ function Socials() {
         <span className="sr-only">Instagram page</span>
       </a>
       <a
-        href="#"
+        href="https://twitter.com/Bieefilled"
         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ function Socials() {
         <span className="sr-only">Twitter page</span>
       </a>
       <a
-        href="#"
+        href="https://github.com/Petsamuel"
         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ function Socials() {
         <span className="sr-only">GitHub account</span>
       </a>
       <a
-        href="#"
+        href="https://dribbble.com/bieefilled"
         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
