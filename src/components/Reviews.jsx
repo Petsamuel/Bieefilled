@@ -46,8 +46,9 @@ function Reviews() {
       >
         Send{" "}
         <a
-          href="#"
+          href="https://www.linkedin.com/recs/give/?senderId=samuel-peters-0746b1216"
           className="text-blue-600 hover:underline dark:text-blue-500"
+          title="write me a recommendation for my profile!"
         >
           Recommendations
         </a>

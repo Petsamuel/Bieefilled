@@ -19,7 +19,7 @@ function Card({ data }) {
                     className="rounded-t-lg pb-6"
                   />
                 )}
-                <a href="#">
+                <a href={index.links}>
                   <h5 class="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white">
                     {index.name}
                   </h5>
