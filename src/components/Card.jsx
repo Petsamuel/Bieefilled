@@ -50,7 +50,7 @@ function Card({ data }) {
                       <span class="sr-only">GitHub account</span>
                     </a>
                   ) : (
-                    "View"
+                    <a href={index.views}>View</a>
                   )}
                   <a
                     href={index.link}
