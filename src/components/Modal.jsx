@@ -15,12 +15,12 @@ export const Modal = ({ message }) => {
     <div
       className={
         close
-          ? "fixed z-50 p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] bg-opacity-30  max-h-full grid place-content-center  w-full  dark:bg-[#242424] bg-[#242424] duration-300 transform translate-y-screen scale-full origin-[0]"
+          ? "fixed z-50 p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] bg-opacity-40  max-h-full grid place-content-center  w-full  dark:bg-[#242424] bg-[#242424] duration-300 transform translate-y-screen scale-full origin-[0]"
           : " hidden"
       }
     >
       <div className="relative w-full max-w-md max-h-full">
-        <div className="relative bg-white rounded-lg shadow dark:bg-[#242424]">
+        <div className="relativebg-[#242424] rounded-lg shadow dark:bg-[#242424]">
           <button
             onClick={() => {
               setClose(!close);
@@ -51,7 +51,7 @@ export const Modal = ({ message }) => {
                 The Email Address to send the {message} to
               </h3>
             </div>
-            <form class="" onSubmit={() => {}}>
+            <form class="">
               <div className="grid place-items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row bg-black rounded-lg my-4 w-md">
                 <InputField type="email" label="email" name="user_email" />
               </div>
