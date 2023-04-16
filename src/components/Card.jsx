@@ -29,6 +29,22 @@ function Card({ data }) {
                     ? index.description
                     : "Go to this step by step guideline process on how to certify for your weekly benefits"}
                 </p>
+                <div className="stack py-2">
+                  {index.stack ? (
+                    <div>
+                      {index.stack.map((index, key) => (
+                        <span
+                          key={key}
+                          class="bg-gradient-to-l from-sky-500 to-fuchsia-500  text-[#f2f2f2] text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full  shadow-sm dark:text-[#f2f2f2] cursor-pointer my-4"
+                        >
+                          {index}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
                 <span class="inline-flex items-center text-inherit hover:underline">
                   {index.institution ? (
                     <a

@@ -113,6 +113,7 @@ export const projects = [
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
     institution: "Open Source",
     description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
+    stack:["React","Ether.js","Solidity", "Tailwindcss"]
   },
   {
     image:
@@ -123,6 +124,7 @@ export const projects = [
     institution: "Private",
     description:
       "Gruvly Music: Platform designed for forward-looking music musical talents...",
+      stack:["Wordpress", "Php", "Sql", "Api"]
   },
   {
     image:
@@ -133,6 +135,7 @@ export const projects = [
     institution: "Private",
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
+      stack:["React","Matter.js","Kia Wallet", "Node.js"]
   },
 ];
 
