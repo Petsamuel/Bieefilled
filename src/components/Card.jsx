@@ -6,7 +6,7 @@ function Card({ data }) {
         return (
           <>
             <div
-              class="max-w-sm p-1 rounded-lg shadow-md hover:shadow-lg border-1  bg-gradient-to-r from-purple-600 to-blue-500  hover:first-line:bg-gradient-to-l hover:from-white hover:to-fuchsia-500 "
+              class="max-w-sm p-1 rounded-lg shadow-md hover:shadow-lg border-1  bg-gradient-to-r from-purple-600 to-blue-500  hover:first-line:bg-gradient-to-l hover:from-white hover:to-fuchsia-500 relative"
               key={index}
             >
               <div className="bg-[#242424] w-full h-full p-4 rounded-md">
@@ -19,16 +19,36 @@ function Card({ data }) {
                     className="rounded-t-lg pb-6"
                   />
                 )}
+
                 <a href={index.links}>
                   <h5 class="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white">
                     {index.name}
                   </h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-sm">
-                  {index.description
-                    ? index.description
-                    : "Go to this step by step guideline process on how to certify for your weekly benefits"}
+                  {index.description ? index.description : "Loading..."}
                 </p>
+                <div className="absolute top-3 right-3">
+                  {index.stack ? (
+                    <>
+                      {index.status ? (
+                        <>
+                          <span class="flex  rounded-full border-4 border-green-900">
+                            <span class="flex w-3 h-3 bg-green-600 rounded-full animate-pulse "></span>
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span class="flex  border-red-900 rounded-full border-4 ">
+                            <span class="flex w-3 h-3 bg-red-500 rounded-full"></span>
+                          </span>
+                        </>
+                      )}
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
                 <div className="stack py-2">
                   {index.stack ? (
                     <div>
