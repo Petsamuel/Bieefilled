@@ -18,7 +18,7 @@ function Reviews() {
               />
             </svg>
             <blockquote>
-              <p className="text-sm text-left italic font-medium text-gray-900 dark:text-white my-5 mx-6">
+              <p className="text-sm text-left italic font-medium text-white dark:text-white my-5 mx-6">
                 {index.reviews}
               </p>
             </blockquote>
@@ -29,7 +29,7 @@ function Reviews() {
                 alt="profile picture"
               />
               <div className="flex items-left divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <cite className="pr-3 font-medium text-gray-900 dark:text-white">
+                <cite className="pr-3 font-medium text-white dark:text-white ">
                   {index.name}
                 </cite>
                 <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">
@@ -42,7 +42,7 @@ function Reviews() {
       ))}
       <label
         for="remember"
-        className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 float-right"
+        className="ml-2 text-sm font-medium  dark:text-gray-300 float-right"
       >
         Send{" "}
         <a

@@ -1,22 +1,27 @@
 import { useState } from "react";
 
 export const Stepper = ({ handleEvent }) => {
+  // const [status, setStatus]=useState()
   const [counter, setCounter] = useState(1);
   handleEvent(counter);
   return (
-    <div>
-      <div className="hidden  md:block lg:block">
+    <div className="fixed z-40">
+      <div className="hidden  md:block lg:block ">
         <ol className="relative text-gray-500 border-l border-gray-200 dark:border-gray-700 dark:text-gray-400">
           <li
-            class="mb-10 ml-6 cursor-pointer"
+            className={
+              counter == 1
+                ? "text-white mb-10 ml-6 cursor-pointer"
+                : "mb-10 ml-6 cursor-pointer hover:text-white"
+            }
             onClick={() => {
               setCounter(1);
             }}
           >
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+            <span className="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
               <svg
                 aria-hidden="true"
-                class="w-5 h-5 text-green-500 dark:text-green-400"
+                className="w-5 h-5 text-white dark:text-white"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,19 +33,33 @@ export const Stepper = ({ handleEvent }) => {
                 ></path>
               </svg>
             </span>
-            <h3 class="font-medium leading-tight">Personal Info</h3>
-            <p class="text-sm">See details here</p>
+            <h3 className="font-medium leading-tight">Personal Info</h3>
+            <p className="text-sm">See details here</p>
           </li>
           <li
-            class="mb-10 ml-6 cursor-pointer"
+            className={
+              counter == 2
+                ? "text-white mb-10 ml-6 cursor-pointer"
+                : "mb-10 ml-6 cursor-pointer hover:text-white"
+            }
             onClick={() => {
               setCounter(2);
             }}
           >
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700">
+            <span
+              className={
+                counter >= 2
+                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900"
+                  : "absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+              }
+            >
               <svg
                 aria-hidden="true"
-                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                className={
+                  counter >= 2
+                    ? "w-5 h-5 text-white dark:text-white"
+                    : "w-5 h-5 text-gray-500 dark:text-gray-400"
+                }
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,19 +71,35 @@ export const Stepper = ({ handleEvent }) => {
                 ></path>
               </svg>
             </span>
-            <h3 class="font-medium leading-tight">Education & Experience</h3>
-            <p class="text-sm">See details here</p>
+            <h3 className="font-medium leading-tight">
+              Education & Experience
+            </h3>
+            <p className="text-sm">See details here</p>
           </li>
           <li
-            class="mb-10 ml-6 cursor-pointer"
+            className={
+              counter == 3
+                ? "text-white mb-10 ml-6 cursor-pointer"
+                : "mb-10 ml-6 cursor-pointer hover:text-white"
+            }
             onClick={() => {
               setCounter(3);
             }}
           >
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700">
+            <span
+              className={
+                counter >= 3
+                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900"
+                  : "absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+              }
+            >
               <svg
                 aria-hidden="true"
-                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                className={
+                  counter >= 3
+                    ? "w-5 h-5 text-white dark:text-white"
+                    : "w-5 h-5 text-gray-500 dark:text-gray-400"
+                }
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,19 +112,33 @@ export const Stepper = ({ handleEvent }) => {
                 ></path>
               </svg>
             </span>
-            <h3 class="font-medium leading-tight">Certifications</h3>
-            <p class="text-sm">See details here</p>
+            <h3 className="font-medium leading-tight">Certifications</h3>
+            <p className="text-sm">See details here</p>
           </li>
           <li
-            class="ml-6 cursor-pointer"
+            className={
+              counter == 4
+                ? "text-white mb-10 ml-6 cursor-pointer"
+                : "mb-10 ml-6 cursor-pointer hover:text-white"
+            }
             onClick={() => {
               setCounter(4);
             }}
           >
-            <span class="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700">
+            <span
+              className={
+                counter == 4
+                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900"
+                  : "absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+              }
+            >
               <svg
                 aria-hidden="true"
-                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                className={
+                  counter == 4
+                    ? "w-5 h-5 text-white dark:text-white"
+                    : "w-5 h-5 text-gray-500 dark:text-gray-400"
+                }
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,16 +151,18 @@ export const Stepper = ({ handleEvent }) => {
                 ></path>
               </svg>
             </span>
-            <h3 class="font-medium leading-tight">Recommendations</h3>
-            <p class="text-sm">See details here</p>
+            <h3 className="font-medium leading-tight">Recommendations</h3>
+            <p className="text-sm">See details here</p>
           </li>
         </ol>
       </div>
       {/* mobile stepper */}
       <div className="lg:hidden md:hidden fixed  w-full bg-[#242424] bg-opacity-50 bottom-0 ">
-        <ol class="flex items-center w-full my-3 ">
+        <ol className="flex items-center w-full my-3 ">
           <li
-            className="flex w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
+            className={
+              "flex w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer "
+            }
             onClick={() => {
               setCounter(1);
             }}
