@@ -4,7 +4,7 @@ import Reviews from "./Reviews";
 
 function Content({ eventState }) {
   return (
-    <section className=" dark:gray-500">
+    <section className=" dark:gray-500 pb-16">
       <div
         className={
           eventState === 1
@@ -12,7 +12,7 @@ function Content({ eventState }) {
             : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+        <h1 className="py-2 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-gray-200">
             Personal{" "}
           </span>
@@ -36,11 +36,11 @@ function Content({ eventState }) {
       <div
         className={
           eventState === 2
-            ? "text-justify leading-normal overflow-y-scroll h-5/6"
+            ? "text-justify leading-normal overflow-y-scroll h-5/6 "
             : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+        <h1 className="py-2 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2 ">
             Education &{" "}
           </span>
@@ -55,7 +55,7 @@ function Content({ eventState }) {
             : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+        <h1 className="py-2 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2">
             Certifi
           </span>
@@ -70,7 +70,7 @@ function Content({ eventState }) {
           eventState === 4 ? "text-justify leading-normal  " : "hidden"
         }
       >
-        <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+        <h1 className="py-2 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2">
             Top&nbsp;
           </span>
