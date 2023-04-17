@@ -173,7 +173,7 @@ export const Stepper = ({ handleEvent }) => {
           </li>
           <li
             className={
-              counter <= 2
+              counter >= 2
                 ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
                 : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
             }
@@ -183,7 +183,7 @@ export const Stepper = ({ handleEvent }) => {
           >
             <span
               className={
-                counter <= 2
+                counter >= 2
                   ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
                   : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
               }
@@ -193,7 +193,7 @@ export const Stepper = ({ handleEvent }) => {
           </li>
           <li
             className={
-              counter <= 3
+              counter >= 3
                 ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
                 : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer "
             }
@@ -203,7 +203,7 @@ export const Stepper = ({ handleEvent }) => {
           >
             <span
               className={
-                counter <= 2
+                counter >= 3
                   ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
                   : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
               }
@@ -217,7 +217,7 @@ export const Stepper = ({ handleEvent }) => {
           >
             <span
               className={
-                counter <= 2
+                counter === 4
                   ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
                   : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
               }
