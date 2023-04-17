@@ -105,6 +105,7 @@ export const Review = [
 ];
 
 export const projects = [
+  // status- completed:true;  on-going:false; stopped:null;
   {
     image:
       "http://drive.google.com/uc?export=view&id=14BI93_0YOKHZC1lH4fUb8iLpGXsTRIRo",
@@ -114,7 +115,7 @@ export const projects = [
     institution: "Open Source",
     description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
     stack: ["React", "Ether.js", "Solidity", "Tailwindcss"],
-    status: true,
+    status: false,
   },
   {
     image:
@@ -138,7 +139,7 @@ export const projects = [
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React", "Matter.js", "Kia Wallet", "Node.js"],
-    status: false,
+    status: null,
   },
 ];
 

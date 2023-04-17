@@ -29,24 +29,26 @@ function Card({ data }) {
                   {index.description ? index.description : "Loading..."}
                 </p>
                 <div className="absolute top-3 right-3">
-                  {index.stack ? (
+                  {index.status === true ? (
                     <>
-                      {index.status ? (
-                        <>
-                          <span class="flex  rounded-full border-4 border-green-900">
-                            <span class="flex w-3 h-3 bg-green-600 rounded-full animate-pulse "></span>
-                          </span>
-                        </>
-                      ) : (
-                        <>
-                          <span class="flex  border-red-900 rounded-full border-4 ">
-                            <span class="flex w-3 h-3 bg-red-500 rounded-full"></span>
-                          </span>
-                        </>
-                      )}
+                      <span class="flex  rounded-full border-4 border-green-900">
+                        <span class="flex w-3 h-3 bg-green-600 rounded-full animate-pulse "></span>
+                      </span>
+                    </>
+                  ) : "" || index.status === false ? (
+                    <>
+                      <span class="flex  border-amber-900 rounded-full border-4 ">
+                        <span class="flex w-3 h-3 bg-amber-500 rounded-full animate-pulse"></span>
+                      </span>
+                    </>
+                  ) : "" || index.status === null ? (
+                    <>
+                      <span class="flex  border-red-900 rounded-full border-4 ">
+                        <span class="flex w-3 h-3 bg-red-500 rounded-full"></span>
+                      </span>
                     </>
                   ) : (
-                    <></>
+                    ""
                   )}
                 </div>
                 <div className="stack py-2">
