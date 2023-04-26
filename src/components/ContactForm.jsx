@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, createRef } from "react";
-import { FailedAlert, SuccessAlerts } from "./Alerts";
+import { AlertMessage } from "./Alerts";
 import emailjs from "@emailjs/browser";
 import Loading from "./Loading";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -58,12 +58,12 @@ export const InputField = ({
 };
 
 export const ContactForm = () => {
-  const [status, setStatus] = useState(false);
+  const [status, setStatus] = useState(null);
   const [alertMessage, setAlertMessage] = useState(null);
   const [formValue, setFormValue] = useState({
-    name: "",
-    description: "",
-    email: "",
+    user_name: "",
+    message: "",
+    user_email: "",
   });
 
   const refCaptcha = createRef();
@@ -71,8 +71,8 @@ export const ContactForm = () => {
   useEffect(() => {
     let timeout;
 
-    if (status) {
-      // Show the info message for 2 seconds
+    if (status === true || false) {
+      // Show the info message for 4 seconds
       timeout = setTimeout(() => {
         setAlertMessage(null);
       }, 4000);
@@ -81,7 +81,7 @@ export const ContactForm = () => {
     return () => {
       if (timeout) {
         clearTimeout(timeout);
-        setStatus(!status);
+        setStatus(null);
       }
     };
   }, [status]);
@@ -89,6 +89,7 @@ export const ContactForm = () => {
   const SubmitForm = (e) => {
     e.preventDefault();
     const token = refCaptcha.current.getValue();
+    setStatus(true);
 
     const params = {
       ...formValue,
@@ -104,23 +105,26 @@ export const ContactForm = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
+          setAlertMessage(true);
+          setStatus(false);
         },
         (err) => {
           console.log("FAILED...", err);
+          setStatus(false);
         }
       );
   };
 
   return (
     <>
-      <div className={alertMessage === null ? "hidden" : ""}>
+      <div className={status === null ? "hidden" : "block"}>
         {alertMessage ? (
           <div>
-            <SuccessAlerts message="Sent" />
+            <AlertMessage message="Sent" alert={true} />
           </div>
         ) : (
           <div>
-            <FailedAlert message="Failed to send" />
+            <AlertMessage message="Failed to send" alert={false} />
           </div>
         )}
       </div>
@@ -149,9 +153,9 @@ export const ContactForm = () => {
           isTextArea
           label="Message"
           name="user_message"
-          value={formValue.description}
+          value={formValue.message}
           handleChange={(e) => {
-            setFormValue({ ...formValue, description: e.target.value });
+            setFormValue({ ...formValue, message: e.target.value });
           }}
         />
         <ReCAPTCHA
