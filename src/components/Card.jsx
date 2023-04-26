@@ -6,7 +6,7 @@ function Card({ data }) {
         return (
           <>
             <div
-              class="max-w-sm p-1 rounded-lg shadow-md hover:shadow-lg border-1  bg-gradient-to-r from-purple-600 to-blue-500  hover:first-line:bg-gradient-to-l hover:from-white hover:to-fuchsia-500 relative"
+              className="max-w-sm p-1 rounded-lg shadow-md hover:shadow-lg border-1  bg-gradient-to-r from-purple-600 to-blue-500  hover:first-line:bg-gradient-to-l hover:from-white hover:to-fuchsia-500 relative"
               key={index}
             >
               <div className="bg-[#242424] w-full h-full p-4 rounded-md">
@@ -21,30 +21,30 @@ function Card({ data }) {
                 )}
 
                 <a href={index.links}>
-                  <h5 class="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white">
+                  <h5 className="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white">
                     {index.name}
                   </h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-sm">
+                <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 text-sm">
                   {index.description ? index.description : "Loading..."}
                 </p>
                 <div className="absolute top-3 right-3">
                   {index.status === true ? (
                     <>
-                      <span class="flex  rounded-full border-4 border-green-900">
-                        <span class="flex w-3 h-3 bg-green-600 rounded-full animate-pulse "></span>
+                      <span className="flex  rounded-full border-4 border-green-900">
+                        <span className="flex w-3 h-3 bg-green-600 rounded-full animate-pulse "></span>
                       </span>
                     </>
                   ) : "" || index.status === false ? (
                     <>
-                      <span class="flex  border-amber-900 rounded-full border-4 ">
-                        <span class="flex w-3 h-3 bg-amber-500 rounded-full animate-pulse"></span>
+                      <span className="flex  border-amber-900 rounded-full border-4 ">
+                        <span className="flex w-3 h-3 bg-amber-500 rounded-full animate-pulse"></span>
                       </span>
                     </>
                   ) : "" || index.status === null ? (
                     <>
-                      <span class="flex  border-red-900 rounded-full border-4 ">
-                        <span class="flex w-3 h-3 bg-red-500 rounded-full"></span>
+                      <span className="flex  border-red-900 rounded-full border-4 ">
+                        <span className="flex w-3 h-3 bg-red-500 rounded-full"></span>
                       </span>
                     </>
                   ) : (
@@ -57,7 +57,7 @@ function Card({ data }) {
                       {index.stack.map((index, key) => (
                         <span
                           key={key}
-                          class="bg-gradient-to-l from-sky-500 to-fuchsia-500  text-[#f2f2f2] text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full  shadow-sm dark:text-[#f2f2f2] cursor-pointer my-4"
+                          className="bg-gradient-to-l from-sky-500 to-fuchsia-500  text-[#f2f2f2] text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full  shadow-sm dark:text-[#f2f2f2] cursor-pointer my-4"
                         >
                           {index}
                         </span>
@@ -67,14 +67,14 @@ function Card({ data }) {
                     ""
                   )}
                 </div>
-                <span class="inline-flex items-center text-inherit hover:underline">
+                <span className="inline-flex items-center text-inherit hover:underline">
                   {index.institution ? (
                     <a
                       href={index.links}
-                      class="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
+                      className="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
                     >
                       <svg
-                        class="w-5 h-5"
+                        className="w-5 h-5"
                         fill="#ffff"
                         viewBox="0 0 24 24"
                         aria-hidden="true"
@@ -85,17 +85,17 @@ function Card({ data }) {
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="sr-only">GitHub account</span>
+                      <span className="sr-only">GitHub account</span>
                     </a>
                   ) : (
                     <a href={index.views}>View</a>
                   )}
                   <a
                     href={index.link}
-                    class="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
+                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
                   >
                     <svg
-                      class="w-5 h-5 ml-2"
+                      className="w-5 h-5 ml-2"
                       fill="#ffff"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"

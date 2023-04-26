@@ -66,7 +66,7 @@ export const ContactForm = () => {
     email: "",
   });
 
-  const recaptchaRef = createRef();
+  const refCaptcha = createRef();
   const form = useRef();
   useEffect(() => {
     let timeout;
@@ -86,16 +86,13 @@ export const ContactForm = () => {
     };
   }, [status]);
 
-  const Trigger = async () => {
-    const token = await recaptchaRef.current.executeAsync();
-    return token;
-  };
-  
   const SubmitForm = (e) => {
     e.preventDefault();
+    const token = refCaptcha.current.getValue();
+
     const params = {
       ...formValue,
-      "g-recaptcha-response": Trigger,
+      "g-recaptcha-response": token,
     };
     emailjs
       .send(
@@ -127,7 +124,7 @@ export const ContactForm = () => {
           </div>
         )}
       </div>
-      <form ref={form} className="space-y-5">
+      <form ref={form} className="space-y-5" onSubmit={(e) => e.preventDefault}>
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
           <InputField
             type="text"
@@ -135,7 +132,6 @@ export const ContactForm = () => {
             name="user_name"
             value={formValue.name}
             handleChange={(e) => {
-              console.log(e.target.value);
               setFormValue({ ...formValue, name: e.target.value });
             }}
           />
@@ -145,7 +141,6 @@ export const ContactForm = () => {
             name="user_email"
             value={formValue.email}
             handleChange={(e) => {
-              console.log(e.target.value);
               setFormValue({ ...formValue, email: e.target.value });
             }}
           />
@@ -156,16 +151,14 @@ export const ContactForm = () => {
           name="user_message"
           value={formValue.description}
           handleChange={(e) => {
-            console.log(e.target.value);
             setFormValue({ ...formValue, description: e.target.value });
           }}
         />
         <ReCAPTCHA
-          ref={recaptchaRef}
+          ref={refCaptcha}
           theme="dark"
-          size="invisible"
+          // size="invisible"
           sitekey={secret_key.reCAPTCHA}
-          onChange={() => Trigger}
         />
 
         <button

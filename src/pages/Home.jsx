@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <motion.section className="">
+    <motion.section>
       <Hero />
     </motion.section>
   );
