@@ -86,11 +86,16 @@ export const ContactForm = () => {
     };
   }, [status]);
 
-  const SubmitForm = (e, token) => {
+  const Trigger = async () => {
+    const token = await recaptchaRef.current.executeAsync();
+    return token;
+  };
+  
+  const SubmitForm = (e) => {
     e.preventDefault();
     const params = {
       ...formValue,
-      "g-recaptcha-response": token,
+      "g-recaptcha-response": Trigger,
     };
     emailjs
       .send(
@@ -158,16 +163,15 @@ export const ContactForm = () => {
         <ReCAPTCHA
           ref={recaptchaRef}
           theme="dark"
+          size="invisible"
           sitekey={secret_key.reCAPTCHA}
-          onChange={() => {
-            SubmitForm({ e, token });
-          }}
+          onChange={() => Trigger}
         />
 
         <button
           className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
           onClick={(e) => {
-            SubmitForm({ e, token });
+            SubmitForm(e);
           }}
         >
           {!status ? `Submit` : <Loading />}
