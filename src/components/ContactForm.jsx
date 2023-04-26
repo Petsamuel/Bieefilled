@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import Loading from "./Loading";
 import ReCAPTCHA from "react-google-recaptcha";
 import { secret_key } from "./store/data";
-export const InputField = ({ type, label, name }) => {
+const InputField = ({ type, label, name, handleChange }) => {
   return (
     <>
       <div class="relative">
@@ -15,6 +15,7 @@ export const InputField = ({ type, label, name }) => {
           placeholder=" "
           required
           minLength="4"
+          onChange={handleChange}
         />
         <label
           required
@@ -26,16 +27,17 @@ export const InputField = ({ type, label, name }) => {
     </>
   );
 };
-export const TextField = () => {
+const TextField = ({ name, handleChange }) => {
   return (
     <div className="relative">
       <label className="absolute text-sm text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 block">
         Message
       </label>
       <textarea
-        name="message"
+        name={name}
         required
         placeholder=" "
+        onChange={handleChange}
         className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-gray-600 focus:border-indigo-600 shadow-sm rounded-lg"
       ></textarea>
     </div>
@@ -45,6 +47,8 @@ export const TextField = () => {
 export const ContactForm = () => {
   const [status, setStatus] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
+  const [formValue, setFormValue] = useState({ name: "" });
+
   const recaptchaRef = createRef();
   const form = useRef();
   useEffect(() => {
@@ -72,10 +76,11 @@ export const ContactForm = () => {
     // recaptcher v2
     const SubmitCaptcha = (captchaValue) => {
       const params = {
-        ...formState,
+        ...formValue,
         "g-recaptcha-response": captchaValue,
       };
     };
+    console.log(formValue);
 
     emailjs
       .sendForm(
@@ -112,11 +117,29 @@ export const ContactForm = () => {
       </div>
       <form ref={form} className="space-y-5">
         <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
-          <InputField type="text" label="Full Name" name="user_name" />
-
-          <InputField type="email" label="Email" name="user_email" />
+          <InputField
+            type="text"
+            label="Full Name"
+            name="user_name"
+            onChange={(e) => {
+              setFormValue({ [e.target.name]: e.target.value });
+            }}
+          />
+          <InputField
+            type="email"
+            label="Email"
+            name="user_email"
+            onchange={(e) => {
+              setFormValue({ [e.target.name]: e.target.value });
+            }}
+          />
         </div>
-        <TextField />
+        <TextField
+          name="user_message"
+          onChange={(e) => {
+            setFormValue({ [e.target.name]: e.target.value });
+          }}
+        />
         <ReCAPTCHA
           ref={recaptchaRef}
           theme="dark"

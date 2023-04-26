@@ -33,6 +33,12 @@ function Content({ eventState }) {
           reputation in the community by creating accessible websites.
         </p>
       </div>
+
+      {/* //TODO: Add Technical Skill Set 
+        //TODO: Logos 
+      
+      */}
+
       <div
         className={
           eventState === 2
