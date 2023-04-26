@@ -5,7 +5,14 @@ import Loading from "./Loading";
 import ReCAPTCHA from "react-google-recaptcha";
 import { secret_key } from "./store/data";
 
-export const InputField = ({ type, label, name, handleChange, isTextArea }) => {
+export const InputField = ({
+  type,
+  label,
+  name,
+  handleChange,
+  isTextArea,
+  value,
+}) => {
   return (
     <>
       <div class="relative">
@@ -19,7 +26,7 @@ export const InputField = ({ type, label, name, handleChange, isTextArea }) => {
               placeholder=" "
               required
               minLength="4"
-              // value=""
+              value={value}
               onChange={handleChange}
             />
             <label
@@ -39,7 +46,7 @@ export const InputField = ({ type, label, name, handleChange, isTextArea }) => {
               name={name}
               required
               placeholder=" "
-              // value=""
+              value={value}
               onChange={handleChange}
               className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-gray-600 focus:border-indigo-600 shadow-sm rounded-lg"
             ></textarea>
@@ -56,6 +63,7 @@ export const ContactForm = () => {
   const [formValue, setFormValue] = useState({
     name: "",
     description: "",
+    email: "",
   });
 
   const recaptchaRef = createRef();
@@ -78,10 +86,29 @@ export const ContactForm = () => {
     };
   }, [status]);
 
-  const SubmitForm = (e) => {
+  const SubmitForm = (e, token) => {
     e.preventDefault();
-    console.log(formValue);
+    const params = {
+      ...formValue,
+      "g-recaptcha-response": token,
+    };
+    emailjs
+      .send(
+        secret_key.mail_service_id,
+        secret_key.mail_template_id,
+        params,
+        secret_key.mail_public_key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
+
   return (
     <>
       <div className={alertMessage === null ? "hidden" : ""}>
@@ -101,18 +128,20 @@ export const ContactForm = () => {
             type="text"
             label="Full Name"
             name="user_name"
-            // value={value}
-            onChange={(e) => {
+            value={formValue.name}
+            handleChange={(e) => {
               console.log(e.target.value);
+              setFormValue({ ...formValue, name: e.target.value });
             }}
           />
           <InputField
             type="email"
             label="Email"
             name="user_email"
-            // value={value}
-            onchange={(e) => {
+            value={formValue.email}
+            handleChange={(e) => {
               console.log(e.target.value);
+              setFormValue({ ...formValue, email: e.target.value });
             }}
           />
         </div>
@@ -120,24 +149,25 @@ export const ContactForm = () => {
           isTextArea
           label="Message"
           name="user_message"
-          // value={value}
-          onChange={(e) => {
+          value={formValue.description}
+          handleChange={(e) => {
             console.log(e.target.value);
+            setFormValue({ ...formValue, description: e.target.value });
           }}
         />
-        {/* <ReCAPTCHA
+        <ReCAPTCHA
           ref={recaptchaRef}
           theme="dark"
           sitekey={secret_key.reCAPTCHA}
           onChange={() => {
-            SubmitCaptcha;
+            SubmitForm({ e, token });
           }}
-        /> */}
+        />
 
         <button
           className="w-full px-4 py-2 text-white  font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:first-line:bg-gradient-to-l hover:from-purple-600 hover:to-fuchsia-500 active:bg-indigo-600 rounded-lg duration-150 "
           onClick={(e) => {
-            SubmitForm(e);
+            SubmitForm({ e, token });
           }}
         >
           {!status ? `Submit` : <Loading />}
