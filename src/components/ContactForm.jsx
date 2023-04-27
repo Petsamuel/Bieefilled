@@ -62,9 +62,9 @@ export const ContactForm = () => {
   const [alertPrompt, setalertPrompt] = useState(null);
   const [alertMessage, setAlertMessage] = useState("");
   const [formValue, setFormValue] = useState({
-    user_name: "",
+    name: "",
     message: "",
-    user_email: "",
+    email: "",
   });
 
   const refCaptcha = createRef();
@@ -74,10 +74,10 @@ export const ContactForm = () => {
     let timeout;
 
     if (status === true || false) {
-      // Show the info message for 4 seconds
+      // Show the info message for 9 seconds
       timeout = setTimeout(() => {
         setalertPrompt(null);
-      }, 4000);
+      }, 8000);
     }
 
     return () => {
@@ -98,14 +98,14 @@ export const ContactForm = () => {
       "g-recaptcha-response": token,
     };
     switch (true) {
-      case formValue.user_name === "":
+      case formValue.name === "":
         setAlertMessage("Name cannot be Blank");
         setStatus(false);
 
         break;
 
-      case formValue.user_email === "":
-        setAlertMessage("Email cannot be Blank");
+      case formValue.email === "":
+        setAlertMessage("Email Address cannot be Blank");
         setStatus(false);
 
         break;
@@ -120,17 +120,17 @@ export const ContactForm = () => {
           )
           .then(
             (response) => {
-              console.log("SUCCESS!", response.status, response.text);
               setAlertMessage("Sent Successfully");
+              console.log("SUCCESS!", response.status, response.text);
               setStatus(false);
             },
             (err) => {
-              console.log("FAILED...", err);
               setAlertMessage("failed to send Message");
+              console.log("FAILED...", err);
               setStatus(false);
             }
           );
-        break;
+      // break
     }
   };
 
@@ -152,26 +152,26 @@ export const ContactForm = () => {
           <InputField
             type="text"
             label="Full Name"
-            name="user_name"
-            value={formValue.user_name}
+            name={formValue.name}
+            value={formValue.name}
             handleChange={(e) => {
-              setFormValue({ ...formValue, user_name: e.target.value });
+              setFormValue({ ...formValue, name: e.target.value });
             }}
           />
           <InputField
             type="email"
             label="Email"
-            name="user_email"
-            value={formValue.user_email}
+            name={formValue.email}
+            value={formValue.email}
             handleChange={(e) => {
-              setFormValue({ ...formValue, user_email: e.target.value });
+              setFormValue({ ...formValue, email: e.target.value });
             }}
           />
         </div>
         <InputField
           isTextArea
           label="Message"
-          name="user_message"
+          name={formValue.message}
           value={formValue.message}
           handleChange={(e) => {
             setFormValue({ ...formValue, message: e.target.value });
@@ -208,7 +208,7 @@ export const NewsletterForm = () => {
             Sign up for our newsletter
           </label>
           <InputField
-            name="user_email"
+            name="email"
             type="email"
             label="Email"
             onchange={(e) => {
