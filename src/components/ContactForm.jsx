@@ -62,9 +62,9 @@ export const ContactForm = () => {
   const [alertPrompt, setalertPrompt] = useState(null);
   const [alertMessage, setAlertMessage] = useState("");
   const [formValue, setFormValue] = useState({
-    name: "",
+    user_name: "",
     message: "",
-    email: "",
+    user_email: "",
   });
 
   const refCaptcha = createRef();
@@ -77,7 +77,7 @@ export const ContactForm = () => {
       // Show the info message for 9 seconds
       timeout = setTimeout(() => {
         setalertPrompt(null);
-      }, 8000);
+      }, 9000);
     }
 
     return () => {
@@ -98,13 +98,13 @@ export const ContactForm = () => {
       "g-recaptcha-response": token,
     };
     switch (true) {
-      case formValue.name === "":
+      case formValue.user_name === "":
         setAlertMessage("Name cannot be Blank");
         setStatus(false);
 
         break;
 
-      case formValue.email === "":
+      case formValue.user_email === "":
         setAlertMessage("Email Address cannot be Blank");
         setStatus(false);
 
@@ -120,14 +120,14 @@ export const ContactForm = () => {
           )
           .then(
             (response) => {
-              setAlertMessage("Sent Successfully");
-              console.log("SUCCESS!", response.status, response.text);
-              setStatus(false);
+              if (response.status === 200) {
+                setAlertMessage("Sent SUCCESSFULLY");
+              }
+              // console.log("SUCCESS!", response.status, response.text);
             },
             (err) => {
-              setAlertMessage("failed to send Message");
-              console.log("FAILED...", err);
-              setStatus(false);
+              setAlertMessage("FAILED...", err);
+              // console.log("FAILED...", err);
             }
           );
       // break
@@ -152,19 +152,19 @@ export const ContactForm = () => {
           <InputField
             type="text"
             label="Full Name"
-            name={formValue.name}
-            value={formValue.name}
+            name={formValue.user_name}
+            value={formValue.user_name}
             handleChange={(e) => {
-              setFormValue({ ...formValue, name: e.target.value });
+              setFormValue({ ...formValue, user_name: e.target.value });
             }}
           />
           <InputField
             type="email"
             label="Email"
-            name={formValue.email}
-            value={formValue.email}
+            name={formValue.user_email}
+            value={formValue.user_email}
             handleChange={(e) => {
-              setFormValue({ ...formValue, email: e.target.value });
+              setFormValue({ ...formValue, user_email: e.target.value });
             }}
           />
         </div>
@@ -208,7 +208,7 @@ export const NewsletterForm = () => {
             Sign up for our newsletter
           </label>
           <InputField
-            name="email"
+            name="user_email"
             type="email"
             label="Email"
             onchange={(e) => {
