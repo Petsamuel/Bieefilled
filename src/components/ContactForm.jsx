@@ -128,7 +128,8 @@ export const ContactForm = () => {
               // console.log("SUCCESS!", response.status, response.text);
             },
             (err) => {
-              setAlertMessage("FAILED...", err);
+              setAlertMessage(`FAILED... ${err}`);
+              setStatus(false);
               // console.log("FAILED...", err);
             }
           );
