@@ -77,7 +77,7 @@ export const ContactForm = () => {
       // Show the info message for 9 seconds
       timeout = setTimeout(() => {
         setAlertPrompt(null);
-      }, 9000);
+      }, 10000);
     }
 
     return () => {
@@ -110,6 +110,12 @@ export const ContactForm = () => {
 
         break;
 
+      case token === undefined:
+        setAlertMessage("Recaptche Error... ");
+        setStatus(false);
+
+        break;
+
       default:
         emailjs
           .send(
@@ -124,13 +130,15 @@ export const ContactForm = () => {
                 setAlertPrompt(true);
                 setAlertMessage("Sent SUCCESSFULLY");
                 setStatus(false);
+                setFormValue({});
               }
               // console.log("SUCCESS!", response.status, response.text);
             },
             (err) => {
-              setAlertMessage(`FAILED... ${err}`);
+              setAlertMessage(`FAILED... ${err.text}`);
               setStatus(false);
-              // console.log("FAILED...", err);
+              setFormValue({});
+              console.log("FAILED...", err.text);
             }
           );
       // break
