@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect, createRef } from "react";
 import { AlertMessage } from "./Alerts";
+import { secret_key } from "./store/data";
 import emailjs from "@emailjs/browser";
 import Loading from "./Loading";
 import ReCAPTCHA from "react-google-recaptcha";
-import { secret_key } from "./store/data";
 
 export const InputField = ({
   type,
@@ -61,7 +61,6 @@ export const ContactForm = () => {
   const [status, setStatus] = useState(null);
   const [alertPrompt, setalertPrompt] = useState(null);
   const [alertMessage, setAlertMessage] = useState("");
-  const [formValidate, setFormValidate] = useState(false);
   const [formValue, setFormValue] = useState({
     user_name: "",
     message: "",
@@ -100,13 +99,13 @@ export const ContactForm = () => {
     };
     switch (true) {
       case formValue.user_name === "":
-        setAlertMessage("Fill your Name");
+        setAlertMessage("Name cannot be Blank");
         setStatus(false);
 
         break;
 
       case formValue.user_email === "":
-        setAlertMessage("Fill your email");
+        setAlertMessage("Email cannot be Blank");
         setStatus(false);
 
         break;
@@ -122,14 +121,13 @@ export const ContactForm = () => {
           .then(
             (response) => {
               console.log("SUCCESS!", response.status, response.text);
-              setalertPrompt(true);
+              setAlertMessage("Sent Successfully");
               setStatus(false);
-              setAlertMessage("Sent");
             },
             (err) => {
               console.log("FAILED...", err);
+              setAlertMessage("failed to send Message");
               setStatus(false);
-              setAlertMessage("failed to send");
             }
           );
         break;
@@ -156,7 +154,6 @@ export const ContactForm = () => {
             label="Full Name"
             name="user_name"
             value={formValue.user_name}
-            error={formValidate}
             handleChange={(e) => {
               setFormValue({ ...formValue, user_name: e.target.value });
             }}
