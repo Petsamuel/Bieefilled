@@ -59,7 +59,9 @@ export const InputField = ({
 
 export const ContactForm = () => {
   const [status, setStatus] = useState(null);
-  const [alertMessage, setAlertMessage] = useState(null);
+  const [alertPrompt, setalertPrompt] = useState(null);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [formValidate, setFormValidate] = useState(false);
   const [formValue, setFormValue] = useState({
     user_name: "",
     message: "",
@@ -68,13 +70,14 @@ export const ContactForm = () => {
 
   const refCaptcha = createRef();
   const form = useRef();
+
   useEffect(() => {
     let timeout;
 
     if (status === true || false) {
       // Show the info message for 4 seconds
       timeout = setTimeout(() => {
-        setAlertMessage(null);
+        setalertPrompt(null);
       }, 4000);
     }
 
@@ -95,36 +98,54 @@ export const ContactForm = () => {
       ...formValue,
       "g-recaptcha-response": token,
     };
-    emailjs
-      .send(
-        secret_key.mail_service_id,
-        secret_key.mail_template_id,
-        params,
-        secret_key.mail_public_key
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setAlertMessage(true);
-          setStatus(false);
-        },
-        (err) => {
-          console.log("FAILED...", err);
-          setStatus(false);
-        }
-      );
+    switch (true) {
+      case formValue.user_name === "":
+        setAlertMessage("Fill your Name");
+        setStatus(false);
+
+        break;
+
+      case formValue.user_email === "":
+        setAlertMessage("Fill your email");
+        setStatus(false);
+
+        break;
+
+      default:
+        emailjs
+          .send(
+            secret_key.mail_service_id,
+            secret_key.mail_template_id,
+            params,
+            secret_key.mail_public_key
+          )
+          .then(
+            (response) => {
+              console.log("SUCCESS!", response.status, response.text);
+              setalertPrompt(true);
+              setStatus(false);
+              setAlertMessage("Sent");
+            },
+            (err) => {
+              console.log("FAILED...", err);
+              setStatus(false);
+              setAlertMessage("failed to send");
+            }
+          );
+        break;
+    }
   };
 
   return (
     <>
       <div className={status === null ? "hidden" : "block"}>
-        {alertMessage ? (
+        {alertPrompt ? (
           <div>
-            <AlertMessage message="Sent" alert={true} />
+            <AlertMessage message={alertMessage} alert={true} />
           </div>
         ) : (
           <div>
-            <AlertMessage message="Failed to send" alert={false} />
+            <AlertMessage message={alertMessage} alert={false} />
           </div>
         )}
       </div>
@@ -134,18 +155,19 @@ export const ContactForm = () => {
             type="text"
             label="Full Name"
             name="user_name"
-            value={formValue.name}
+            value={formValue.user_name}
+            error={formValidate}
             handleChange={(e) => {
-              setFormValue({ ...formValue, name: e.target.value });
+              setFormValue({ ...formValue, user_name: e.target.value });
             }}
           />
           <InputField
             type="email"
             label="Email"
             name="user_email"
-            value={formValue.email}
+            value={formValue.user_email}
             handleChange={(e) => {
-              setFormValue({ ...formValue, email: e.target.value });
+              setFormValue({ ...formValue, user_email: e.target.value });
             }}
           />
         </div>
