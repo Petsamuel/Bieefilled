@@ -59,7 +59,7 @@ export const InputField = ({
 
 export const ContactForm = () => {
   const [status, setStatus] = useState(null);
-  const [alertPrompt, setalertPrompt] = useState(null);
+  const [alertPrompt, setAlertPrompt] = useState(null);
   const [alertMessage, setAlertMessage] = useState("");
   const [formValue, setFormValue] = useState({
     user_name: "",
@@ -76,7 +76,7 @@ export const ContactForm = () => {
     if (status === true || false) {
       // Show the info message for 9 seconds
       timeout = setTimeout(() => {
-        setalertPrompt(null);
+        setAlertPrompt(null);
       }, 9000);
     }
 
@@ -121,7 +121,9 @@ export const ContactForm = () => {
           .then(
             (response) => {
               if (response.status === 200) {
+                setAlertPrompt(true);
                 setAlertMessage("Sent SUCCESSFULLY");
+                setStatus(false);
               }
               // console.log("SUCCESS!", response.status, response.text);
             },
