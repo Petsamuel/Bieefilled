@@ -157,11 +157,13 @@ export const Stepper = ({ handleEvent }) => {
         </ol>
       </div>
       {/* mobile stepper */}
-      <div className="lg:hidden md:hidden fixed  w-full bg-[#242424] bg-opacity-50 bottom-0 ">
-        <ol className="flex items-center w-full my-3 ">
+      <div className="lg:hidden md:hidden fixed  w-screen bg-black bottom-0">
+        <ol className="flex items-center w-full my-3 mx-3 ">
           <li
             className={
-              "flex w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer "
+              counter >= 2
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
+                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
             }
             onClick={() => {
               setCounter(1);
@@ -173,9 +175,9 @@ export const Stepper = ({ handleEvent }) => {
           </li>
           <li
             className={
-              counter >= 2
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
-                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
+              counter >= 3
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
+                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
             }
             onClick={() => {
               setCounter(2);
@@ -193,9 +195,9 @@ export const Stepper = ({ handleEvent }) => {
           </li>
           <li
             className={
-              counter >= 3
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
-                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer "
+              counter >= 4
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
+                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer "
             }
             onClick={() => {
               setCounter(3);
