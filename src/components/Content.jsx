@@ -1,6 +1,7 @@
 import Certification from "./Certification";
 import Experience from "./Experience";
 import Reviews from "./Reviews";
+import { Tool } from "./Tools";
 
 function Content({ eventState }) {
   return (
@@ -32,12 +33,10 @@ function Content({ eventState }) {
           skilled speaker, and inventive software creator. I pride myself on my
           reputation in the community by creating accessible websites.
         </p>
+        <div>
+          <Tool />
+        </div>
       </div>
-
-      {/* //TODO: Add Technical Skill Set 
-        //TODO: Logos 
-      
-      */}
 
       <div
         className={

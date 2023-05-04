@@ -207,3 +207,52 @@ export const contactMethods = [
     contact: "Lagos Nigeria",
   },
 ];
+
+export const tools = [
+  { name: "React", svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+  {
+    name: "Python",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+  },
+  {
+    name: "JavaScript",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    svg: "https://raw.githubusercontent.com/wappalyzer/wappalyzer/master/src/drivers/webextension/images/icons/TypeScript.svg",
+  },
+  { name: "PHP", svg: "https://www.vectorlogo.zone/logos/php/php-icon.svg" },
+  {
+    name: "HTML",
+    svg: "https://raw.githubusercontent.com/uiwjs/file-icons/master/icon/html.svg",
+  },
+  {
+    name: "CSS",
+    svg: "https://raw.githubusercontent.com/manuelbieh/logo-file-icons/master/icons/css.svg",
+  },
+  {
+    name: "TailwindCss",
+    svg: "https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/tailwindcss.dark.svg",
+  },
+  {
+    name: "Bootstrap",
+    svg: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg",
+  },
+  {
+    name: "Vite",
+    svg: "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/vitejs.svg",
+  },
+  {
+    name: "Git",
+    svg: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_git2.svg",
+  },
+  {
+    name: "NPM",
+    svg: "https://raw.githubusercontent.com/leungwensen/svg-icon/master/dist/svg/logos/npm.svg",
+  },
+  {
+    name: "VsCode",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+  },
+];
