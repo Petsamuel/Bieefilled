@@ -1,12 +1,12 @@
 import { projects } from "../components/store/data";
 import Card from "../components/Card";
 import GitHubCalendar from "react-github-calendar";
-import { motion } from "framer-motion";
+
 
 function Project() {
   return (
     <>
-      <motion.section className="flex flex-col items-center">
+      <section className="flex flex-col items-center">
         <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  mt-4">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2">
             Projects&nbsp;
@@ -30,7 +30,7 @@ function Project() {
             />
           </div>
         </div>
-      </motion.section>
+      </section>
     </>
   );
 }

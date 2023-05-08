@@ -108,7 +108,7 @@ export const projects = [
   // status- completed:true;  on-going:false; stopped:null;
   {
     image:
-      "http://drive.google.com/uc?export=view&id=14BI93_0YOKHZC1lH4fUb8iLpGXsTRIRo",
+      "https://drive.google.com/uc?export=view&id=14BI93_0YOKHZC1lH4fUb8iLpGXsTRIRo",
     name: "Koinfund",
     year: "Mar 2023 - Present",
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
@@ -119,7 +119,7 @@ export const projects = [
   },
   {
     image:
-      "http://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
+      "https://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
     name: "Gruvly Music",
     year: "Jan 2022 - Present",
     link: "http://gruvlymusic.com/",
@@ -131,7 +131,7 @@ export const projects = [
   },
   {
     image:
-      "http://drive.google.com/uc?export=view&id=1cVzwlSy6WDAB3HxMEhZdxnkgL2vkTKtU",
+      "https://drive.google.com/uc?export=view&id=1cVzwlSy6WDAB3HxMEhZdxnkgL2vkTKtU",
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
     link: "http://varena.app/",

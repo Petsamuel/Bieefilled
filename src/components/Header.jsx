@@ -18,8 +18,8 @@ function Header() {
       <nav
         className={
           updateNavbar
-            ? " w-screen fixed z-50 bg-[#242424] bg-opacity-[0.9]"
-            : " w-screen fixed z-50 "
+            ? " w-screen fixed z-50  bg-opacity-[0.9]  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 shadow-md"
+            : " w-screen fixed "
         }
       >
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">

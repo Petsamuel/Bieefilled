@@ -3,7 +3,7 @@ export const Tool = () => {
   return (
     <>
       <h4 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white mt-4">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2 text-2xl">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2 text-2xl">
           Tech
         </span>
         nology
@@ -14,7 +14,7 @@ export const Tool = () => {
             <div>
               <div key={key} className="my-3">
                 <img src={value.svg} alt="alt" className="w-10 h-10" />
-                <p lassName="py-2">{value.name}</p>
+                <p className="py-2">{value.name}</p>
               </div>
             </div>
           </span>

@@ -2,10 +2,10 @@ import { Review } from "./store/data";
 
 function Reviews() {
   return (
-    <figure class=" relativemax-w-screen-md mx-auto text-left ">
+    <figure className=" relative max-w-screen-md mx-auto text-left ">
       {Review.map((index, key) => (
         <span key={key}>
-          <figure class="relative max-w-screen-md mx-auto text-left py-2">
+          <figure className="relative max-w-screen-md mx-auto text-left py-2">
             <svg
               className="absolute w-6 h-6 mx-auto mb-3 left-0  text-gray-400 dark:text-gray-600"
               viewBox="0 0 24 27"
@@ -22,7 +22,7 @@ function Reviews() {
                 {index.reviews}
               </p>
             </blockquote>
-            <figcaption class="flex items-left justify-left mt-6 space-x-3">
+            <figcaption className="flex items-left justify-left mt-6 space-x-3">
               <img
                 className="w-8 h-8 rounded-full"
                 src={index.image}
@@ -46,7 +46,7 @@ function Reviews() {
       >
         Send{" "}
         <a
-          href="https://www.linkedin.com/recs/give/?senderId=samuel-peters-0746b1216"
+          href="https://www.linkedin.com/recs/give/?senderId=bieefilled"
           className="text-blue-600 hover:underline dark:text-blue-500"
           title="write me a recommendation for my profile!"
         >

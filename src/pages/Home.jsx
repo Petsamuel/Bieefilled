@@ -1,11 +1,11 @@
 import Hero from "../components/Hero";
-import { motion } from "framer-motion";
+
 
 function Home() {
   return (
-    <motion.section>
+    <section>
       <Hero />
-    </motion.section>
+    </section>
   );
 }
 
