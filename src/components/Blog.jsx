@@ -11,7 +11,7 @@ function BlogCard() {
             </span>
           </h1>
 
-          <p className="max-w-lg mx-auto mt-4 text-gray-500">
+          <p className="max-w-lg mx-auto mt-4 text-white">
             Latest Blog Post on technology trends
           </p>
         </div>

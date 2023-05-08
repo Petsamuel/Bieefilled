@@ -60,7 +60,7 @@ function Header() {
             className={
               toggle
                 ? "items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-                : "items-center justify-between  w-full md:flex md:w-auto md:order-1 bg-[#242424]"
+                : "items-center justify-between  w-full md:flex md:w-auto md:order-1 g-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 shadow-md bg-black"
             }
           >
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
