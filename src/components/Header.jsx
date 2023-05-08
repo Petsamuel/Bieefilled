@@ -19,7 +19,7 @@ function Header() {
         className={
           updateNavbar
             ? " w-screen fixed z-50  bg-opacity-[0.9]  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 shadow-md"
-            : " w-screen fixed "
+            : " w-screen fixed bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 shadow-md z-50"
         }
       >
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
@@ -59,8 +59,8 @@ function Header() {
             id="mega-menu"
             className={
               toggle
-                ? "items-center justify-between hidden w-full md:flex md:w-auto md:order-1 backdrop-blur-lg bg-opacity-0 shadow-md bg-black"
-                : "items-center justify-between  w-full md:flex md:w-auto md:order-1 g-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 shadow-md bg-black"
+                ? "items-center justify-between hidden w-full md:flex md:w-auto md:order-1 backdrop-blur-lg bg-opacity-0 shadow-md bg-black z-50"
+                : "items-center justify-between  w-full md:flex md:w-auto md:order-1 g-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 shadow-md bg-black z-50"
             }
           >
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">

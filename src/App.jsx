@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { Fragment } from "react";
+// import { AnimatePresence } from "framer-motion";
 import { Layout } from "./components/Layout";
 import { Blog } from "./pages/Blog";
 import Error from "./components/Error";
@@ -12,7 +13,7 @@ import "./index.css";
 
 export const App = () => {
   return (
-    <div className="App">
+    <Fragment>
       <BrowserRouter>
         <Layout>
           <Routes>
@@ -25,6 +26,6 @@ export const App = () => {
           </Routes>
         </Layout>
       </BrowserRouter>
-    </div>
+    </Fragment>
   );
 };

@@ -9,13 +9,13 @@ function About() {
     setEventState(num);
   }
   return (
-    <section >
+    <section>
       <div className="pt-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-x-8 grid-cols-1 ">
-        <div className=" lg:items-end lg:col-span-2 text-right ">
+        <div className=" lg:items-end lg:col-span-2 text-right z-auto">
           <Content eventState={eventState} />
         </div>
 
-        <div >
+        <div>
           <Stepper handleEvent={handleEvent} />
         </div>
       </div>

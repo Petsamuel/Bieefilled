@@ -1,7 +1,7 @@
 function Card({ data }) {
   // console.log(data.name);
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 my-2">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 my-2 z-auto">
       {data.map((index, key) => {
         return (
           <>

@@ -210,7 +210,7 @@ export const ContactForm = () => {
 export const NewsletterForm = () => {
   return (
     <>
-      <div class="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50">
+      <div class="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50 z-auto">
         <form action="#" class="flex flex-col items-center w-full md:flex-row">
           <label
             for="email"
