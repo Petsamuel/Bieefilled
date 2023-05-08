@@ -59,7 +59,7 @@ function Header() {
             id="mega-menu"
             className={
               toggle
-                ? "items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                ? "items-center justify-between hidden w-full md:flex md:w-auto md:order-1 backdrop-blur-lg bg-opacity-0 shadow-md bg-black"
                 : "items-center justify-between  w-full md:flex md:w-auto md:order-1 g-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 shadow-md bg-black"
             }
           >
