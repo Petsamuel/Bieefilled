@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, createRef } from "react";
+import { useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { AlertMessage } from "./Alerts";
@@ -61,6 +62,7 @@ export const ContactForm = () => {
   const [status, setStatus] = useState(null);
   const [alertPrompt, setAlertPrompt] = useState(null);
   const [alertMessage, setAlertMessage] = useState("");
+  const navigate = useNavigate();
   const [formValue, setFormValue] = useState({
     user_name: "",
     message: "",
@@ -130,7 +132,7 @@ export const ContactForm = () => {
                 setAlertPrompt(true);
                 setAlertMessage("Sent SUCCESSFULLY");
                 setStatus(false);
-                setFormValue({});
+                navigate("/");
               }
               // console.log("SUCCESS!", response.status, response.text);
             },
@@ -210,7 +212,7 @@ export const ContactForm = () => {
 export const NewsletterForm = () => {
   return (
     <>
-      <div class="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50 z-auto">
+      <div class="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50 ">
         <form action="#" class="flex flex-col items-center w-full md:flex-row">
           <label
             for="email"
