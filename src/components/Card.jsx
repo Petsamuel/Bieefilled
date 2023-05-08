@@ -2,12 +2,12 @@ function Card({ data }) {
   // console.log(data.name);
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 my-2">
-      {data.map((index) => {
+      {data.map((index, key) => {
         return (
           <>
             <div
               className="max-w-sm p-1 rounded-lg shadow-md hover:shadow-lg border-1  bg-gradient-to-r from-purple-600 to-blue-500  hover:first-line:bg-gradient-to-l hover:from-white hover:to-fuchsia-500 relative"
-              key={index}
+              key={key}
             >
               <div className="bg-black w-full h-full p-4 rounded-md">
                 {!index.institution ? (
@@ -16,15 +16,12 @@ function Card({ data }) {
                   <img
                     src={index.image}
                     alt="svg"
-                    className="rounded-t-lg pb-6"
+                    className="rounded-t-lg pb-6 w-auto"
                   />
                 )}
-
-                <a href={index.links}>
-                  <h5 className="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white">
-                    {index.name}
-                  </h5>
-                </a>
+                <h5 className="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white cursor-pointer">
+                  <a href={index.link}>{index.name}</a>
+                </h5>
                 <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 text-sm">
                   {index.description ? index.description : "Loading..."}
                 </p>
@@ -70,7 +67,7 @@ function Card({ data }) {
                 <span className="inline-flex items-center text-inherit hover:underline">
                   {index.institution ? (
                     <a
-                      href={index.links}
+                      href="https://github.com/petsamuel"
                       className="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
                     >
                       <svg
