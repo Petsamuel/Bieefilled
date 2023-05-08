@@ -26,20 +26,22 @@ function Content({ eventState }) {
           expert in technologies, and coding for the creation of dependable,
           user-friendly systems. I'm a talented team player who encourages,
           teaches, and leads a team of experts to develop softwares, and track
-          changes effectively.
-          <p className="py-2">
-            In conclusion If you're seeking a creative developer with the
-            ability to customize software to your company's specific needs,
-            enhance its unique features, and drive its success, look no further.
-            As a skilled speaker and innovative software creator, I take pride
-            in my reputation for creating accessible websites that meet the
-            highest standards of excellence. With a proven track record of
-            developing imaginative software solutions, I'm confident that I have
-            the expertise and experience to help your company achieve its goals.
-            So if you want a developer who is committed to delivering results
-            and going above and beyond for their clients, I'm the right person
-            for the job.
-          </p>
+          changes effectively. However If you're seeking a creative
+          developer with the ability to customize software to your company's
+          specific needs, enhance its unique features, and drive its success,
+          look no further.
+          <div className="my-1 space-y-4">
+            {" "}
+            <br />
+          </div>
+          Conclusively as a skilled speaker and innovative software creator, I
+          take pride in my reputation for creating accessible websites that meet
+          the highest standards of excellence. With a proven track record of
+          developing imaginative software solutions, I'm confident that I have
+          the expertise and experience to help your company achieve its goals.
+          So if you want a developer who is committed to delivering results and
+          going above and beyond for their clients, I'm the right person for the
+          job.
         </span>
 
         <div>
