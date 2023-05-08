@@ -13,7 +13,7 @@ function Content({ eventState }) {
             : "hidden"
         }
       >
-        <h1 className="py-2 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white  ">
+        <h1 className="py-2 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white z-auto ">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-gray-200">
             Personal{" "}
           </span>
@@ -26,10 +26,10 @@ function Content({ eventState }) {
           expert in technologies, and coding for the creation of dependable,
           user-friendly systems. I'm a talented team player who encourages,
           teaches, and leads a team of experts to develop softwares, and track
-          changes effectively. However If you're seeking a creative
-          developer with the ability to customize software to your company's
-          specific needs, enhance its unique features, and drive its success,
-          look no further.
+          changes effectively. However If you're seeking a creative developer
+          with the ability to customize software to your company's specific
+          needs, enhance its unique features, and drive its success, look no
+          further.
           <div className="my-1 space-y-4">
             {" "}
             <br />
