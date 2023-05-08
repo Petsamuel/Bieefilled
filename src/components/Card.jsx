@@ -16,7 +16,7 @@ function Card({ data }) {
                   <img
                     src={index.image}
                     alt="svg"
-                    className="rounded-t-lg pb-6 w-auto"
+                    className="rounded-t-lg pb-6 w-full h-auto"
                   />
                 )}
                 <h5 className="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white cursor-pointer">
