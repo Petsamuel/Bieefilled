@@ -15,7 +15,7 @@ function Experience() {
             <h6 className="text-sm font-semibold  dark:text-white text-white">
               {index.title}
             </h6>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 text-base font-normal text-gray-300 ">
               {index.description}
             </p>
           </li>

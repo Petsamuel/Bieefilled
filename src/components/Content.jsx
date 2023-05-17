@@ -5,7 +5,7 @@ import { Tool } from "./Tools";
 
 function Content({ eventState }) {
   return (
-    <section className=" text-gray-500 pb-16">
+    <section className=" text-white pb-16">
       <div
         className={
           eventState === 1

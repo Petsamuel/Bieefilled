@@ -5,7 +5,7 @@ function Socials() {
     <div className="flex py-4 space-x-6 sm:mt-0 leading-normal flex-center text-center">
       <a
         href="https://facebook.com/sirmhuel.peter"
-        className=" text-gray-500 hover:text-blue-600  "
+        className=" text-gray-500 hover:text-blue-600"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path

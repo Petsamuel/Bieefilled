@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 export const Stepper = ({ handleEvent }) => {
-  // const [status, setStatus]=useState()
+ 
   const [counter, setCounter] = useState(1);
   handleEvent(counter);
   return (
     <div className="fixed z-40">
       <div className="hidden  md:block lg:block ">
-        <ol className="relative text-gray-500 border-l border-gray-200 dark:border-gray-700 dark:text-gray-400">
+        <ol className="relative text-gray-500 border-l border-gray-200 ">
           <li
             className={
               counter == 1
@@ -18,10 +18,10 @@ export const Stepper = ({ handleEvent }) => {
               setCounter(1);
             }}
           >
-            <span className="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+            <span className="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full -left-4 ring-4 ring-white  ">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 text-white dark:text-white"
+                className="w-5 h-5 text-white "
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,16 +49,16 @@ export const Stepper = ({ handleEvent }) => {
             <span
               className={
                 counter >= 2
-                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900"
-                  : "absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white "
+                  : "absolute flex items-center justify-center w-8 h-8 bg-black rounded-full -left-4 ring-4 ring-white "
               }
             >
               <svg
                 aria-hidden="true"
                 className={
                   counter >= 2
-                    ? "w-5 h-5 text-white dark:text-white"
-                    : "w-5 h-5 text-gray-500 dark:text-gray-400"
+                    ? "w-5 h-5 text-white "
+                    : "w-5 h-5 text-gray-500 "
                 }
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -89,16 +89,16 @@ export const Stepper = ({ handleEvent }) => {
             <span
               className={
                 counter >= 3
-                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900"
-                  : "absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white "
+                  : "absolute flex items-center justify-center w-8 h-8 bg-black rounded-full -left-4 ring-4 ring-white "
               }
             >
               <svg
                 aria-hidden="true"
                 className={
                   counter >= 3
-                    ? "w-5 h-5 text-white dark:text-white"
-                    : "w-5 h-5 text-gray-500 dark:text-gray-400"
+                    ? "w-5 h-5 text-white "
+                    : "w-5 h-5 text-gray-500 "
                 }
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -128,16 +128,16 @@ export const Stepper = ({ handleEvent }) => {
             <span
               className={
                 counter == 4
-                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900"
-                  : "absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -left-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+                  ? "bg-gradient-to-br from-purple-600 to-blue-500 absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-4 ring-white "
+                  : "absolute flex items-center justify-center w-8 h-8 bg-black rounded-full -left-4 ring-4 ring-white "
               }
             >
               <svg
                 aria-hidden="true"
                 className={
                   counter == 4
-                    ? "w-5 h-5 text-white dark:text-white"
-                    : "w-5 h-5 text-gray-500 dark:text-gray-400"
+                    ? "w-5 h-5 text-white "
+                    : "w-5 h-5 text-gray-500 "
                 }
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -162,22 +162,22 @@ export const Stepper = ({ handleEvent }) => {
           <li
             className={
               counter >= 2
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
-                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
+                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
             }
             onClick={() => {
               setCounter(1);
             }}
           >
-            <span class="flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+            <span class="flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0">
               1
             </span>
           </li>
           <li
             className={
               counter >= 3
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
-                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer"
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
+                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
             }
             onClick={() => {
               setCounter(2);
@@ -186,8 +186,8 @@ export const Stepper = ({ handleEvent }) => {
             <span
               className={
                 counter >= 2
-                  ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
-                  : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
+                  ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0"
+                  : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0"
               }
             >
               2
@@ -196,8 +196,8 @@ export const Stepper = ({ handleEvent }) => {
           <li
             className={
               counter >= 4
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-blue-800 cursor-pointer"
-                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700 cursor-pointer "
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
+                : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer "
             }
             onClick={() => {
               setCounter(3);
@@ -206,8 +206,8 @@ export const Stepper = ({ handleEvent }) => {
             <span
               className={
                 counter >= 3
-                  ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
-                  : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
+                  ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0"
+                  : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0"
               }
             >
               3
@@ -220,8 +220,8 @@ export const Stepper = ({ handleEvent }) => {
             <span
               className={
                 counter === 4
-                  ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
-                  : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500"
+                  ? "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0"
+                  : "flex items-center justify-center w-5 h-5 mr-2 text-xs border border-blue-600 rounded-full shrink-0"
               }
             >
               4
