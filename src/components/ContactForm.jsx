@@ -212,11 +212,11 @@ export const ContactForm = () => {
 export const NewsletterForm = () => {
   return (
     <>
-      <div class="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50 ">
-        <form action="#" class="flex flex-col items-center w-full md:flex-row">
+      <div className="flex items-center flex-shrink-0 w-full mx-auto sm:w-auto fixed bottom-0 left-0 z-50 dark:bg-gray-700 dark:border-gray-600 bg-opacity-50 ">
+        <form action="#" className="flex flex-col items-center w-full md:flex-row">
           <label
             for="email"
-            class="flex-shrink-0 mb-2 mr-auto text-sm font-medium text-gray-500 md:mb-0 md:mr-4 dark:text-gray-400 md:m-0"
+            className="flex-shrink-0 mb-2 mr-auto text-sm font-medium text-gray-500 md:mb-0 md:mr-4 dark:text-gray-400 md:m-0"
           >
             Sign up for our newsletter
           </label>
@@ -230,7 +230,7 @@ export const NewsletterForm = () => {
           />
           <button
             type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Subscribe
           </button>

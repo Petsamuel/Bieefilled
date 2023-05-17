@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "./Modal";
+import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Socials from "./Socials";
 import smile from "../assets/smile.svg";
@@ -9,7 +10,7 @@ import left from "../assets/left.svg";
 
 function Hero() {
   const [imgChange, setImgChange] = useState(smiles);
-  const [serveModal, setServeModal] = useState(false);
+  const navigate = useNavigate()
 
   const checker = (e) => {
     var y = e.movementY;
@@ -31,7 +32,7 @@ function Hero() {
   return (
     <>
       <section className="place-content-center">
-        <div className="lg:pt-20 flex lg:flex-row flex-col justify-center items-center px-16">
+        <div className="lg:pt-20 flex lg:flex-row flex-col justify-center items-center px-16 lg:text-justify">
           <div
             className="flex-auto"
             onMouseMove={(e) => {
@@ -46,13 +47,13 @@ function Hero() {
               }
             />
           </div>
-          <div className="lg:w-2/4 dark:text-white flex-auto ">
+          <div className="lg:w-2/4 text-white flex-auto items-center text-center lg:text-justify">
             <span className="text-white font-[Poppins]  text-2xl font-extrabold  md:text-2xl lg:text-5xl leading-loose">
               Samuel Peters
             </span>{" "}
             <br />
-            <span className="font-[Poppins]  lg:text-3xl flex  sm:text-2xl md:text-2xl items-center">
-              <span className="">I'm&nbsp;</span>
+            <span className="font-[Poppins]  lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
+              <span className="hidden lg:inline">I'm&nbsp;</span>
               <span className=" px-2 bg-gradient-to-r from-purple-600 to-blue-500  sm:text-sm">
                 <Typewriter
                   options={{ loop: true }}
@@ -74,28 +75,25 @@ function Hero() {
                 />
               </span>
             </span>
-            <div className="text-sm font-normal text-gray-500 lg:text-xl dark:text-gray-400 lg:w-4/5 py-4 place-items-center leading-normal ">
+            <div className="text-sm font-normal text-gray-500 lg:text-xl  lg:w-4/5 py-4 leading-normal lg:text-left text-center w-96 flex  justify-center flex-col items-center lg:items-start">
               I'm a skilled software engineer creating efficient and
               user-friendly solutions to enhance productivity.
               <Socials />
             </div>
             <div>
-              <button
+              <a
                 className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500bg-[#242424]bg-[#242424]bg-[#242424]bg-[#242424]focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-sm"
                 onMouseEnter={() => setImgChange(smile)}
                 onMouseLeave={() => setImgChange(smiles)}
-                onClick={() => {
-                  setServeModal(!serveModal);
-                }}
+                href={"/contact"}
               >
-                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#242424] dark:bg-[#242424] rounded-md group-hover:bg-opacity-0 text-white">
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#242424] dark:bg-[#242424] rounded-md group-hover:bg-opacity-0 text-white justify">
                   RESUME
                 </span>
-              </button>
+              </a>
               <a
                 href="/contact"
-                className="relative inline-flex items-center ju
-              stify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-sm"
+                className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-sm"
               >
                 <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#242424] dark:bg-[#242424] rounded-md group-hover:bg-opacity-0 text-white">
                   QUOTES
@@ -105,9 +103,7 @@ function Hero() {
           </div>
         </div>
         {/* modal */}
-        <div className="absolute top-0 w-full">
-          {serveModal ? <Modal message="RESUME" /> : ""}
-        </div>
+       
       </section>
     </>
   );

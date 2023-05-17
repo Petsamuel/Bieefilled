@@ -19,10 +19,10 @@ function Card({ data }) {
                     className="rounded-t-lg pb-6 w-full h-auto"
                   />
                 )}
-                <h5 className="mb-2 text-1xl font-semibold tracking-tight  dark:text-white text-white cursor-pointer">
+                <h5 className="mb-2 text-1xl font-semibold tracking-tight   text-white cursor-pointer">
                   <a href={index.link}>{index.name}</a>
                 </h5>
-                <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 text-sm">
+                <p className="mb-3 font-normal text-gray-500  text-sm">
                   {index.description ? index.description : "Loading..."}
                 </p>
                 <div className="absolute top-3 right-3">
@@ -54,7 +54,7 @@ function Card({ data }) {
                       {index.stack.map((index, key) => (
                         <span
                           key={key}
-                          className="bg-gradient-to-l from-sky-500 to-fuchsia-500  text-[#f2f2f2] text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full  shadow-sm dark:text-[#f2f2f2] cursor-pointer my-4"
+                          className="bg-gradient-to-l from-sky-500 to-fuchsia-500  text-[#f2f2f2] text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full  shadow-sm  cursor-pointer my-4"
                         >
                           {index}
                         </span>
@@ -68,7 +68,7 @@ function Card({ data }) {
                   {index.institution ? (
                     <a
                       href="https://github.com/petsamuel"
-                      className="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
+                      className="text-gray-500 hover:text-gray-900  cursor-pointer"
                     >
                       <svg
                         className="w-5 h-5"
@@ -88,7 +88,7 @@ function Card({ data }) {
                   )}
                   <a
                     href={index.link}
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer"
+                    className="text-gray-500 hover:text-gray-900 cursor-pointer"
                   >
                     <svg
                       className="w-5 h-5 ml-2"
