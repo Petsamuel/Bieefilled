@@ -157,12 +157,12 @@ export const Stepper = ({ handleEvent }) => {
         </ol>
       </div>
       {/* mobile stepper */}
-      <div className="lg:hidden md:hidden fixed  w-screen bg-black bottom-0">
+      <div className="lg:hidden md:hidden fixed  w-screen bg-black bottom-0 text-white">
         <ol className="flex items-center w-full my-3 mx-3 ">
           <li
             className={
               counter >= 2
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-600 after:border-4 after:inline-block  cursor-pointer "
                 : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
             }
             onClick={() => {
@@ -176,7 +176,7 @@ export const Stepper = ({ handleEvent }) => {
           <li
             className={
               counter >= 3
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-600 after:border-4 after:inline-block  cursor-pointer"
                 : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
             }
             onClick={() => {
@@ -196,7 +196,7 @@ export const Stepper = ({ handleEvent }) => {
           <li
             className={
               counter >= 4
-                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer"
+                ? "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-600 after:border-4 after:inline-block  cursor-pointer"
                 : "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block  cursor-pointer "
             }
             onClick={() => {
