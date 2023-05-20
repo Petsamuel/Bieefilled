@@ -24,4 +24,12 @@ export const Post = [
       "Are you tired of the plain and uninformative 404 error pages on your website? we'll guide you through the process of creating a custom 404 error page using HTML and CSS...",
     href: "https://bieefilled.medium.com/designing-html-error-page-dd68dd38045f",
   },
+  {
+    title: "How to Use Robots.txt to Improve Your Website's SEO",
+    featured_img:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--usx_pbxO--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2xb85q4h4skk69kcnjx0.jpg",
+    description:
+      "Have you ever wondered how search engines decide what content to show in their search results? Well, websites are regularly scanned and indexed by search engine crawlers...",
+    href: "https://dev.to/bieefilled/how-to-use-robotstxt-to-improve-your-websites-seo-57pc",
+  },
 ];

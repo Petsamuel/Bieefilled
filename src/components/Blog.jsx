@@ -52,7 +52,7 @@ function BlogCard() {
                 href={value.href}
                 className="inline-block mt-4 text-blue-500 underline hover:text-blue-400"
               >
-                Read more
+                Read more ➳
               </a>
             </div>
           ))}
