@@ -23,7 +23,8 @@ function Card({ data }) {
                   <a href={index.link}>{index.name}</a>
                 </h5>
                 <p className="mb-3 font-normal text-gray-500  text-sm">
-                  {index.description ? index.description : "Loading..."}
+                  {index.description ?? index.description}
+                  {index.year ?? index.year}
                 </p>
                 <div className="absolute top-3 right-3">
                   {index.status === true ? (

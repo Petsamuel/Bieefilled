@@ -30,7 +30,7 @@ export const certification = [
   {
     name: "Django Development",
     svg: `${zuri}`,
-    year: "",
+    year: "2022",
     link: "https://drive.google.com/file/d/1GYca4gIT4f-12RL4VOjAtfGfnN3Kfk7Z/view?usp=drivesdk",
   },
   {
@@ -84,7 +84,7 @@ export const Experiences = [
 export const Review = [
   {
     image:
-      "https://media.licdn.com/dms/image/C4D03AQEcFHoJBYTstg/profile-displayphoto-shrink_100_100/0/1652963174609?e=1686787200&v=beta&t=HBuvzD9AbX_BR7FV0yxp9iapW43cg_cyzAR80ie5-QQ",
+      "https://media.licdn.com/dms/image/D4D03AQGcGZbBNKyvaA/profile-displayphoto-shrink_100_100/0/1684077068929?e=1691625600&v=beta&t=OsxUVlknNpkFq7oYHCZNhzRnhyz6IOL4qTnzyP1vu3o",
     name: "Michael Peters",
     date: "Apiril 18 2022",
     title: "Head Automation and Innovation",
