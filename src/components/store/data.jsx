@@ -84,9 +84,9 @@ export const Experiences = [
 export const Review = [
   {
     image:
-      "https://media.licdn.com/dms/image/D4D03AQGcGZbBNKyvaA/profile-displayphoto-shrink_100_100/0/1684077068929?e=1691625600&v=beta&t=OsxUVlknNpkFq7oYHCZNhzRnhyz6IOL4qTnzyP1vu3o",
+      "https://media.licdn.com/dms/image/D4D03AQGcGZbBNKyvaA/profile-displayphoto-shrink_100_100/0/1684077070008?e=1706745600&v=beta&t=T7Fp35Wigf2qpiUo4MYU8vbhbU6SUnnjHk3xSfRJu1E",
     name: "Michael Peters",
-    date: "Apiril 18 2022",
+    date: "April 18 2022",
     title: "Head Automation and Innovation",
     reviews:
       "Samuel is brilliant website designer. He demonstrates brilliance and customer focused approach in delivering powerful Web presence and SEO for businesses. I have watched him grow over the years into a goto person for website and design delivery and he is still learning.",
@@ -94,13 +94,25 @@ export const Review = [
   },
   {
     image:
-      "https://media.licdn.com/dms/image/C4D03AQHEApS2e4_0pw/profile-displayphoto-shrink_100_100/0/1651503985110?e=1686787200&v=beta&t=8Ii2mDJswhMr4Cwi9U61i73BtRgmDpNP_Nxa02e3mJU",
-    name: "Benjamin Ikechi",
-    date: "October 6 2021",
-    title: "Senior WebDeveloper Bingreach Digitals",
+      "https://media.licdn.com/dms/image/D4D03AQHshLmDNupiVA/profile-displayphoto-shrink_100_100/0/1676753431128?e=1706745600&v=beta&t=i9sIS9wIPTioDeGWNIlxNs38x1_SieZYykktL8fwSWc",
+    name: "Enoch Afolabi",
+    date: "November 30 2023",
+    title: `Growth Manager at Moringa School | Business Development | Growth Management | Partnerships Management`,
     reviews:
-      "Samuel has been working with me for the past 4 years now, i happy to say he thought me everything i know. And i strongly reccommend you to work with him. 5 stars to him.",
-    link: "https://www.linkedin.com/in/benjamin-ikechi/",
+      `Samuel Peter is a great web developer who delivers exceptional results. Really skilled, and his creative approach has resulted in websites that exceed expectations. 
+      He is truly professional, responsive to feedback, and it was a pleasure to work with.
+      I highly recommend Samuel Peter for any web development project.`,
+    link: "https://www.linkedin.com/in/enochafolabi/",
+  },
+  {
+    image:
+      "https://media.licdn.com/dms/image/C4D03AQEzId2tDzz7Qw/profile-displayphoto-shrink_100_100/0/1661952121356?e=1706745600&v=beta&t=AO4hUEThz_N6APnmLNQQx-E6ibGuLgkSIM6RZr3YsHI",
+    name: "Stanley Obayagbo",
+    date: "November 30 2023",
+    title: `Programs & Grants Operations | Risk & Quality Management | Project Management| Data Analyst| Program Coordinator| Agile-Scrum`,
+    reviews:
+      `Samuel is one of the most innovative IT personnel I've worked with. highly skilled in both backend and front end development, his creativity stood out during our time together at H.Pierson.`,
+    link: "https://www.linkedin.com/in/stanley-obayagbo-058ab497",
   },
 ];
 

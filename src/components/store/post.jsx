@@ -32,4 +32,20 @@ export const Post = [
       "Have you ever wondered how search engines decide what content to show in their search results? Well, websites are regularly scanned and indexed by search engine crawlers...",
     href: "https://dev.to/bieefilled/how-to-use-robotstxt-to-improve-your-websites-seo-57pc",
   },
+  {
+    title: "Basic and Applied Research: A Friendly Guild",
+    featured_img:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--3YVQvRRj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ifu4yrlmv3e465c2duu.png",
+    description:
+      "Ever wondered how the world around us works? Or how we can solve some of the biggest challenges facing humanity today? The answers to these questions lie in the world of research...",
+    href: "https://dev.to/bieefilled/basic-and-applied-research-a-friendly-guild-484l",
+  },
+  {
+    title: "Building a Simple JQuery Carousel",
+    featured_img:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--jXZ1s3rk--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ucme3f6h3uaautiy7glf.png",
+    description:
+      "Carousels also known as sliders or slideshows, are a popular way to display multiple images or content in a compact and visually appealing manner on a blog post...",
+    href: "https://dev.to/bieefilled/building-a-simple-jquery-carousel-1db7",
+  },
 ];
