@@ -133,13 +133,13 @@ export const projects = [
     image:
       "https://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
     name: "Gruvly Music",
-    year: "Jan 2022 - Present",
-    link: "http://gruvlymusic.com/",
+    year: "Jan 2022 - October 2023",
+    link: "bieefilled.vercel.app",
     institution: "Private",
     description:
       "Gruvly Music: Platform designed for forward-looking music musical talents...",
-    stack: ["Wordpress", "Php", "Sql", "Api"],
-    status: true,
+    stack: ["Wordpress CMS", "Php", "Sql", "Api"],
+    status: false,
   },
   {
     image:
@@ -151,7 +151,19 @@ export const projects = [
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React", "Matter.js", "Kia Wallet", "Node.js"],
-    status: null,
+    status: false,
+  },
+  {
+    image:
+      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+    name: "League of Profession winning 2024",
+    year: "Nov-2023",
+    link: "http://lopwin.com.ng",
+    institution: "Private",
+    description:
+      "an event planning landing page built with WordPress CMS...",
+      stack: ["Wordpress CMS", "Php", "Sql", "Api", "ConvertKit"],
+    status: false,
   },
 ];
 
@@ -173,7 +185,7 @@ export const contactMethods = [
         />
       </svg>
     ),
-    contact: "bieefilled.netlify.app",
+    contact: "bieefilled.Vercel.app",
   },
   {
     icon: (
