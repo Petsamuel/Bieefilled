@@ -4,9 +4,9 @@ import jm from "../../assets/jm.svg";
 import { BsPuzzle } from "react-icons/bs";
 import { TbWritingSign } from "react-icons/tb";
 import { GrAnalytics } from "react-icons/gr";
-import { RiOpenSourceFill } from "react-icons/ri";
-import { SiLinkedin, SiOpensourceinitiative, } from "react-icons/si";
-import { FaSquareXTwitter, FaMedium, FaDev } from "react-icons/fa6";
+// import { SiOpensourceinitiative, } from "react-icons/si";
+import { RiOpenSourceLine } from "react-icons/ri";
+import { FaXTwitter, FaMedium, FaDev, FaLinkedinIn } from "react-icons/fa6";
 
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
@@ -24,19 +24,25 @@ export const secret_key = {
 export const socials = [
   {
     name: "LinkedIn",
-    icon: <SiLinkedin />
+    icon: <FaLinkedinIn color="#0072b1" />,
+    link: "https://linkedin.com/in/bieefilled"
   },
   {
     name: "Twitter",
-    icon: <FaSquareXTwitter />
+    icon: <FaXTwitter color="#000000" />,
+    link: "https://twitter.com/bieefilled"
+
   },
   {
     name: "Medium",
-    icon: <FaMedium />
+    icon: <FaMedium color="#000000" />,
+    link: "https://medium.com/bieefilled"
   },
   {
-    name: "DevTo",
-    icon: <FaDev />
+    name: "Dev To",
+    icon: <FaDev color="#000000" />,
+
+    link: "https://devto.com/bieefilled"
   },
 
 
@@ -352,19 +358,19 @@ My technical skills, interpersonal skills, and passion for innovation and proble
 
 export const Stack = [{
   name: "Software Engineer",
-  icon: <BsPuzzle />,
+  icon: <BsPuzzle color="#57518b" />,
 },
 {
   name: "Technical Writter",
-  icon: <TbWritingSign />,
+  icon: <TbWritingSign color="#679d7f" />,
 },
 {
   name: "Freelance Analyst",
-  icon: <GrAnalytics />,
+  icon: <GrAnalytics color="#ffb170" />,
 },
 {
-  name: "Open Source",
-  icon: [<SiOpensourceinitiative />],
+  name: "Open Source Dev.",
+  icon: [<RiOpenSourceLine color="#da9797" />],
 },
 ]
 
