@@ -10,21 +10,22 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 
 import "./index.css";
+import { Index } from "./Rebrand/pages/Index";
 
 export const App = () => {
   return (
     <Fragment>
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="*" element={<Error />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Project />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+
       </BrowserRouter>
     </Fragment>
   );

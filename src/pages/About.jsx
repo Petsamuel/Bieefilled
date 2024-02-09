@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Stepper } from "../components/Stepper";
 import Content from "../components/Content";
+import Header from "../components/Header";
 
 function About() {
   const [eventState, setEventState] = useState(1);
@@ -9,7 +10,8 @@ function About() {
     setEventState(num);
   }
   return (
-    <section>
+    <section className="bg-black h-screen">
+      <Header />
       <div className="pt-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-x-8 grid-cols-1 ">
         <div className=" lg:items-end lg:col-span-2 text-right z-auto">
           <Content eventState={eventState} />

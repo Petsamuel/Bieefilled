@@ -5,6 +5,7 @@ import { Stacks } from "../components/Stacks";
 import { About, Experiences, projects } from "../../components/store/data";
 import { Post } from "../../components/store/post";
 import { FaExternalLinkAlt } from "react-icons/fa";
+// import { Modal } from "../components/modal";
 
 
 
@@ -43,7 +44,7 @@ export const Index = () => {
                             }}
                             type="button"
                             value="Readmore..."
-                                className="cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"
+                            className="cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"
                         />
                     )}
                 </section>
@@ -88,10 +89,11 @@ export const Index = () => {
                         ))}
                     </div>
                 </section>
-                <section id="Recommendation"></section>
+                {/* <section id="Recommendation"></section> */}
 
 
             </main>
+            {/* <Modal/> */}
             <footer mt-5>
                 <Footer />
             </footer>

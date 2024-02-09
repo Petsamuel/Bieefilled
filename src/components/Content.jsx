@@ -20,28 +20,28 @@ function Content({ eventState }) {
           Info
         </h1>
         <span className="text-sm">
-          Hello! My Name is Samuel Peters a competent Software Engineer with a
-          strong desire to create efficient, user-friendly solutions that
-          increase the productivity and effectiveness of organizations. An
-          expert in technologies, and coding for the creation of dependable,
-          user-friendly systems. I'm a talented team player who encourages,
-          teaches, and leads a team of experts to develop softwares, and track
-          changes effectively. However If you're seeking a creative developer
-          with the ability to customize software to your company's specific
-          needs, enhance its unique features, and drive its success, look no
-          further.
+          <p>Hello! My Name is Samuel Peters a competent Software Engineer with a
+            strong desire to create efficient, user-friendly solutions that
+            increase the productivity and effectiveness of organizations. An
+            expert in technologies, and coding for the creation of dependable,
+            user-friendly systems. I'm a talented team player who encourages,
+            teaches, and leads a team of experts to develop softwares, and track
+            changes effectively. However If you're seeking a creative developer
+            with the ability to customize software to your company's specific
+            needs, enhance its unique features, and drive its success, look no
+            further.</p>
           <div className="my-1 space-y-4">
             {" "}
             <br />
           </div>
-          Conclusively as a skilled speaker and innovative software creator, I
-          take pride in my reputation for creating accessible websites that meet
-          the highest standards of excellence. With a proven track record of
-          developing imaginative software solutions, I'm confident that I have
-          the expertise and experience to help your company achieve its goals.
-          So if you want a developer who is committed to delivering results and
-          going above and beyond for their clients, I'm the right person for the
-          job.
+          <p>Conclusively as a skilled speaker and innovative software creator, I
+            take pride in my reputation for creating accessible websites that meet
+            the highest standards of excellence. With a proven track record of
+            developing imaginative software solutions, I'm confident that I have
+            the expertise and experience to help your company achieve its goals.
+            So if you want a developer who is committed to delivering results and
+            going above and beyond for their clients, I'm the right person for the
+            job.</p>
         </span>
 
         <div>

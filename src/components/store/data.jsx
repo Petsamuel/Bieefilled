@@ -1,6 +1,13 @@
 import sololearn from "../../assets/sololearn.svg";
 import zuri from "../../assets/zuri.svg";
 import jm from "../../assets/jm.svg";
+import { BsPuzzle } from "react-icons/bs";
+import { TbWritingSign } from "react-icons/tb";
+import { GrAnalytics } from "react-icons/gr";
+import { RiOpenSourceFill } from "react-icons/ri";
+import { SiLinkedin, } from "react-icons/si";
+import { FaSquareXTwitter, FaMedium, FaDev } from "react-icons/fa6";
+
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
 const template_id = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID;
@@ -14,6 +21,26 @@ export const secret_key = {
   reCAPTCHA: reCAPTCHA_site_key,
 };
 
+export const socials = [
+  {
+    name: "LinkedIn",
+    icon: <SiLinkedin />
+  },
+  {
+    name: "Twitter",
+    icon: <FaSquareXTwitter />
+  },
+  {
+    name: "Medium",
+    icon: <FaMedium />
+  },
+  {
+    name: "DevTo",
+    icon: <FaDev />
+  },
+
+
+]
 export const certification = [
   {
     name: "REACT + REDUX Certification",
@@ -51,7 +78,7 @@ export const Experiences = [
     institution: "HNG Internship · Internship",
     date: "Oct-2020 - Dec-2022",
     title: "Frontend Engineer",
-    skills: "Systems Design · Analytical Skills · User Interface Design",
+    skills: "Collaboration  · Analytical Skills · FrontEnd Development",
     description:
       "I developed web applications using javascript framework (REACT), collaborated with other developers to improve web application performance, and gained valuable experience in web development and teamwork.",
   },
@@ -60,7 +87,7 @@ export const Experiences = [
     institution: "Zuri Team, Inc. · Internship",
     date: "May 2022 - Aug 2022",
     title: " Full-stack Django Developer ",
-    skills: "Systems Design · Analytical Skills · User Interface Design",
+    skills: "Collaboration · Python · Mysqli · CMS · FullStack Development",
     description:
       "I developed web applications using Django framework, collaborated with other developers to improve web application performance, and gained valuable experience in web development and teamwork.",
   },
@@ -87,7 +114,7 @@ export const Review = [
       "https://media.licdn.com/dms/image/D4D03AQGcGZbBNKyvaA/profile-displayphoto-shrink_100_100/0/1684077070008?e=1706745600&v=beta&t=T7Fp35Wigf2qpiUo4MYU8vbhbU6SUnnjHk3xSfRJu1E",
     name: "Michael Peters",
     date: "April 18 2022",
-    title: "Head Automation and Innovation",
+    title: "Head Automation and Innovation, Wema Bank",
     reviews:
       "Samuel is brilliant website designer. He demonstrates brilliance and customer focused approach in delivering powerful Web presence and SEO for businesses. I have watched him grow over the years into a goto person for website and design delivery and he is still learning.",
     link: "https://www.linkedin.com/in/michael-peters-2a497353/",
@@ -118,6 +145,18 @@ export const Review = [
 
 export const projects = [
   // status- completed:true;  on-going:false; stopped:null;
+  {
+    image:
+      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+    name: "League of Professionals",
+    year: "Nov-2023",
+    link: "http://lopwin.com.ng",
+    institution: "Private",
+    description:
+      "an event planning landing page built with WordPress CMS...",
+    stack: ["Wordpress CMS", "Php", "ConvertKit"],
+    status: false,
+  },
   {
     image:
       "https://drive.google.com/uc?export=view&id=14BI93_0YOKHZC1lH4fUb8iLpGXsTRIRo",
@@ -151,18 +190,6 @@ export const projects = [
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React", "Matter.js", "Kia Wallet", "Node.js"],
-    status: false,
-  },
-  {
-    image:
-      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
-    name: "League of Profession winning 2024",
-    year: "Nov-2023",
-    link: "http://lopwin.com.ng",
-    institution: "Private",
-    description:
-      "an event planning landing page built with WordPress CMS...",
-      stack: ["Wordpress CMS", "Php", "Sql", "Api", "ConvertKit"],
     status: false,
   },
 ];
@@ -280,3 +307,40 @@ export const tools = [
     svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
   },
 ];
+
+export const About = [
+  {
+    about: `I am a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have Intensive experience with programming languages such as JavaScript, TypeScript, PHP, and Python, and I am proficient with the latest development frameworks and tools.
+
+In addition to my technical background, I have strong interpersonal skills and the ability to communicate effectively with a variety of stakeholders. `
+  },
+  {
+    more: `I am comfortable working with individuals from diverse cultural backgrounds, and I pride myself on understanding their unique needs and providing customized solutions.
+
+I thrive in fast-paced environments that require creativity and problem-solving.`},
+  {
+    extra: ` I am always willing to go the extra mile to ensure the success of any project.
+
+One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software.
+
+My technical skills, interpersonal skills, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`}
+]
+
+export const Stack = [{
+  name: "Software Engineer",
+  icon: <BsPuzzle />,
+},
+{
+  name: "Technical Writter",
+  icon: <TbWritingSign />,
+},
+{
+  name: "Freelance Analyst",
+  icon: <GrAnalytics />,
+},
+{
+  name: "Open Source Contributor",
+  icon: [<RiOpenSourceFill />],
+},
+]
+
