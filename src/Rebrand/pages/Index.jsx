@@ -7,9 +7,6 @@ import { Post } from "../../components/store/post";
 import { FaExternalLinkAlt } from "react-icons/fa";
 // import { Modal } from "../components/modal";
 
-
-
-
 export const Index = () => {
     const [trigger, setTrigger] = useState();
     return (
@@ -44,7 +41,7 @@ export const Index = () => {
                             }}
                             type="button"
                             value="Readmore..."
-                            className="cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"
+                            className="cursor-pointer font-bold text-gray-600 "
                         />
                     )}
                 </section>
@@ -64,14 +61,15 @@ export const Index = () => {
                 </section>
                 <section Id="Portfolio">
                     <p class=" font-black py-8 text-3xl">Portfolio</p>
-                    <div className="py-8 grid lg:grid-cols-4 md:grid-cols-3 gap-6">
+                    <div className="py-8 flex flex-col gap-6">
                         {projects.map((value, index) => (
-                            <div className=" cursor-pointer hover: py-6 px-2 shadow p-4 hover:shadow-md" key={index}>
-                                <a href={value.link} className="font-extrabold p-4">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
-                                <div className="p-4">{value.institution}</div>
+                            <div className=" cursor-pointer hover: py-6" key={index}>
+                                <a href={value.link} className="font-extrabold">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
+                                <div className="">{value.institution}</div>
 
                             </div>
                         ))}
+                        <hr />
                     </div>
                 </section>
                 <section id="Articles">

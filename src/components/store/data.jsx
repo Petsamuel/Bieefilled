@@ -5,7 +5,7 @@ import { BsPuzzle } from "react-icons/bs";
 import { TbWritingSign } from "react-icons/tb";
 import { GrAnalytics } from "react-icons/gr";
 import { RiOpenSourceFill } from "react-icons/ri";
-import { SiLinkedin, } from "react-icons/si";
+import { SiLinkedin, SiOpensourceinitiative, } from "react-icons/si";
 import { FaSquareXTwitter, FaMedium, FaDev } from "react-icons/fa6";
 
 
@@ -150,7 +150,7 @@ export const projects = [
       "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
     name: "League of Professionals",
     year: "Nov-2023",
-    link: "http://lopwin.com.ng",
+    link: "https://lopwin.com.ng",
     institution: "Private",
     description:
       "an event planning landing page built with WordPress CMS...",
@@ -185,11 +185,35 @@ export const projects = [
       "https://drive.google.com/uc?export=view&id=1cVzwlSy6WDAB3HxMEhZdxnkgL2vkTKtU",
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
-    link: "http://varena.app/",
+    link: "https://varena.app/",
     institution: "Private",
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React", "Matter.js", "Kia Wallet", "Node.js"],
+    status: false,
+  },
+  {
+    image:
+      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+    name: "Hpierson Brochure",
+    year: "Nov-2023",
+    link: "https://Hpierson.com/Brochure",
+    institution: "Private",
+    description:
+      "an event planning landing page built with WordPress CMS...",
+    stack: ["Wordpress CMS", "Php"],
+    status: false,
+  },
+  {
+    image:
+      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+    name: "DataHarbor Africa",
+    year: "Nov-2023",
+    link: "https://dataharborAfrica.com",
+    institution: "Private",
+    description:
+      "an event planning landing page built with WordPress CMS...",
+    stack: ["Wordpress CMS", "Php"],
     status: false,
   },
 ];
@@ -339,8 +363,8 @@ export const Stack = [{
   icon: <GrAnalytics />,
 },
 {
-  name: "Open Source Contributor",
-  icon: [<RiOpenSourceFill />],
+  name: "Open Source",
+  icon: [<SiOpensourceinitiative />],
 },
 ]
 
