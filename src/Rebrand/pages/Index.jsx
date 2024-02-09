@@ -10,7 +10,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export const Index = () => {
     const [trigger, setTrigger] = useState();
     return (
-        <section className="flex flex-col lg:m-16 m-4 md:m-8">
+        <section className="flex flex-col lg:m-16 m-6 md:m-8">
             <header className="">
                 <Header />
             </header>
