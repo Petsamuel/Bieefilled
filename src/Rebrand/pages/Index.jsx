@@ -26,7 +26,7 @@ export const Index = () => {
 
                             <span className=" mb-5 lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
 
-                                <span className="flex  px-6 sm:text-sm text-xs italic text-gray-900 gap-1"> <p>"</p>
+                                <span className="flex  px-6 sm:text-sm text-xs italic  gap-1"> <p>"</p>
                                     <Typewriter
                                         options={{ loop: true }}
                                         onInit={(writer) => {
@@ -81,7 +81,7 @@ export const Index = () => {
                                     }}
                                     type="button"
                                     value="Readmore..."
-                                    className="text-md absolute -mt-6 cursor-pointer font-bold  text-left lg:w-[95%] pl-3 py-3 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40"
+                                    className="text-md absolute -mt-6 cursor-pointer font-bold  text-left lg:w-[95%] w-[50%] pl-3 py-3 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40"
                                 />
 
                             </>)}
