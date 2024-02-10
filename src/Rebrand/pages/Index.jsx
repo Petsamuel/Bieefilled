@@ -22,7 +22,7 @@ export const Index = () => {
                         <Stacks />
                     </section>
                     <section className="my-12 font-[Inter] text-md" id="About">
-                        <div class="quote">
+                        <div class="quote h-14">
 
                             <span className=" mb-5 lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
 
@@ -81,7 +81,7 @@ export const Index = () => {
                                     }}
                                     type="button"
                                     value="Readmore..."
-                                    className="text-md absolute -mt-6 cursor-pointer font-bold  text-left lg:w-[95%] w-[50%] pl-3 py-3 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40"
+                                    className="text-md cursor-pointer font-bold py-3"
                                 />
 
                             </>)}

@@ -24,9 +24,9 @@ export const Header = () => {
                 <div className="lg:text-md md:text-sm text-[.5em]  font-bold"> <span > <a href="#" className="cursor-pointer">@Bieefilled</a> &nbsp;¤ &nbsp;Lagos, Nigeria. </span></div>
             </div>
             <div className="flex  gap-y-3 lg:items-center items-start font-[Inter]">
-                <div className="  ">
+                <div className="flex justify-center items-center  ">
                     <a
-                        className="  gap-3 relative inline-flex  justify-center p-0.5 mb-2 mr-2 overflow-hidden 
+                        className=" items-center gap-3 relative inline-flex  justify-center p-0.5 mb-2 mr-2 overflow-hidden 
                          font-medium rounded-full  py-2 hover:ring-green-900    transition-all ease-in-out hover:ring-2 border  ring-gray-300 hover:scale-95 active:scale-90"
                         href={"Https://linkedIn.com/in/bieefilled"}
                     >
