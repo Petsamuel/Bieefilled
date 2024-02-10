@@ -1,15 +1,27 @@
-import img from "../../assets/image.png"
+import { useState } from "react"
 import { SiBuymeacoffee } from "react-icons/si";
-
+import { Modal } from "./Modal";
+import img from "../../assets/image.png"
 
 
 export const Header = () => {
+    const [trigger, setTrigger] = useState()
+
+    const modalSwitch = () => {
+        setTrigger(true)
+
+
+    }
+
     return (
         <section className="flex justify-between lg:py-2 py-8 lg:items-center ">
+            <section className="absolute">
+                <Modal trigger={trigger} />
+            </section>
             <div className="flex flex-col mb-4 gap-y-1">
-                <img src={img} alt="img" className="rounded-full h-auto w-[30%] cursor-pointer" />
-                <div className=" font-black text-3xl font-[Inter]"> Samuel Peters </div>
-                <div classNAME="lg:text-md md:text-sm text-[.5em]  font-bold text-[#101010]"> <span> <a href="#">@Bieefilled</a> &nbsp;¤ &nbsp;Lagos, Nigeria. </span></div>
+                <img src={img} alt="img" className="rounded-full h-auto w-[30%] cursor-pointer" onClick={modalSwitch} />
+                <div className=" font-black text-3xl font-[Inter] cursor-pointer"> Samuel Peters </div>
+                <div className="lg:text-md md:text-sm text-[.5em]  font-bold text-[#101010]"> <span > <a href="#" className="cursor-pointer">@Bieefilled</a> &nbsp;¤ &nbsp;Lagos, Nigeria. </span></div>
             </div>
             <div className="flex  gap-y-3 lg:items-center items-start font-[Inter]">
                 <div className="  ">

@@ -373,7 +373,7 @@ export const Stack = [{
   icon: <GrAnalytics color="#ffb170" />,
 },
 {
-  name: "Web Development",
+  name: "Web Developer",
   icon: [<FaReact color="#da9797" />],
 },
 ]
