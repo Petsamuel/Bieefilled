@@ -5,7 +5,7 @@ import { Stacks } from "../components/Stacks";
 import { About, Experiences, projects } from "../../components/store/data";
 import { Post } from "../../components/store/post";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { Modal } from "../components/Modal";
+import Typewriter from "typewriter-effect";
 
 export const Index = () => {
     const [trigger, setTrigger] = useState();
@@ -23,11 +23,38 @@ export const Index = () => {
                     </section>
                     <section className="my-12 font-[Inter] text-md" id="About">
                         <div class="quote">
-                            <div class="p-4 bg-gray-50 w-fit my-3">
-                                <p class="text-xs italic text-gray-900">
-                                    “The future belongs to those who believe in the beauty of their dreams.” - Eleanor Roosevelt
-                                </p>
-                            </div>
+
+                            <span className=" mb-5 lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
+
+                                <span className="flex  px-6 sm:text-sm text-xs italic text-gray-900 gap-1"> <p>"</p>
+                                    <Typewriter
+                                        options={{ loop: true }}
+                                        onInit={(writer) => {
+                                            const quotes = [
+                                                "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+                                                "Your attitude determines your altitude. Rise above the challenges with a positive mindset and soar to new heights. - Zig Ziglar",
+                                                "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+                                                "Don't watch the clock; do what it does. Keep going. - Sam Levenson"
+                                            ];
+
+                                            let index = 0;
+
+                                            const typeNextString = () => {
+                                                writer.typeString(quotes[index])
+                                                    .pauseFor(9000)
+                                                    .deleteAll()
+                                                    .callFunction(() => {
+                                                        index = (index + 1) % quotes.length;
+                                                    })
+                                                    .start();
+                                            };
+
+                                            typeNextString();
+                                        }}
+                                    />
+
+                                </span>
+                            </span>
 
                         </div>
 
@@ -54,7 +81,7 @@ export const Index = () => {
                                     }}
                                     type="button"
                                     value="Readmore..."
-                                    className="text-md absolute -mt-6 cursor-pointer font-bold text-black text-left w-[95%] pl-3 py-3 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40"
+                                    className="text-md absolute -mt-6 cursor-pointer font-bold  text-left lg:w-[95%] pl-3 py-3 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40"
                                 />
 
                             </>)}
