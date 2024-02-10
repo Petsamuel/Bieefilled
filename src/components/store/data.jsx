@@ -4,8 +4,14 @@ import jm from "../../assets/jm.svg";
 import { BsPuzzle } from "react-icons/bs";
 import { TbWritingSign } from "react-icons/tb";
 import { GrAnalytics } from "react-icons/gr";
-import { FaXTwitter, FaMedium, FaDev, FaLinkedinIn, FaGithub, FaReact } from "react-icons/fa6";
-
+import {
+  FaXTwitter,
+  FaMedium,
+  FaDev,
+  FaLinkedinIn,
+  FaGithub,
+  FaReact,
+} from "react-icons/fa6";
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
 const template_id = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID;
@@ -23,34 +29,30 @@ export const socials = [
   {
     name: "LinkedIn",
     icon: <FaLinkedinIn color="#0072b1" />,
-    link: "https://linkedin.com/in/bieefilled"
+    link: "https://linkedin.com/in/bieefilled",
   },
   {
     name: "Twitter",
     icon: <FaXTwitter color="#000000" />,
-    link: "https://twitter.com/bieefilled"
-
+    link: "https://twitter.com/bieefilled",
   },
   {
     name: "Github",
     icon: <FaGithub color="#000000" />,
-    link: "https://twitter.com/petsamuel"
-
+    link: "https://twitter.com/petsamuel",
   },
   {
     name: "Medium",
     icon: <FaMedium color="#000000" />,
-    link: "https://medium.com/bieefilled"
+    link: "https://medium.com/bieefilled",
   },
   {
     name: "Dev To",
     icon: <FaDev color="#000000" />,
 
-    link: "https://devto.com/bieefilled"
+    link: "https://devto.com/bieefilled",
   },
-
-
-]
+];
 export const certification = [
   {
     name: "REACT + REDUX Certification",
@@ -135,8 +137,7 @@ export const Review = [
     name: "Enoch Afolabi",
     date: "November 30 2023",
     title: `Growth Manager at Moringa School | Business Development | Growth Management | Partnerships Management`,
-    reviews:
-      `Samuel Peter is a great web developer who delivers exceptional results. Really skilled, and his creative approach has resulted in websites that exceed expectations. 
+    reviews: `Samuel Peter is a great web developer who delivers exceptional results. Really skilled, and his creative approach has resulted in websites that exceed expectations. 
       He is truly professional, responsive to feedback, and it was a pleasure to work with.
       I highly recommend Samuel Peter for any web development project.`,
     link: "https://www.linkedin.com/in/enochafolabi/",
@@ -147,8 +148,7 @@ export const Review = [
     name: "Stanley Obayagbo",
     date: "November 30 2023",
     title: `Programs & Grants Operations | Risk & Quality Management | Project Management| Data Analyst| Program Coordinator| Agile-Scrum`,
-    reviews:
-      `Samuel is one of the most innovative IT personnel I've worked with. highly skilled in both backend and front end development, his creativity stood out during our time together at H.Pierson.`,
+    reviews: `Samuel is one of the most innovative IT personnel I've worked with. highly skilled in both backend and front end development, his creativity stood out during our time together at H.Pierson.`,
     link: "https://www.linkedin.com/in/stanley-obayagbo-058ab497",
   },
 ];
@@ -162,8 +162,7 @@ export const projects = [
     year: "Nov-2023",
     link: "https://lopwin.com.ng",
     institution: "Private",
-    description:
-      "an event planning landing page built with WordPress CMS...",
+    description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php", "ConvertKit"],
     status: false,
   },
@@ -209,8 +208,7 @@ export const projects = [
     year: "Nov-2023",
     link: "https://Hpierson.com/Brochure",
     institution: "Private",
-    description:
-      "an event planning landing page built with WordPress CMS...",
+    description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php"],
     status: false,
   },
@@ -221,8 +219,7 @@ export const projects = [
     year: "Nov-2023",
     link: "https://dataharborAfrica.com",
     institution: "Private",
-    description:
-      "an event planning landing page built with WordPress CMS...",
+    description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php"],
     status: false,
   },
@@ -344,37 +341,39 @@ export const tools = [
 
 export const About = [
   {
-    about: `I am a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have Intensive experience with programming languages such as JavaScript, TypeScript, PHP, and Python, and I am proficient with the latest development frameworks and tools.
+    about: `I am a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have significant experience working with programming languages such as JavaScript, TypeScript, PHP, and Python, Additionally, I am well-versed proficient in the latest development frameworks and tools.
 
-In addition to my technical background, I have strong interpersonal skills and the ability to communicate effectively with a variety of stakeholders. `
+    Beyound my technical expertise, I have strong interpersonal skills and excel at effective communication effectively with diverse stakeholders. `,
   },
   {
     more: `I am comfortable working with individuals from diverse cultural backgrounds, and I pride myself on understanding their unique needs and providing customized solutions.
 
-I thrive in fast-paced environments that require creativity and problem-solving.`},
+    I thrive in fast-paced environments that require creativity and problem-solving.`,
+  },
   {
     extra: ` I am always willing to go the extra mile to ensure the success of any project.
 
-One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software.
+    One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software.
 
-My technical skills, interpersonal skills, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`}
-]
+    My technical skills, interpersonal skills, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`,
+  },
+];
 
-export const Stack = [{
-  name: "Software Engineer",
-  icon: <BsPuzzle color="#57518b" />,
-},
-{
-  name: "Technical Writter",
-  icon: <TbWritingSign color="#679d7f" />,
-},
-{
-  name: "Freelance Analyst",
-  icon: <GrAnalytics color="#ffb170" />,
-},
-{
-  name: "Web Developer",
-  icon: [<FaReact color="#da9797" />],
-},
-]
-
+export const Stack = [
+  {
+    name: "Software Engineer",
+    icon: <BsPuzzle color="#57518b" />,
+  },
+  {
+    name: "Technical Writter",
+    icon: <TbWritingSign color="#679d7f" />,
+  },
+  {
+    name: "Freelance Analyst",
+    icon: <GrAnalytics color="#ffb170" />,
+  },
+  {
+    name: "Web Developer",
+    icon: [<FaReact color="#da9797" />],
+  },
+];
