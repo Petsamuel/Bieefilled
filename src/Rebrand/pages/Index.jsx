@@ -30,26 +30,19 @@ export const Index = () => {
                                     <Typewriter
                                         options={{ loop: true }}
                                         onInit={(writer) => {
-                                            const quotes = [
-                                                "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
-                                                "Your attitude determines your altitude. Rise above the challenges with a positive mindset and soar to new heights. - Zig Ziglar",
-                                                "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
-                                                "Don't watch the clock; do what it does. Keep going. - Sam Levenson"
-                                            ];
+                                            writer.typeString("The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt");
+                                            writer.pauseFor(5000);
+                                            writer.deleteAll();
 
-                                            let index = 0;
+                                            writer.typeString("Your attitude determines your altitude. Rise above the challenges with a positive mindset and soar to new heights. - Zig Ziglar");
+                                            writer.pauseFor(5000);
+                                            writer.deleteAll();
+                                            writer.typeString("The only limit to our realization of tomorrow will be our doubts of today. - Franklin D.Roosevelt");
+                                            writer.pauseFor(5000);
+                                            writer.deleteAll();
 
-                                            const typeNextString = () => {
-                                                writer.typeString(quotes[index])
-                                                    .pauseFor(9000)
-                                                    .deleteAll()
-                                                    .callFunction(() => {
-                                                        index = (index + 1) % quotes.length;
-                                                    })
-                                                    .start();
-                                            };
-
-                                            typeNextString();
+                                            writer.typeString("Don't watch the clock; do what it does. Keep going. - Sam Levenson");
+                                            writer.pauseFor(5000).start();
                                         }}
                                     />
 
