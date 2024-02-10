@@ -22,6 +22,15 @@ export const Index = () => {
                         <Stacks />
                     </section>
                     <section className="my-12 font-[Inter] text-md" id="About">
+                        <div class="quote">
+                            <div class="p-4 bg-gray-50 w-fit my-3">
+                                <p class="text-xs italic text-gray-900">
+                                    “The future belongs to those who believe in the beauty of their dreams.” - Eleanor Roosevelt
+                                </p>
+                            </div>
+
+                        </div>
+
                         {About.map((value, index) => (
                             <p key={index}>
                                 {value.about}
@@ -38,18 +47,20 @@ export const Index = () => {
                         {trigger ? (
                             ""
                         ) : (
-                            <input
-                                onClick={() => {
-                                    setTrigger(!trigger);
-                                }}
-                                type="button"
-                                value="Readmore..."
-                                className=" cursor-pointer font-bold text-gray-600 text-left w-[50%] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-1 z-50"
-                            />
-                        )}
+                            <>
+                                <input
+                                    onClick={() => {
+                                        setTrigger(!trigger);
+                                    }}
+                                    type="button"
+                                    value="Readmore..."
+                                    className="text-md absolute -mt-6 cursor-pointer font-bold text-black text-left w-[95%] pl-3 py-3 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40"
+                                />
+
+                            </>)}
                     </section>
                     <section className="" id="Resume">
-                        <p class="text-2xl font-extrabold py-8 font-['Inter']">Resume</p>
+                        <p class="text-2xl font-extrabold py-8 font-['Inter'] ">Resume</p>
                         <div className="py-8">
                             {Experiences.map((value, index) => (
                                 <div className="font-[Inter] text-sm">
