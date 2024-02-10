@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <section className="flex justify-between lg:py-2 py-8 lg:items-center ">
             <div className="flex flex-col mb-4 gap-y-1">
-                <img src={img} alt="img" className="rounded-full h-auto w-[30%]" />
+                <img src={img} alt="img" className="rounded-full h-auto w-[30%] cursor-pointer" />
                 <div className=" font-black text-3xl font-[Inter]"> Samuel Peters </div>
                 <div classNAME="lg:text-md md:text-sm text-[.5em]  font-bold text-[#101010]"> <span> <a href="#">@Bieefilled</a> &nbsp;¤ &nbsp;Lagos, Nigeria. </span></div>
             </div>

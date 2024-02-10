@@ -4,9 +4,7 @@ import jm from "../../assets/jm.svg";
 import { BsPuzzle } from "react-icons/bs";
 import { TbWritingSign } from "react-icons/tb";
 import { GrAnalytics } from "react-icons/gr";
-// import { SiOpensourceinitiative, } from "react-icons/si";
-import { RiOpenSourceLine } from "react-icons/ri";
-import { FaXTwitter, FaMedium, FaDev, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { FaXTwitter, FaMedium, FaDev, FaLinkedinIn, FaGithub, FaReact } from "react-icons/fa6";
 
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
@@ -375,8 +373,8 @@ export const Stack = [{
   icon: <GrAnalytics color="#ffb170" />,
 },
 {
-  name: "Open Source Dev.",
-  icon: [<RiOpenSourceLine color="#da9797" />],
+  name: "Web Development",
+  icon: [<FaReact color="#da9797" />],
 },
 ]
 
