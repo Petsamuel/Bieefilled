@@ -6,7 +6,7 @@ import { TbWritingSign } from "react-icons/tb";
 import { GrAnalytics } from "react-icons/gr";
 // import { SiOpensourceinitiative, } from "react-icons/si";
 import { RiOpenSourceLine } from "react-icons/ri";
-import { FaXTwitter, FaMedium, FaDev, FaLinkedinIn } from "react-icons/fa6";
+import { FaXTwitter, FaMedium, FaDev, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
@@ -31,6 +31,12 @@ export const socials = [
     name: "Twitter",
     icon: <FaXTwitter color="#000000" />,
     link: "https://twitter.com/bieefilled"
+
+  },
+  {
+    name: "Github",
+    icon: <FaGithub color="#000000" />,
+    link: "https://twitter.com/petsamuel"
 
   },
   {

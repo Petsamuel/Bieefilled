@@ -15,10 +15,10 @@ export const Index = () => {
                 <Header />
             </header>
             <main className="max-h-content">
-                <section className="lg:mx-8 my-4 mx-2 ">
+                <section className="lg:mx-8  mx-2 ">
                     <Stacks />
                 </section>
-                <section className="my-16 font-[Inter] " id="About">
+                <section className="my-12 font-[Inter] " id="About">
                     {About.map((value, index) => (
                         <p key={index}>
                             {value.about}
@@ -41,12 +41,12 @@ export const Index = () => {
                             }}
                             type="button"
                             value="Readmore..."
-                            className="cursor-pointer font-bold text-gray-600 "
+                            className=" cursor-pointer font-bold text-gray-600 text-left w-[50%] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-1 z-50"
                         />
                     )}
                 </section>
                 <section className="" id="Resume">
-                    <p class="text-3xl font-extrabold py-8">Resume</p>
+                    <p class="text-2xl font-extrabold py-8 font-['Inter']">Resume</p>
                     <div className="py-8">
                         {Experiences.map((value, index) => (
                             <div className="font-[Inter]">
@@ -60,8 +60,8 @@ export const Index = () => {
                     </div>
                 </section>
                 <section Id="Portfolio">
-                    <p class=" font-black py-8 text-3xl">Portfolio</p>
-                    <div className="py-4 flex flex-col gap-6  font-[Inter]">
+                    <p class=" font-black py-8 text-2xl font-['Inter']">Portfolio</p>
+                    <div className="py-4 flex flex-col gap-6  font-['Inter']">
                         {projects.map((value, index) => (
                             <div className=" cursor-pointer hover: py-2  hover:text-lg  " key={index}>
                                 <a href={value.link} className="font-extrabold">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
@@ -73,8 +73,8 @@ export const Index = () => {
                     </div>
                 </section>
                 <section id="Articles">
-                    <p class=" font-black py-8 text-3xl">Articles</p>
-                    <div className="py-8 font-[Inter]">
+                    <p class=" font-black py-8 text-2xl font-['Inter']">Articles</p>
+                    <div className="py-8 font-['Inter']">
                         {Post.map((value, index) => (
                             <div className="flex">
                                 <div className=" flex cursor-pointer hover:text-lg  py-4 " key={index}>
