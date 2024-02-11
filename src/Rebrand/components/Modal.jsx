@@ -27,12 +27,12 @@ export const Modal = ({ trigger }) => {
                 <img onClick={imgToggle} src={switchImg ? img1 : img2} alt="image" className='w-[50%] rounded-2xl cursor-pointer' />
 
 
-                <div className='pt-16 px-4 flex flex-col'>
+                <div className='pt-16 px-4 flex flex-col justify-between'>
                     <p className='lg:text-3xl text-md md:text-md font-[Poppins] w-34 text-white '> Peter Samuel Edidiong</p>
                     <div className='font-bold pt-5'>Lagos, Nigeria.</div>
                     <div className=' py-8 space-x-2 flex items-center gap-5'>
-                        <FaCheck color="#14532d" className="text-5xl hover:scale-95 active:scale-90 " />
-                        <FaCircleXmark onClick={modalSwitch} className='space-x-5 text-5xl hover:scale-95 active:scale-90' color="#7f1d1d" />
+                        <div onClick={modalSwitch} className="py-8 text-green-900 font-extrabold font-['Inter] hover:scale-95 active:scale-90 hover:text-white"><FaCheck color="#14532d" className="text-5xl " /><p className='py-2 cursor-pointer'>Accept</p></div>
+                        <div onClick={modalSwitch} className="py-8 text-red-900 font-extrabold font-['Inter] hover:scale-95 active:scale-90 hover:text-white"><FaCircleXmark className='space-x-5 text-5xl ' color="#7f1d1d" /><p className='py-2 cursor-pointer'>Cancel</p></div>
                     </div>
 
                 </div>
