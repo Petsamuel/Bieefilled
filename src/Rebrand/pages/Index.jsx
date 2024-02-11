@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Stacks } from "../components/Stacks";
-import { About, Experiences, projects } from "../../components/store/data";
+import { About, Experiences, projects, Review } from "../../components/store/data";
 import { Post } from "../../components/store/post";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
@@ -104,6 +104,20 @@ export const Index = () => {
                                 </div>
                             ))}
                             <hr />
+                        </div>
+                    </section>
+                    <section className="" id="Reviews">
+                        <p class="text-2xl font-extrabold py-8 font-['Inter'] ">Reviews</p>
+                        <div className="pb-8 ">
+                            {Review.map((value, index) => (
+                                <div className="font-[Inter] text-sm cursor-pointer flex-col flex gap-1" key={index}>
+                                    <div>{value.date}</div>
+                                    <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap ">{value.name} <span className="text-sm font-thin">{value.title}</span></a>
+                                    <div>{value.reviews}</div>
+                                    {/* <div >{value.Review}</div> */}
+                                    <hr className="my-4 h-[0px]" />
+                                </div>
+                            ))}
                         </div>
                     </section>
                     <section id="Articles">

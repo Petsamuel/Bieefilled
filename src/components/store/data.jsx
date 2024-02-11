@@ -3,7 +3,6 @@ import zuri from "../../assets/zuri.svg";
 import jm from "../../assets/jm.svg";
 import { BsPuzzle } from "react-icons/bs";
 import { TbWritingSign } from "react-icons/tb";
-import { GrAnalytics } from "react-icons/gr";
 import {
   FaXTwitter,
   FaMedium,
@@ -11,6 +10,7 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaReact,
+  FaShopify
 } from "react-icons/fa6";
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
@@ -147,7 +147,7 @@ export const Review = [
       "https://media.licdn.com/dms/image/C4D03AQEzId2tDzz7Qw/profile-displayphoto-shrink_100_100/0/1661952121356?e=1706745600&v=beta&t=AO4hUEThz_N6APnmLNQQx-E6ibGuLgkSIM6RZr3YsHI",
     name: "Stanley Obayagbo",
     date: "November 30 2023",
-    title: `Programs & Grants Operations | Risk & Quality Management | Project Management| Data Analyst| Program Coordinator| Agile-Scrum`,
+    title: `Programs & Grants Operations | Risk & Quality Management| Data Analyst| Program Coordinator| Agile-Scrum`,
     reviews: `Samuel is one of the most innovative IT personnel I've worked with. highly skilled in both backend and front end development, his creativity stood out during our time together at H.Pierson.`,
     link: "https://www.linkedin.com/in/stanley-obayagbo-058ab497",
   },
@@ -365,15 +365,15 @@ export const Stack = [
     icon: <BsPuzzle color="#57518b" />,
   },
   {
-    name: "Technical Writter",
+    name: "Technical Writer",
     icon: <TbWritingSign color="#679d7f" />,
   },
   {
-    name: "Freelance Analyst",
-    icon: <GrAnalytics color="#ffb170" />,
+    name: "E-commerce",
+    icon: <FaShopify color="#ffb170" />,
   },
   {
-    name: "Web Developer",
+    name: "Web Developement",
     icon: [<FaReact color="#da9797" />],
   },
 ];
