@@ -27,7 +27,7 @@ export const Modal = ({ trigger }) => {
                 <img onClick={imgToggle} src={switchImg ? img1 : img2} alt="image" className='w-[50%] rounded-2xl cursor-pointer' />
 
 
-                <div className='pt-16 px-4 flex flex-col justify-between'>
+                <div className='pt-16 px-4 flex flex-col justify-center flex-wrap'>
                     <p className='lg:text-3xl text-md md:text-md font-[Poppins] w-34 text-white '> Peter Samuel Edidiong</p>
                     <div className='font-bold pt-5'>Lagos, Nigeria.</div>
                     <div className=' py-8 space-x-2 flex items-center gap-5'>
