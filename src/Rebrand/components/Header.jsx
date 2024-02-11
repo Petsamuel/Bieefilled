@@ -27,7 +27,7 @@ export const Header = () => {
                     <div className=" font-black text-3xl font-[Inter] cursor-pointer"> Samuel Peters </div>
                     <div className="lg:text-md md:text-sm text-[.5em]  font-bold"> <span > <a href="#" className="cursor-pointer">@Bieefilled</a> &nbsp;¤ &nbsp;Lagos, Nigeria. </span></div>
                 </div>
-                <div className="flex  gap-y-3 lg:items-center items-start font-['Inter'] space-x-4">
+                <div className="flex  gap-y-2 lg:items-center items-start font-['Inter']">
                     <div className="flex justify-center items-center  ">
                         <a
                             className="w-max items-center gap-3 relative flex  ijustify-center p-0.5 mb-2 mr-2 overflow-hidden 
