@@ -81,7 +81,7 @@ export const Index = () => {
                     </section>
                     <section className="" id="Resume">
                         <p class="text-2xl font-extrabold py-8 font-['Inter'] ">Resume</p>
-                        <div className="py-8">
+                        <div className="pb-8 ">
                             {Experiences.map((value, index) => (
                                 <div className="font-[Inter] text-sm">
                                     <div>{value.date}</div>
@@ -95,7 +95,7 @@ export const Index = () => {
                     </section>
                     <section Id="Portfolio">
                         <p class=" font-black py-8 text-2xl font-['Inter']">Portfolio</p>
-                        <div className="py-4 flex flex-col gap-6  font-['Inter'] text-sm">
+                        <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
                             {projects.map((value, index) => (
                                 <div className=" cursor-pointer py-2  hover:text-lg  " key={index}>
                                     <a href={value.link} className="font-extrabold">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
@@ -108,7 +108,7 @@ export const Index = () => {
                     </section>
                     <section id="Articles">
                         <p class=" font-black py-8 text-2xl font-['Inter']">Articles</p>
-                        <div className="py-8 font-['Inter'] text-sm">
+                        <div className="pb-4 font-['Inter'] text-sm">
                             {Post.map((value, index) => (
                                 <div className="flex">
                                     <div className=" flex cursor-pointer hover:text-lg  py-4 " key={index}>

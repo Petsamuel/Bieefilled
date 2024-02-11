@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { SiBuymeacoffee } from "react-icons/si";
 import { Modal } from "./Modal";
-import img from "../../assets/image.png"
+import img from "../../assets/image.gif"
 
 
 export const Header = () => {
@@ -14,10 +14,11 @@ export const Header = () => {
     }
 
     return (
-        <section className="flex justify-between lg:py-2 py-8 lg:items-center ">
+        <section className="flex justify-between lg:py-2 py-12 lg:items-center ">
             <section className="absolute">
                 <Modal trigger={trigger} />
             </section>
+
             <div className="flex flex-col mb-4 gap-y-1">
                 <img src={img} alt="img" className="flex items-center place-content-center rounded-full h-auto w-[30%] cursor-pointer" onClick={modalSwitch} />
                 <div className=" font-black text-3xl font-[Inter] cursor-pointer"> Samuel Peters </div>
@@ -30,7 +31,7 @@ export const Header = () => {
                          font-medium rounded-full  py-2 hover:ring-green-900    transition-all ease-in-out hover:ring-2 border  ring-gray-300 hover:scale-95 active:scale-90"
                         href={"Https://linkedIn.com/in/bieefilled"}
                     >
-                        <span className=" w-24 lg:w-full items-center gap-2 flex relative px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0   lg:text-lg text-xs">
+                        <span className=" w-24 lg:w-full items-center gap-2 flex px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0   lg:text-lg text-xs">
                             Hire Me
                         </span>
                     </a>

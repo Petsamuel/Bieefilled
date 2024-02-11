@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import img1 from "../../assets/AI_1.png"
+import img1 from "../../assets/AI_1.jpg"
 import img2 from "../../assets/AI_2.jpg"
 import { FaCheck, FaCircleXmark } from 'react-icons/fa6';
 
