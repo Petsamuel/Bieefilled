@@ -352,7 +352,7 @@ export const tools = [
 
 export const About = [
   {
-    about: `I am Peter Samuel a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have significant experience working with programming languages such as JavaScript, TypeScript, PHP, and Python, Additionally, I am well-versed proficient in the latest development frameworks and tools.
+    about: `I am Peter Samuel a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have significant experience working with programming languages such as JavaScript, TypeScript, PHP, and Python, Additionally, I am well-versed in the latest development frameworks and tools.
 
     Beyound my technical expertise, I have strong interpersonal skills and excel at effective communication effectively with diverse stakeholders. `,
   },
