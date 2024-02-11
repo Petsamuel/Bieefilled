@@ -20,7 +20,7 @@ export const Modal = ({ trigger }) => {
     }
 
     return (
-        <div className={closed ? " bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 fixed z-50 p-4 overflow-hidden md:inset-0 h-screen max-h-full grid place-content-center w-full duration-300 transform translate-y-screen scale-full origin-[0] bg-[#101010] bg-opacity-40"
+        <div className={closed ? " bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 fixed z-50 p-4 overflow-hidden md:inset-0 h-screen max-h-full grid place-content-center w-full duration-300 transform translate-y-screen scale-full origin-[0] bg-[#101010] bg-opacity-40 top-0 left-0"
             : "hidden"
         }>
             <div className=" w-full max-h-full flex max-w-lg">
