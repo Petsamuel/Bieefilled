@@ -10,7 +10,9 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaReact,
-  FaShopify
+  FaShopify,
+  FaWordpressSimple,
+  FaRankingStar
 } from "react-icons/fa6";
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
@@ -86,6 +88,15 @@ export const certification = [
   },
 ];
 export const Experiences = [
+
+  {
+    institution: "H. PIERSON ASSOCIATES LIMITED ",
+    date: "Jul 2022 - Jul 2023",
+    title: "Fullstack Engineer",
+    skills: "Collaboration · Website Development · Maintenance",
+    description:
+      "Build and maintain various Websites",
+  },
   {
     institution: "HNG Internship · Internship",
     date: "Oct-2020 - Dec-2022",
@@ -369,11 +380,21 @@ export const Stack = [
     icon: <TbWritingSign color="#679d7f" />,
   },
   {
-    name: "E-commerce",
-    icon: <FaShopify color="#ffb170" />,
-  },
-  {
     name: "Web Developement",
     icon: [<FaReact color="#da9797" />],
   },
+  {
+    name: "E-commerce",
+    icon: <FaShopify color="#ffb170" />,
+  },
+  , {
+    name: "S.E.O Expert",
+    icon: <FaRankingStar color="#444140" />
+  },
+  {
+    name: "WordPress Development",
+    icon: <FaWordpressSimple color="#00749C" />
+  }
+
+
 ];

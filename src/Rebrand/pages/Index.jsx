@@ -79,13 +79,13 @@ export const Index = () => {
 
                             </>)}
                     </section>
-                    <section className="" id="Resume">
-                        <p class="text-2xl font-extrabold py-8 font-['Inter'] ">Resume</p>
+                    <section className="" id="Resume ">
+                        <p class="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Resume</p>
                         <div className="pb-8 ">
                             {Experiences.map((value, index) => (
                                 <div className="font-[Inter] text-sm">
                                     <div>{value.date}</div>
-                                    <div className="font-extrabold">{value.institution}</div>
+                                    <div className="font-extrabold uppercase">{value.institution}</div>
                                     <div>{value.title}</div>
                                     <div >{value.skills}</div>
                                     <hr className="my-4 h-[0px]" />
@@ -94,11 +94,11 @@ export const Index = () => {
                         </div>
                     </section>
                     <section Id="Portfolio">
-                        <p class=" font-black py-8 text-2xl font-['Inter']">Portfolio</p>
+                        <p class=" font-black py-8 text-2xl font-['Inter'] uppercase ">Portfolio</p>
                         <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
                             {projects.map((value, index) => (
-                                <div className=" cursor-pointer py-2  hover:text-lg  " key={index}>
-                                    <a href={value.link} className="font-extrabold">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
+                                <div className=" cursor-pointer py-2   hover:scale-95 active:scale-90  " key={index}>
+                                    <a href={value.link} className="font-extrabold uppercase">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
                                     <div className="">{value.institution}</div>
 
                                 </div>
@@ -107,25 +107,25 @@ export const Index = () => {
                         </div>
                     </section>
                     <section className="" id="Reviews">
-                        <p class="text-2xl font-extrabold py-8 font-['Inter'] ">Reviews</p>
+                        <p class="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Reviews</p>
                         <div className="pb-8 ">
                             {Review.map((value, index) => (
-                                <div className="font-[Inter] text-sm cursor-pointer flex-col flex gap-1" key={index}>
-                                    <div>{value.date}</div>
-                                    <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap ">{value.name} <span className="text-sm font-thin">{value.title}</span></a>
+                                <div className="hover:scale-95 active:scale-90 font-[Inter]  text-sm cursor-pointer flex-col flex gap-1 " key={index}>
+                                    <div className="text-xs">{value.date}</div>
+                                    <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap uppercase">{value.name} <span className="text-sm font-thin">{value.title}</span></a>
                                     <div>{value.reviews}</div>
-                                    {/* <div >{value.Review}</div> */}
+                                    {/* <div >{value.date}</div> */}
                                     <hr className="my-4 h-[0px]" />
                                 </div>
                             ))}
                         </div>
                     </section>
                     <section id="Articles">
-                        <p class=" font-black py-8 text-2xl font-['Inter']">Articles</p>
+                        <p class=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
                         <div className="pb-4 font-['Inter'] text-sm">
                             {Post.map((value, index) => (
                                 <div className="flex">
-                                    <div className=" flex cursor-pointer hover:text-lg  py-4 " key={index}>
+                                    <div className=" flex cursor-pointer hover:text-lg hover:scale-95 active:scale-90  py-4 " key={index}>
 
                                         <a class="flex " href={value.href}>{1 + index}. {value.title}  <span className="text-[10px] text-gray-400 mx-2">
                                             <FaExternalLinkAlt />
