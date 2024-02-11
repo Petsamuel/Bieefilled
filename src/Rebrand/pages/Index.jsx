@@ -18,7 +18,7 @@ export const Index = () => {
                 </header>
 
                 <main className="max-h-content">
-                    <section className="lg:mx-8  mx-2 ">
+                    <section className="lg:mx-8 ">
                         <Stacks />
                     </section>
                     <section className="my-12 font-[Inter] text-md" id="About">
