@@ -389,7 +389,7 @@ export const Stack = [
   },
   , {
     name: "S.E.O Expert",
-    icon: <FaRankingStar color="#444140" />
+    icon: <FaRankingStar color="#445445" />
   },
   {
     name: "WordPress Development",
