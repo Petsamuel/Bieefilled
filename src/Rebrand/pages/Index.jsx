@@ -113,7 +113,7 @@ export const Index = () => {
                                 <div className="hover:scale-95 active:scale-90 font-[Inter]  text-sm cursor-pointer flex-col flex gap-1 " key={index}>
                                     <div className="text-xs">{value.date}</div>
                                     <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap uppercase">{value.name} <span className="text-sm font-thin">{value.title}</span></a>
-                                    <div>{value.reviews}</div>
+                                    <div> <span className="text-2xl text-bold">"</span>{value.reviews}</div>
                                     {/* <div >{value.date}</div> */}
                                     <hr className="my-4 h-[0px]" />
                                 </div>
