@@ -97,9 +97,14 @@ export const Index = () => {
                         <p class=" font-black py-8 text-2xl font-['Inter'] uppercase ">Portfolio</p>
                         <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
                             {projects.map((value, index) => (
-                                <div className=" cursor-pointer py-2   hover:scale-95 active:scale-90  " key={index}>
+                                <div className=" cursor-pointer py-2" key={index}>
                                     <a href={value.link} className="font-extrabold uppercase">{value.name} <span className="text-[10px] text-gray-400 mx-2 absolute"><FaExternalLinkAlt /></span></a>
                                     <div className="">{value.institution}</div>
+                                    <div className="flex items-center space-x-2 flex-wrap">
+                                        {value.stack.map((val) => (
+                                            <div className="shadow-sm text-xs font-light  p-2 rounded-lg items-center flex hover:scale-95 active:scale-90 hover:shdow-sm">{val}</div>
+                                        ))}
+                                    </div>
 
                                 </div>
                             ))}
@@ -114,7 +119,7 @@ export const Index = () => {
                                     <div className="text-xs">{value.date}</div>
                                     <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap uppercase">{value.name} <span className="text-sm font-thin">{value.title}</span></a>
                                     <div> <span className="text-2xl text-bold">"</span>{value.reviews}</div>
-                                    {/* <div >{value.date}</div> */}
+
                                     <hr className="my-4 h-[0px]" />
                                 </div>
                             ))}

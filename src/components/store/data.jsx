@@ -185,7 +185,7 @@ export const projects = [
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
     institution: "Open Source",
     description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
-    stack: ["React", "Ether.js", "Solidity", "Tailwindcss"],
+    stack: ["React.JS", "Ether.Js", "Solidity", "Tailwindcss"],
     status: false,
   },
   {
@@ -197,7 +197,7 @@ export const projects = [
     institution: "Private",
     description:
       "Gruvly Music: Platform designed for forward-looking music musical talents...",
-    stack: ["Wordpress CMS", "Php", "Sql", "Api"],
+    stack: ["Wordpress CMS", "PHP", "SQL", "API"],
     status: false,
   },
   {
@@ -209,7 +209,7 @@ export const projects = [
     institution: "Private",
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
-    stack: ["React", "Matter.js", "Kia Wallet", "Node.js"],
+    stack: ["React.JS", "Matter.js", "Kia Wallet", "Node.js"],
     status: false,
   },
   {
@@ -220,7 +220,7 @@ export const projects = [
     link: "https://Hpierson.com/Brochure",
     institution: "Private",
     description: "an event planning landing page built with WordPress CMS...",
-    stack: ["Wordpress CMS", "Php"],
+    stack: ["Wordpress CMS", "PHP"],
     status: false,
   },
   {
@@ -231,7 +231,7 @@ export const projects = [
     link: "https://dataharborAfrica.com",
     institution: "Private",
     description: "an event planning landing page built with WordPress CMS...",
-    stack: ["Wordpress CMS", "Php"],
+    stack: ["Wordpress CMS", "PHP"],
     status: false,
   },
 ];
