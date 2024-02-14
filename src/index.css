@@ -35,6 +35,5 @@ body {
 * {
   scrollbar-width: thin;
   /* scrollbar-color: red; */
+  scroll-behavior: smooth;
 }
-
-
