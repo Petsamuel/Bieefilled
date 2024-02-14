@@ -4,7 +4,7 @@ import { Footer } from "../components/Footer";
 import { Stacks } from "../components/Stacks";
 import { About, Experiences, projects, Review, tools } from "../../components/store/data";
 import { Post } from "../../components/store/post";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaRegArrowAltCircleUp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import Typewriter from "typewriter-effect";
@@ -15,10 +15,21 @@ import 'swiper/css/autoplay';
 
 export const Index = () => {
     const [trigger, setTrigger] = useState();
+
+    const [back2Top, setBack2Top] = useState();
+
+    function scrollHandler() {
+        if (window.scrollY >= 250) {
+            setBack2Top(true);
+        } else {
+            setBack2Top(false);
+        }
+    }
+    window.addEventListener("scroll", scrollHandler);
     return (
         <>
 
-            <section className="flex flex-col lg:m-16 m-6 md:m-8">
+            <section className="flex flex-col lg:m-16 m-6 md:m-8" id="Home">
                 <header className="">
                     <Header />
                 </header>
@@ -27,7 +38,7 @@ export const Index = () => {
                     <section className="lg:mx-8 ">
                         <Stacks />
                     </section>
-                    <section className="my-12 font-[Inter] text-md" id="About">
+                    <section className="my-12 font-[Inter] text-md" id="Resume">
                         <div class="quote h-14">
 
                             <span className=" mb-5 lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
@@ -99,26 +110,7 @@ export const Index = () => {
                             ))}
                         </div>
                     </section>
-                    <section id="tools" className="py-4 mb-9">
 
-                        <div className="">
-                            <Swiper
-                                modules={[Autoplay, Navigation,]}
-
-                                autoplay={{
-                                    delay: 2500,
-                                    disableOnInteraction: false,
-                                }}
-                                spaceBetween={15}
-                                slidesPerView={5}
-                                onSwiper={(swipper) => console.log(swipper)}
-                            >
-                                {tools.map((val, key) => (
-                                    <SwiperSlide key={key} className="cursor-pointer"><div className="flex items-center flex-col lg:text-4xl text-md">{val.icon} <div className="font['Inter'] cursor-pointer text-xs font-thin py-1">{val.name}</div></div></SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
-                    </section>
                     <section Id="Portfolio">
                         <p class=" font-black py-8 text-2xl font-['Inter'] uppercase ">Portfolio</p>
                         <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
@@ -152,6 +144,26 @@ export const Index = () => {
                         </div>
                     </section>
 
+                    <section id="tools" className=" my-9 h-16">
+
+                        <div className="">
+                            <Swiper
+                                modules={[Autoplay, Navigation,]}
+
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+                                spaceBetween={15}
+                                slidesPerView={5}
+                                onSwiper={(swipper) => console.log(swipper)}
+                            >
+                                {tools.map((val, key) => (
+                                    <SwiperSlide key={key} className="cursor-pointer hover:text-2xl"><div className="flex items-center flex-col lg:text-4xl text-md">{val.icon} <div className="font['Inter'] cursor-pointer text-xs font-thin py-1">{val.name}</div></div></SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+                    </section>
 
                     <section id="Articles">
                         <p class=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
@@ -177,8 +189,11 @@ export const Index = () => {
                 </main>
 
 
+                <div className="relative ">
+                    <a href="#Home" className={!back2Top ? "hidden" :
+                        " hover:text-3xl hover:scale-90 active:scale-90 fixed text-2xl animate-bounce rounded-full bottom-10 right-5"} id="back2Top"><FaRegArrowAltCircleUp /></a>
 
-
+                </div>
 
                 <footer mt-5>
                     <Footer />
