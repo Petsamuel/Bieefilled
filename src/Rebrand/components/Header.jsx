@@ -19,7 +19,7 @@ export const Header = () => {
                 <Modal trigger={trigger} />
             </section>
 
-            <section className="flex justify-between lg:py-2 py-12 lg:items-center ">
+            <section className="flex justify-between lg:py-2 pt-12 pb-6 lg:items-center ">
 
 
                 <div className="flex flex-col mb-4 gap-y-1">
@@ -49,6 +49,7 @@ export const Header = () => {
                                 Sponsor <span><SiBuymeacoffee color="green" /></span>
                             </span>
                         </a>
+
 
                     </div>
 
