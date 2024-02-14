@@ -12,8 +12,11 @@ import {
   FaReact,
   FaShopify,
   FaWordpressSimple,
-  FaRankingStar
+  FaRankingStar,
+  FaCss3,
+
 } from "react-icons/fa6";
+import { SiTailwindcss, SiNextdotjs, SiReact, SiTypescript, SiBootstrap, SiFirebase, SiMongodb, SiPython, SiJavascript, SiPhp, SiRadstudio, SiHtml5, SiVite, SiNpm, SiGit, SiVisualstudiocode, SiSqlite, SiWordpress } from "react-icons/si";
 
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
 const template_id = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID;
@@ -302,51 +305,98 @@ export const contactMethods = [
 ];
 
 export const tools = [
-  { name: "React", svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+  {
+    name: "React", svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    icon: <SiReact />
+  },
   {
     name: "Python",
     svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    icon: <SiPython />
   },
   {
     name: "JavaScript",
     svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    icon: <SiJavascript />
   },
   {
     name: "TypeScript",
     svg: "https://raw.githubusercontent.com/wappalyzer/wappalyzer/master/src/drivers/webextension/images/icons/TypeScript.svg",
+    icon: <SiTypescript />
   },
-  { name: "PHP", svg: "https://www.vectorlogo.zone/logos/php/php-icon.svg" },
+  {
+    name: "PHP", svg: "https://www.vectorlogo.zone/logos/php/php-icon.svg",
+    icon: <SiPhp />
+  },
   {
     name: "HTML",
     svg: "https://raw.githubusercontent.com/uiwjs/file-icons/master/icon/html.svg",
+    icon: <SiHtml5 />
   },
   {
     name: "CSS",
     svg: "https://raw.githubusercontent.com/manuelbieh/logo-file-icons/master/icons/css.svg",
+    icon: <FaCss3 />
   },
   {
     name: "TailwindCss",
     svg: "https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/tailwindcss.dark.svg",
+    icon: <SiTailwindcss />
   },
   {
     name: "Bootstrap",
     svg: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg",
+    icon: <SiBootstrap />
   },
   {
     name: "Vite",
     svg: "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/vitejs.svg",
+    icon: <SiVite />
   },
   {
     name: "Git",
     svg: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_git2.svg",
+    icon: <SiGit />
   },
   {
     name: "NPM",
     svg: "https://raw.githubusercontent.com/leungwensen/svg-icon/master/dist/svg/logos/npm.svg",
+    icon: <SiNpm />
   },
   {
     name: "VsCode",
     svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiVisualstudiocode />
+  },
+  {
+    name: "RAD",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiRadstudio />
+  },
+  {
+    name: "Next Js",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiNextdotjs />
+  },
+  {
+    name: "FireBase",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiFirebase />
+  },
+  {
+    name: "Mongo Db",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiMongodb />
+  },
+  {
+    name: "SQL",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiSqlite />
+  },
+  {
+    name: "WordPress",
+    svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    icon: <SiWordpress />
   },
 ];
 
@@ -354,19 +404,19 @@ export const About = [
   {
     about: `I am Peter Samuel a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have significant experience working with programming languages such as JavaScript, TypeScript, PHP, and Python, Additionally, I am well-versed in the latest development frameworks and tools.
 
-    Beyound my technical expertise, I have strong interpersonal skills and excel at effective communication effectively with diverse stakeholders. `,
+      Beyound my technical expertise, I have strong interpersonal skills and excel at effective communication effectively with diverse stakeholders. `,
   },
   {
     more: `I have experience collaborating with people from diverse cultural backgrounds, and tailoring solutions to meet their specific requirements.
 
-    I thrive in fast-paced environments that require creativity and problem-solving.`,
+      I thrive in fast-paced environments that require creativity and problem-solving.`,
   },
   {
     extra: ` I am always willing to go the extra mile to ensure the success of any project.
 
-    One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software.
+      One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software.
 
-    My technical skills, interpersonal skills, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`,
+      My technical skills, interpersonal skills, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`,
   },
 ];
 

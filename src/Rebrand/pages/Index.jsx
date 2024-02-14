@@ -2,10 +2,16 @@ import { useState } from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Stacks } from "../components/Stacks";
-import { About, Experiences, projects, Review } from "../../components/store/data";
+import { About, Experiences, projects, Review, tools } from "../../components/store/data";
 import { Post } from "../../components/store/post";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import Typewriter from "typewriter-effect";
+import 'swiper/css';
+import 'swiper/css/autoplay';
+
+
 
 export const Index = () => {
     const [trigger, setTrigger] = useState();
@@ -93,6 +99,26 @@ export const Index = () => {
                             ))}
                         </div>
                     </section>
+                    <section id="tools" className="py-4 mb-9">
+
+                        <div className="">
+                            <Swiper
+                                modules={[Autoplay, Navigation,]}
+
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+                                spaceBetween={15}
+                                slidesPerView={5}
+                                onSwiper={(swipper) => console.log(swipper)}
+                            >
+                                {tools.map((val, key) => (
+                                    <SwiperSlide key={key} className="cursor-pointer"><div className="flex items-center flex-col lg:text-4xl text-md">{val.icon} <div className="font['Inter'] cursor-pointer text-xs font-thin py-1">{val.name}</div></div></SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+                    </section>
                     <section Id="Portfolio">
                         <p class=" font-black py-8 text-2xl font-['Inter'] uppercase ">Portfolio</p>
                         <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
@@ -125,6 +151,8 @@ export const Index = () => {
                             ))}
                         </div>
                     </section>
+
+
                     <section id="Articles">
                         <p class=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
                         <div className="pb-4 font-['Inter'] text-sm">

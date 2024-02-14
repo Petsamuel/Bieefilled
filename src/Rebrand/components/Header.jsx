@@ -34,7 +34,7 @@ export const Header = () => {
                          font-medium rounded-full  py-2 hover:ring-green-900    transition-all ease-in-out hover:ring-2 border  ring-gray-300 hover:scale-95 active:scale-90"
 
                         >
-                            <span className="w-max items-center gap-2 flex px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0 lg:text-lg text-xs font-['Inter']">
+                            <span className="w-max items-center gap-2 flex px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0 lg:text-md text-xs font-['Inter']">
                                 Hire Me
                             </span>
                         </a>
@@ -45,7 +45,7 @@ export const Header = () => {
                          font-medium  rounded-full text-green-900 py-2 hover:ring-green-900 transition-all ease-in-out hover:ring-2 border ring-gray-300  hover:scale-95 active:scale-90"
 
                         >
-                            <span className="text-green-900 items-center gap-2 flex relative px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-lg text-xs">
+                            <span className="text-green-900 items-center gap-2 flex relative px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-md text-xs">
                                 Sponsor <span><SiBuymeacoffee color="green" /></span>
                             </span>
                         </a>
