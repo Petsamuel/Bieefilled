@@ -191,24 +191,24 @@ export const projects = [
     stack: ["React.JS", "Ether.Js", "Solidity", "Tailwindcss"],
     status: false,
   },
-  {
-    image:
-      "https://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
-    name: "Gruvly Music",
-    year: "Jan 2022 - October 2023",
-    link: "bieefilled.vercel.app",
-    institution: "Private",
-    description:
-      "Gruvly Music: Platform designed for forward-looking music musical talents...",
-    stack: ["Wordpress CMS", "PHP", "SQL", "API"],
-    status: false,
-  },
+  // {
+  //   image:
+  //     "https://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
+  //   name: "Gruvly Music",
+  //   year: "Jan 2022 - October 2023",
+  //   link: "bieefilled.vercel.app",
+  //   institution: "Private",
+  //   description:
+  //     "Gruvly Music: Platform designed for forward-looking music musical talents...",
+  //   stack: ["Wordpress CMS", "PHP", "SQL", "API"],
+  //   status: false,
+  // },
   {
     image:
       "https://drive.google.com/uc?export=view&id=1cVzwlSy6WDAB3HxMEhZdxnkgL2vkTKtU",
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
-    link: "https://varena.app/",
+    link: "",
     institution: "Private",
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
@@ -226,17 +226,17 @@ export const projects = [
     stack: ["Wordpress CMS", "PHP"],
     status: false,
   },
-  {
-    image:
-      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
-    name: "DataHarbor Africa",
-    year: "Nov-2023",
-    link: "https://dataharborAfrica.com",
-    institution: "Private",
-    description: "an event planning landing page built with WordPress CMS...",
-    stack: ["Wordpress CMS", "PHP"],
-    status: false,
-  },
+  // {
+  //   image:
+  //     "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+  //   name: "DataHarbor Africa",
+  //   year: "Nov-2023",
+  //   link: "https://dataharborAfrica.com",
+  //   institution: "Private",
+  //   description: "an event planning landing page built with WordPress CMS...",
+  //   stack: ["Wordpress CMS", "PHP"],
+  //   status: false,
+  // },
 ];
 
 export const contactMethods = [
