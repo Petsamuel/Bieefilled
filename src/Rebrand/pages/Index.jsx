@@ -100,7 +100,7 @@ export const Index = () => {
                         <p class="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Resume</p>
                         <div className="pb-8 ">
                             {Experiences.map((value, index) => (
-                                <div className="font-[Inter] text-sm">
+                                <div className="font-[Inter] text-sm cursor-pointer">
                                     <div>{value.date}</div>
                                     <div className="font-extrabold uppercase">{value.institution}</div>
                                     <div>{value.title}</div>

@@ -10,7 +10,7 @@ function About() {
     setEventState(num);
   }
   return (
-    <section className="bg-black h-screen">
+    <section className="bg-black lg:h-screen ">
       <Header />
       <div className="pt-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-x-8 grid-cols-1 ">
         <div className=" lg:items-end lg:col-span-2 text-right z-auto">

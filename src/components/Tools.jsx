@@ -1,4 +1,9 @@
 import { tools } from "./store/data";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/autoplay';
 export const Tool = () => {
   return (
     <>
@@ -8,17 +13,33 @@ export const Tool = () => {
         </span>
         nology
       </h4>
-      <span className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-3 lg:h-40 overflow-y-scroll h-32">
-        {tools.map((value, key) => (
-          <span>
-            <div>
-              <div key={key} className="my-3">
-                <img src={value.svg} alt="alt" className="w-10 h-10" />
-                <p className="py-2">{value.name}</p>
-              </div>
-            </div>
-          </span>
-        ))}
+      <span className="">
+
+        <Swiper
+          modules={[Autoplay, Navigation,]}
+
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          spaceBetween={15}
+          slidesPerView={5}
+          onSwiper={(swipper) => console.log(swipper)}
+        >
+          {tools.map((value, key) => (
+            <SwiperSlide key={key} className="cursor-pointer hover:text-2xl">
+              <span>
+                <div>
+                  <div key={key} className="my-3">
+                    <img src={value.svg} alt="alt" className="lg:w-8 lg:h-8 w-5 h-5" />
+                    <p className="py-2">{value.name}</p>
+                  </div>
+                </div>
+              </span>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
       </span>
     </>
   );
