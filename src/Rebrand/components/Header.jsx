@@ -30,11 +30,11 @@ export const Header = () => {
                 <div className="flex  gap-y-2 lg:items-center items-start font-['Inter']">
                     <div className="flex justify-center items-center  ">
                         <a
-                            className="w-max items-center gap-3 relative flex  ijustify-center p-0.5 mb-2 mr-2 overflow-hidden 
+                            className=" hover:cursor-pointer w-max items-center gap-3 relative flex  ijustify-center p-0.5 mb-2 mr-2 overflow-hidden 
                          font-medium rounded-full  py-2 hover:ring-green-900    transition-all ease-in-out hover:ring-2 border  ring-gray-300 hover:scale-95 active:scale-90"
 
                         >
-                            <span className="w-max items-center gap-2 flex px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0 lg:text-md text-xs font-['Inter']">
+                            <span className="hover:cursor-pointer w-max items-center gap-2 flex px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0 lg:text-md text-xs font-['Inter']">
                                 Hire Me
                             </span>
                         </a>
