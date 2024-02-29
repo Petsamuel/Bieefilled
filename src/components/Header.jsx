@@ -32,7 +32,7 @@ function Header() {
           </Link>
           <div className="flex items-center md:order-2">
             <Link
-              href="/blog"
+              to="/blog"
               className="text-white  focus:ring-1  font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 focus:outline-none hover:shadow-sm "
             >
               Blog

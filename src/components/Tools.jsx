@@ -27,7 +27,7 @@ export const Tool = () => {
           onSwiper={(swipper) => console.log(swipper)}
         >
           {tools.map((value, key) => (
-            <SwiperSlide key={key} className="cursor-pointer hover:text-2xl">
+            <SwiperSlide key={key} className="cursor-pointer ">
               <span>
                 <div>
                   <div key={key} className="my-3">
