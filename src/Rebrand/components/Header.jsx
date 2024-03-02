@@ -44,6 +44,7 @@ export const Header = () => {
                     </div>
                     <div className="lg:block hidden">
                         <a
+                            href="https://www.buymeacoffee.com/bieefilled"
                             className="cursor-pointer  gap-3 relative inline-flex  justify-center p-0.5 mb-2 mr-2 overflow-hidden 
                          font-medium  rounded-full text-green-900 py-2 hover:ring-green-900 transition-all ease-in-out hover:ring-2 border ring-gray-300  hover:scale-95 active:scale-90"
 
