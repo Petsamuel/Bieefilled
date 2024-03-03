@@ -14,7 +14,7 @@ function About() {
       <Header />
       <div className="flex py-20 lg:mx-10 mx-4 gap-14 lg:flex-row flex-col">
         {/* grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-8 grid-cols-1 py-9 */}
-        <div className="  w-[90%] ">
+        <div className=" lg:w-3/4 w-[90%] ">
           <Content eventState={eventState} />
         </div>
 

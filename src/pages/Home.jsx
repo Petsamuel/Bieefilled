@@ -6,7 +6,7 @@ function Home() {
   return (
     <section className="bg-black h-screen">
       <Header />
-      <div className="flex items-center m-auto py-[6em] "> <Hero /></div>
+      <div className="py-14 lg:py-4"> <Hero /></div>
     </section>
   );
 }
