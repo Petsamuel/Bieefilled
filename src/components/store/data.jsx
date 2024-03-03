@@ -34,27 +34,27 @@ export const secret_key = {
 export const socials = [
   {
     name: "LinkedIn",
-    icon: <FaLinkedinIn color="#0072b1" />,
+    icon: <FaLinkedinIn color="#0072b1" className="dark:text-white" />,
     link: "https://linkedin.com/in/bieefilled",
   },
   {
     name: "Twitter",
-    icon: <FaXTwitter color="#000000" />,
+    icon: <FaXTwitter color="#000000" className="dark:text-white" />,
     link: "https://twitter.com/bieefilled",
   },
   {
     name: "Github",
-    icon: <FaGithub color="#000000" />,
+    icon: <FaGithub color="#000000" className="dark:text-white" />,
     link: "https://github.com/petsamuel",
   },
   {
     name: "Medium",
-    icon: <FaMedium color="#000000" />,
+    icon: <FaMedium color="#000000" className="dark:text-white" />,
     link: "https://medium.com/bieefilled",
   },
   {
     name: "Dev To",
-    icon: <FaDev color="#000000" />,
+    icon: <FaDev color="#000000" className="dark:text-white" />,
 
     link: "https://devto.com/bieefilled",
   },
