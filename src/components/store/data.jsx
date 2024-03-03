@@ -3,6 +3,7 @@ import zuri from "../../assets/zuri.svg";
 import jm from "../../assets/jm.svg";
 import { BsPuzzle } from "react-icons/bs";
 import { TbWritingSign } from "react-icons/tb";
+import { SiFrontendmentor } from "react-icons/si";
 import {
   FaXTwitter,
   FaMedium,
@@ -133,6 +134,14 @@ export const Experiences = [
     description:
       " I gained a solid understanding of programming, algorithms, data structures, and computer systems. I also worked on various projects including developing software applications, creating websites, and designing databases.",
   },
+  {
+    institution: "Green Nobel Technologies",
+    date: "June-2018 - Sept-2019",
+    title: "Frontend Developer",
+    skills: "HTML, CSS, JavaScript",
+    description:
+      "I worked as a Frontend Developer."
+  },
 ];
 export const Review = [
   {
@@ -226,17 +235,26 @@ export const projects = [
     stack: ["Wordpress CMS", "PHP"],
     status: false,
   },
-  // {
-  //   image:
-  //     "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
-  //   name: "DataHarbor Africa",
-  //   year: "Nov-2023",
-  //   link: "https://dataharborAfrica.com",
-  //   institution: "Private",
-  //   description: "an event planning landing page built with WordPress CMS...",
-  //   stack: ["Wordpress CMS", "PHP"],
-  //   status: false,
-  // },
+  {
+    image: "",
+    name: "KewnuAi",
+    year: "Ongoing",
+    link: "https://Kwenuai.com.ng",
+    institution: "Private",
+    description: "Ai consulting platform built with react, Flutterwave, TailwindCss ...",
+    stack: ["ReactJs, TailwindCss", "FlutterWave"],
+    status: true,
+  },
+  {
+    image: "",
+    name: "Xpenzes",
+    year: "Ongoing",
+    link: "https://xpenzes.vercel.app/",
+    institution: "Private",
+    description: "A finance Management platform built with React, Node.js, FireBase, Stripe...",
+    stack: ["ReactJs, TailwindCss", "Stripe"],
+    status: true,
+  },
 ];
 
 export const contactMethods = [
@@ -444,6 +462,9 @@ export const Stack = [
   {
     name: "WordPress Development",
     icon: <FaWordpressSimple color="#00749C" />
+  }, {
+    name: "Mentorship",
+    icon: <SiFrontendmentor color="#000000" />
   }
 
 
