@@ -1,7 +1,7 @@
 import { Experiences } from "./store/data";
 function Experience() {
   return (
-    <section className="overflow-none">
+    <section className="">
       <ol className="relative border-l border-gray-200 dark:border-gray-700 ">
         {Experiences.map((index, key) => (
           <li className="mb-10 ml-4" key={key}>

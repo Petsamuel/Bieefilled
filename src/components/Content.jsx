@@ -52,7 +52,7 @@ function Content({ eventState }) {
       <div
         className={
           eventState === 2
-            ? "text-justify leading-normal overflow-y-scroll h-5/6 "
+            ? "text-justify leading-normal h-5/6 "
             : "hidden"
         }
       >
@@ -67,7 +67,7 @@ function Content({ eventState }) {
       <div
         className={
           eventState === 3
-            ? "text-justify leading-normal overflow-y-scroll h-5/6"
+            ? "text-justify leading-normal h-5/6"
             : "hidden"
         }
       >
