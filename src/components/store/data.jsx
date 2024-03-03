@@ -136,7 +136,7 @@ export const Experiences = [
   },
   {
     institution: "Green Nobel Technologies",
-    date: "June-2018 - Sept-2019",
+    date: "Jan 2018 - Jul 2022",
     title: "Frontend Developer",
     skills: "HTML, CSS, JavaScript",
     description:
