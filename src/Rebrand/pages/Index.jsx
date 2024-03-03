@@ -6,7 +6,8 @@ import { About, Experiences, projects, Review, tools } from "../../components/st
 import { Post } from "../../components/store/post";
 import { FaExternalLinkAlt, FaRegArrowAltCircleUp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
+// import GitHubCalendar from "react-github-calendar";s
 import Typewriter from "typewriter-effect";
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -69,7 +70,7 @@ export const Index = () => {
                         </div>
 
                         {About.map((value, index) => (
-                            <p key={index}>
+                            <p key={index} className="text-justify">
                                 {value.about}
                                 {trigger ? (
                                     <span>
@@ -98,7 +99,7 @@ export const Index = () => {
                     </section>
                     <section className="" id="Resume ">
                         <p class="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Resume</p>
-                        <div className="pb-8 ">
+                        <div className="pb-8">
                             {Experiences.map((value, index) => (
                                 <div className="font-[Inter] text-sm cursor-pointer">
                                     <div>{value.date}</div>
@@ -164,6 +165,16 @@ export const Index = () => {
                             </Swiper>
                         </div>
                     </section>
+
+                    {/* <section id="Opensource">
+                        <p class=" font-black py-8 text-2xl font-['Inter'] uppercase">Open Sourcery</p>
+                        <GitHubCalendar
+                            username="Petsamuel"
+                            color="black"
+                            hideColorLegend
+                        />
+
+                    </section> */}
 
                     <section id="Articles">
                         <p class=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
