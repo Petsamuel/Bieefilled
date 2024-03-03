@@ -10,14 +10,15 @@ function About() {
     setEventState(num);
   }
   return (
-    <section className="bg-black lg:h-full h-screen py-5">
+    <section className="bg-black ">
       <Header />
-      <div className="pt-20 grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-x-8 grid-cols-1 ">
-        <div className=" lg:items-end lg:col-span-2 text-right z-auto">
+      <div className="flex py-20 lg:mx-10 mx-4 gap-14 lg:flex-row flex-col">
+        {/* grid lg:grid-cols-3 md:grid-cols-2 px-4 gap-8 grid-cols-1 py-9 */}
+        <div className="  w-[90%] ">
           <Content eventState={eventState} />
         </div>
 
-        <div>
+        <div className="flex-1 mt-10">
           <Stepper handleEvent={handleEvent} />
         </div>
       </div>

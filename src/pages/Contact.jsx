@@ -4,9 +4,9 @@ import Header from "../components/Header";
 
 function Contact() {
   return (
-    <main className="bg-black h-screen max-h-content" >
+    <main className="bg-black lg:h-max h-screen" >
       <Header />
-      <main className="py-14">
+      <main className="py-14 ">
         <div className="max-w-screen-xl mx-auto px-4 text-white md:px-8">
           <div className="max-w-lg mx-auto space-y-3 sm:text-center text-sm">
             <h1 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white mt-4">

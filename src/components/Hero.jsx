@@ -32,7 +32,7 @@ function Hero() {
   return (
     <>
       <section className="place-content-center">
-        <div className="lg:pt-20 flex lg:flex-row flex-col justify-center items-center px-16 lg:text-justify">
+        <div className="lg:pt-20 flex lg:flex-row flex-col justify-center items-center lg:px-16 lg:text-justify">
           <div
             className="flex-auto"
             onMouseMove={(e) => {

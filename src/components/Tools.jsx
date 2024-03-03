@@ -7,7 +7,7 @@ import 'swiper/css/autoplay';
 export const Tool = () => {
   return (
     <>
-      <h4 className="py-4 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white mt-4">
+      <h4 className="py-8 px-2 mb-3  text-semibold font-[Poppins] text-2xl text-white mt-4 ">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 border-b-2 text-2xl">
           Tech
         </span>
@@ -31,7 +31,8 @@ export const Tool = () => {
               <span>
                 <div>
                   <div key={key} className="my-3">
-                    <img src={value.svg} alt="alt" className="lg:w-8 lg:h-8 w-5 h-5" />
+                    <span className="lg:w-8 lg:h-8 w-5 h-5" >{value.icon}</span>
+
                     <p className="py-2">{value.name}</p>
                   </div>
                 </div>
@@ -40,7 +41,7 @@ export const Tool = () => {
           ))}
         </Swiper>
 
-      </span>
+      </span >
     </>
   );
 };
