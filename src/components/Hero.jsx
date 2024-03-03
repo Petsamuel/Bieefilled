@@ -68,6 +68,9 @@ function Hero() {
                     writer.typeString("A Freelance Analysts...");
                     writer.pauseFor(5000);
                     writer.deleteAll();
+                    writer.typeString("Wordpress Developer...");
+                    writer.pauseFor(5000);
+                    writer.deleteAll();
 
                     writer.typeString("An Open Source Contributor...");
                     writer.pauseFor(5000).start();

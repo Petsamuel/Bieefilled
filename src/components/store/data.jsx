@@ -440,11 +440,11 @@ export const About = [
 
 export const Stack = [
   {
-    name: "Software Engineer",
+    name: "Software Engineering",
     icon: <BsPuzzle color="#57518b" />,
   },
   {
-    name: "Technical Writer",
+    name: "Technical Writing",
     icon: <TbWritingSign color="#679d7f" />,
   },
   {
