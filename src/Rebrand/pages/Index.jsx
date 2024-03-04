@@ -121,7 +121,7 @@ export const Index = () => {
                                     <div className="">{value.institution}</div>
                                     <div className="flex items-center space-x-2 flex-wrap">
                                         {value.stack.map((val) => (
-                                            <div className="shadow-sm text-xs font-light  p-2 rounded-lg items-center flex hover:scale-95 active:scale-90 hover:shdow-sm">{val}</div>
+                                            <div className=" text-xs font-light py-2 rounded-lg items-center flex hover:scale-95 active:scale-90 ">{val}</div>
                                         ))}
                                     </div>
 
