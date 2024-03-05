@@ -23,7 +23,7 @@ export const App = () => {
   // }, []);
   return (
     <Fragment>
-      {!loading ? <BrowserRouter>
+       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<Error />} />
@@ -34,7 +34,7 @@ export const App = () => {
           <Route path="/blog" element={<Blog />} />
         </Routes>
 
-      </BrowserRouter> : <Loading />}
+      </BrowserRouter> 
     </Fragment>
   );
 };
