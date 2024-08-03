@@ -184,7 +184,7 @@ export const projects = [
     name: "League of Professionals",
     year: "Nov-2023",
     link: "https://lopwin.com.ng",
-    institution: "Private",
+    institution: "",
     description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php", "ConvertKit"],
     status: false,
@@ -218,7 +218,7 @@ export const projects = [
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
     link: "",
-    institution: "Private",
+    institution: "",
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React.JS", "Matter.js", "Kia Wallet", "Node.js"],
@@ -230,7 +230,7 @@ export const projects = [
     name: "Hpierson Brochure",
     year: "Nov-2023",
     link: "https://Hpierson.com/Brochure",
-    institution: "Private",
+    institution: "",
     description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "PHP"],
     status: false,
@@ -240,7 +240,7 @@ export const projects = [
     name: "KewnuAi",
     year: "Ongoing",
     link: "https://Kwenuai.com.ng",
-    institution: "Private",
+    institution: "",
     description: "Ai consulting platform built with react, Flutterwave, TailwindCss ...",
     stack: ["ReactJs, TailwindCss", "FlutterWave"],
     status: true,
@@ -250,7 +250,7 @@ export const projects = [
     name: "Xpenzes",
     year: "Ongoing",
     link: "https://xpenzes.vercel.app/",
-    institution: "Private",
+    institution: "",
     description: "A finance Management platform built with React, Node.js, FireBase, Stripe...",
     stack: ["ReactJs, TailwindCss", "Stripe"],
     status: true,
@@ -418,51 +418,50 @@ export const tools = [
   },
 ];
 
-export const About = [
-  {
-    about: `I am Peter Samuel a software Engineer with a wide range of technical backgrounds, including web development, SEO, and database management. I have significant experience working with programming languages such as JavaScript, TypeScript, PHP, and Python, Additionally, I am well-versed in the latest development frameworks and tools.
+export const About = [{
+  about: `I am Peter Samuel, a seasoned Software Engineer with a diverse technical background that cut across web development, SEO, and database management. My expertise spans multiple programming languages, including JavaScript, TypeScript, PHP, and Python. I'm current with the latest development frameworks and tools, ensuring I can deliver cutting-edge solutions.`,
 
-      Beyound my technical expertise, I have strong interpersonal skills and excel at effective communication effectively with diverse stakeholders. `,
-  },
-  {
-    more: `I have experience collaborating with people from diverse cultural backgrounds, and tailoring solutions to meet their specific requirements.
+  more: `My technical proficiency covers a wide range of areas, allowing me to tackle complex projects effectively. I excel in web development, have a strong understanding of SEO principles, and am skilled in database management.
+  
+  Beyond my technical abilities, I possess strong interpersonal skills and excel at communicating effectively with diverse stakeholders. This combination allows me to bridge the gap between complex technical concepts and business objectives.
 
-      I thrive in fast-paced environments that require creativity and problem-solving.`,
-  },
-  {
-    extra: ` I am always willing to go the extra mile to ensure the success of any project.
+  I have extensive experience collaborating with people from diverse cultural backgrounds, which has honed my ability to tailor solutions to meet specific client requirements.
 
-      One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software.
+  I thrive in fast-paced environments that demand creativity and innovative problem-solving. I am always willing to go the extra mile to ensure the success of any project.`
 
-      My technical skills, interpersonal skills, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`,
-  },
-];
+}, {
+  extra: `One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software. This project showcases my ability to lead complex initiatives and deliver tailored solutions that meet unique business needs.
+
+  My technical skills, interpersonal abilities, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`}];
 
 export const Stack = [
   {
     name: "Software Engineering",
     icon: <BsPuzzle color="#57518b" />,
   },
+
   {
-    name: "Technical Writing",
-    icon: <TbWritingSign color="#679d7f" />,
-  },
-  {
-    name: "Web Developement",
+    name: "Web Development",
     icon: [<FaReact color="#da9797" />],
   },
   {
     name: "E-commerce",
     icon: <FaShopify color="#ffb170" />,
   },
-  , {
-    name: "S.E.O Expert",
-    icon: <FaRankingStar color="#445445" />
+  {
+    name: "WordPress",
+    icon: <FaWordpressSimple color="#00749C" />
   },
   {
-    name: "WordPress Development",
-    icon: <FaWordpressSimple color="#00749C" />
-  }, {
+    name: "SEO Expert",
+    icon: <FaRankingStar color="#445445" />
+  },
+
+  {
+    name: "Technical Writing",
+    icon: <TbWritingSign color="#679d7f" />,
+  },
+  {
     name: "Mentorship",
     icon: <SiFrontendmentor className="text-black dark:text-[#da9797]" />
   }
