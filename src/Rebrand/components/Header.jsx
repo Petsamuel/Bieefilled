@@ -2,7 +2,7 @@ import { useState } from "react"
 import { SiBuymeacoffee } from "react-icons/si";
 import { Modal } from "./Modal";
 import img from "../../assets/image.gif"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 export const Header = () => {
@@ -31,16 +31,16 @@ export const Header = () => {
                 </div>
                 <div className="flex  gap-y-2 lg:items-center items-start font-['Inter']">
                     <div className="flex justify-center items-center  ">
-                        <Link
-                            to="/contact"
+                        <a
+                            href="https://docs.google.com/document/d/1OMDfHk0rFGpbTEdlQWUivNgdG-4GYvoV/edit?usp=sharing&ouid=116822055537140001259&rtpof=true&sd=true"
                             className="cursor-pointer w-max items-center gap-3 relative flex  ijustify-center p-0.5 mb-2 mr-2 overflow-hidden 
                          font-medium rounded-full  py-2 hover:ring-green-900    transition-all ease-in-out hover:ring-2 border  ring-gray-300 hover:scale-95 active:scale-90"
 
                         >
                             <span className="cursor-pointer w-max items-center gap-2 flex px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0 lg:text-md text-xs font-['Inter']">
-                                Hire Me
+                                Resume
                             </span>
-                        </Link>
+                        </a>
                     </div>
                     <div className="lg:block hidden">
                         <a
