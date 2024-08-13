@@ -16,7 +16,7 @@ export default ({ mode }) => {
         registerType: "autoUpdate",
         includeAssets: ["favicon.ico", "robots.txt", "apple-touch-icon.png"],
         manifest: {
-          name: "Peter Samuel",
+          name: "my Portfolio",
           short_name: "Biee cv",
           theme_color: "#ffffff",
           icons: [
