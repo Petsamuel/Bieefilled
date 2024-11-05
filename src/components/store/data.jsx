@@ -16,9 +16,19 @@ import {
   FaRankingStar,
   FaCss3,
 
-} from "react-icons/fa6";
-import { SiTailwindcss, SiNextdotjs, SiReact, SiTypescript, SiBootstrap, SiFirebase, SiMongodb, SiPython, SiJavascript, SiPhp, SiRadstudio, SiHtml5, SiVite, SiNpm, SiGit, SiVisualstudiocode, SiSqlite, SiWordpress } from "react-icons/si";
 
+} from "react-icons/fa6";
+import {
+  TbBrandGithub,
+  TbBrandX,
+  TbExchange,
+  TbHome,
+  TbNewSection,
+  TbTerminal2,
+} from "react-icons/tb";
+
+import { SiTailwindcss, SiNextdotjs, SiReact, SiTypescript, SiBootstrap, SiFirebase, SiMongodb, SiPython, SiJavascript, SiPhp, SiRadstudio, SiHtml5, SiVite, SiNpm, SiGit, SiVisualstudiocode, SiSqlite, SiWordpress, SiUpwork } from "react-icons/si";
+// import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 const public_key = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY;
 const template_id = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID;
 const mail_service_id = import.meta.env.VITE_APP_MAIL_SERVICE_ID;
@@ -30,7 +40,24 @@ export const secret_key = {
   mail_service_id: mail_service_id,
   reCAPTCHA: reCAPTCHA_site_key,
 };
+export const navItems = [
+  {
+    name: "Home",
+    link: "/",
+    // icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "About",
+    link: "#about",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+    // icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
 
+  },
+];
 export const socials = [
   {
     name: "LinkedIn",
@@ -55,13 +82,17 @@ export const socials = [
   {
     name: "Dev To",
     icon: <FaDev className="dark:text-white text-black" />,
-
     link: "https://devto.com/bieefilled",
+  },
+  {
+    name: "UpWork",
+    icon: <SiUpwork className="dark:text-white text-black" />,
+    link: "https://www.upwork.com/freelancers/~01d16db2f02d0b5e0d?mp_source=share",
   },
 ];
 export const certification = [
   {
-    name: "REACT + REDUX Certification",
+    name: "React + Redux Certification",
     svg: `${sololearn}`,
     year: "2023",
     link: "https://www.sololearn.com/certificates/course/en/18019527/1097/landscape/png",
@@ -73,13 +104,13 @@ export const certification = [
     link: "https://www.sololearn.com/certificates/course/en/18019527/1060/landscape/png",
   },
   {
-    name: "Django Development",
+    name: "Django Fullstack Development",
     svg: `${zuri}`,
     year: "2022",
     link: "https://drive.google.com/file/d/1GYca4gIT4f-12RL4VOjAtfGfnN3Kfk7Z/view?usp=drivesdk",
   },
   {
-    name: " JobberMan SoftSkill",
+    name: "JobberMan SoftSkill",
     svg: `${jm}`,
     year: "2021",
     link: "https://drive.google.com/file/d/1Qw3LOt0-6eU7a_YVW4urPu9HnKckHG_H/view?usp=drivesdk",
@@ -96,7 +127,7 @@ export const Experiences = [
   {
     institution: "H. PIERSON ASSOCIATES LIMITED ",
     date: "Jul 2022 - Jul 2023",
-    title: "Fullstack Engineer",
+    title: "Fullstack Developer",
     skills: "Collaboration · Website Development · Maintenance",
     description:
       "Build and maintain various Websites",
@@ -104,7 +135,7 @@ export const Experiences = [
   {
     institution: "HNG Internship · Internship",
     date: "Oct-2020 - Dec-2022",
-    title: "Frontend Engineer",
+    title: "Frontend Developer",
     skills: "Collaboration  · Analytical Skills · FrontEnd Development",
     description:
       "I developed web applications using javascript framework (REACT), collaborated with other developers to improve web application performance, and gained valuable experience in web development and teamwork.",
@@ -129,7 +160,7 @@ export const Experiences = [
   {
     institution: "Yaba College Of Technology",
     date: "Sept-2019 - May-2022",
-    title: "Computer Science",
+    title: "Computer Science Deploma",
     skills: "Systems Design · Analytical Skills · User Interface Design",
     description:
       " I gained a solid understanding of programming, algorithms, data structures, and computer systems. I also worked on various projects including developing software applications, creating websites, and designing databases.",
@@ -175,6 +206,64 @@ export const Review = [
     link: "https://www.linkedin.com/in/stanley-obayagbo-058ab497",
   },
 ];
+export const links = [
+  {
+    title: "Home",
+    icon: (
+      <TbHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+
+  {
+    title: "Products",
+    icon: (
+      <TbTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+  {
+    title: "Components",
+    icon: (
+      <TbNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+  {
+    title: "Aceternity UI",
+    icon: (
+      <img
+        src="https://assets.aceternity.com/logo-dark.png"
+        width={20}
+        height={20}
+        alt="Aceternity Logo"
+      />
+    ),
+    href: "#",
+  },
+  {
+    title: "Changelog",
+    icon: (
+      <TbExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+
+  {
+    title: "Twitter",
+    icon: (
+      <TbBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+  {
+    title: "GitHub",
+    icon: (
+      <TbBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+];
 
 export const projects = [
   // status- completed:true;  on-going:false; stopped:null;
@@ -188,6 +277,7 @@ export const projects = [
     description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php", "ConvertKit"],
     status: false,
+    ctaText: "visit",
   },
   {
     image:
@@ -199,6 +289,7 @@ export const projects = [
     description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
     stack: ["React.JS", "Ether.Js", "Solidity", "Tailwindcss"],
     status: false,
+    ctaText: "visit",
   },
   // {
   //   image:
@@ -223,6 +314,7 @@ export const projects = [
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React.JS", "Matter.js", "Kia Wallet", "Node.js"],
     status: false,
+    ctaText: "visit",
   },
   {
     image:
@@ -234,6 +326,7 @@ export const projects = [
     description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "PHP"],
     status: false,
+    ctaText: "visit",
   },
   {
     image: "",
@@ -244,6 +337,7 @@ export const projects = [
     description: "Ai consulting platform built with react, Flutterwave, TailwindCss ...",
     stack: ["ReactJs, TailwindCss", "FlutterWave"],
     status: true,
+    ctaText: "visit",
   },
   {
     image: "",
@@ -254,6 +348,7 @@ export const projects = [
     description: "A finance Management platform built with React, Node.js, FireBase, Stripe...",
     stack: ["ReactJs, TailwindCss", "Stripe"],
     status: true,
+    ctaText: "visit",
   },
 ];
 

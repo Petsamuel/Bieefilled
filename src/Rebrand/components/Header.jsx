@@ -43,14 +43,17 @@ export const Header = () => {
                         </a>
                     </div>
                     <div className="lg:block hidden">
+                        {/* <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                             Sponsor <span><SiBuymeacoffee color="green" /></span> Sponsore
+                        </button> */}
                         <a
                             href="https://www.buymeacoffee.com/bieefilled"
-                            className="cursor-pointer  gap-3 relative inline-flex  justify-center p-0.5 mb-2 mr-2 overflow-hidden 
-                         font-medium  rounded-full text-green-900 py-2 hover:ring-green-900 transition-all ease-in-out hover:ring-2 border ring-gray-300  hover:scale-95 active:scale-90"
+                            className="cursor-pointer  gap-3 relative inline-flex   p-0.5 mb-2 mr-2 overflow-hidden 
+                         font-medium  rounded-full dark:text-white text-white py-2 hover:ring-green-900 ease-in-out hover:ring-2 border ring-gray-300  animate-shimmer items-center justify-center border-slate-800 bg-[linear-gradient(110deg,#000000,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]   transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
 
                         >
-                            <span className="text-green-900 items-center gap-2 flex relative px-5  transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-md text-xs">
-                                Sponsor <span><SiBuymeacoffee color="green" /></span>
+                            <span className=" items-center gap-2 flex relative px-5 ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-md text-xs animate-shimmer transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                                Hire Me
                             </span>
                         </a>
 

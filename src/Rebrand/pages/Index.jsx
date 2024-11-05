@@ -11,6 +11,9 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import Typewriter from "typewriter-effect";
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { BackgroundBeams } from "../../v4/components/ui/BackgroundBeam";
+// import { GridBackgroundDemo } from "../../v4/components/Hero";
+import { ExpandableCardDemo } from "../components/test";
 // import GitHubCalendar from "react-github-calendar";
 
 
@@ -60,16 +63,16 @@ export const Index = () => {
         <>
             <div className="scroll-container" >
 
-                <section className=" flex flex-col lg:m-16 m-6 md:m-8" id="Home"  >
-                    <header className="" >
+                <section className=" flex flex-col " id="Home"  >
+                    <header className="lg:mx-16 mx-6 md:mx-8" >
                         <Header />
                     </header>
 
                     <main className="max-h-content" >
-                        <section className="lg:mx-8 " >
+                        <section className="lg:mx-16 lg:m-16 m-6 md:m-8" >
                             <Stacks />
                         </section>
-                        <section className="my-12 font-[Inter] text-md" id="Resume" data-scroll data-scroll-speed={2}>
+                        <section className="my-12 font-[Inter] text-md lg:m-16 m-6 md:m-8" id="Resume" data-scroll data-scroll-speed={2}>
                             <div class="quote h-14">
 
                                 <span className=" mb-5 lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
@@ -127,7 +130,7 @@ export const Index = () => {
 
                                 </>)}
                         </section>
-                        <section className="" id="Resume" data-scroll data-scroll-speed={10}>
+                        <section className="lg:mx-16 mx-6 md:mx-8" id="Resume" data-scroll data-scroll-speed={10}>
                             <p className="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Resume</p>
                             <div className="pb-8">
                                 {Experiences.map((value, index) => (
@@ -142,7 +145,7 @@ export const Index = () => {
                             </div>
                         </section>
 
-                        <section id="Portfolio">
+                        <section id="Portfolio" className="lg:mx-16 mx-6 md:mx-8">
                             <p className=" font-black py-8 text-2xl font-['Inter'] uppercase ">Portfolio</p>
                             <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
                                 {projects.map((value, index) => (
@@ -160,22 +163,24 @@ export const Index = () => {
                                 <hr />
                             </div>
                         </section>
-                        <section className="" id="Reviews">
+                        {/* reviews */}
+                        <section className="lg:m-16 m-6 md:m-8" id="Reviews">
                             <p className="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Reviews</p>
                             <div className="pb-8 ">
                                 {Review.map((value, index) => (
-                                    <div className="hover:scale-95 active:scale-90 font-[Inter]  text-sm cursor-pointer flex-col flex gap-1 " key={index}>
+                                    <div className="font-[Inter]  text-sm cursor-pointer flex-col flex gap-1 " key={index}>
                                         <div className="text-xs">{value.date}</div>
-                                        <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap uppercase">{value.name} <span className="text-sm font-thin">{value.title}</span></a>
-                                        <div> <span className="text-2xl text-bold">"</span>{value.reviews}</div>
+                                        <a href={value.link} className="font-extrabold gap-x-2 flex flex-wrap uppercase">{value.name} <span className="text-sm font-thin hover:font-normal">{value.title}</span></a>
+                                        <div className="relative"> <span className="font-extrabold text-2xl absolute ">"</span> <span className="text-2xl text-bold text-justify p-2"></span>{value.reviews}</div>
 
-                                        <hr className="my-4 h-[0px]" />
+                                        <hr className="my-2 h-[0px]" />
                                     </div>
                                 ))}
                             </div>
                         </section>
+                        {/* tools */}
 
-                        <section id="tools" className=" my-9 h-16">
+                        <section id="tools" className=" my-9 ">
                             <div className="">
                                 <Swiper
                                     modules={[Autoplay, Navigation,]}
@@ -204,7 +209,7 @@ export const Index = () => {
                         />
                     </section> */}
 
-                        <section id="Articles">
+                        <section id="Articles" className="lg:mx-16 mx-6 md:m-8">
                             <p className=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
                             <div className="pb-4 font-['Inter'] text-sm">
                                 {Post.map((value, index) => (
@@ -216,7 +221,7 @@ export const Index = () => {
 
                                             </span>
                                             </a>
-                                            <hr className="my-4 h-[0px]" />
+                                            <hr className="my-2 h-[0px]" />
                                         </div>
 
 
@@ -228,17 +233,20 @@ export const Index = () => {
                     </main>
 
 
-                    <div className="relative ">
+                    <div className="relative lg:m-16 mx-6 md:mx-8">
                         <a href="#Home" className={!back2Top ? "hidden" :
                             " hover:text-3xl hover:scale-90 active:scale-90 fixed text-2xl animate-bounce rounded-full bottom-10 right-5"} id="back2Top"><FaRegArrowAltCircleUp /></a>
 
                     </div>
 
-                    <footer mt-5>
+                    <footer className=" lg:m-16 m-6 md:m-8">
                         <Footer />
                     </footer>
                 </section>
             </div>
+            <BackgroundBeams />
+
+
         </>
     );
 };

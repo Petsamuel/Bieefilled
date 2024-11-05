@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Fragment, useEffect, useRef, useState } from "react";
+import { LandingPage } from "./v4/pages/LandingPage";
 // import Loading from "./components/Loading";
 // import { Layout } from "./components/Layout";
 import { Blog } from "./pages/Blog";
@@ -10,6 +11,7 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import "./index.css";
 import { Index } from "./Rebrand/pages/Index";
+import { Usetheme } from "./components/store/store";
 // import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 // import 'locomotive-scroll/dist/locomotive-scroll.css';
 
@@ -23,13 +25,17 @@ export const App = () => {
   //   }, 2000);
   // }, []);
   const scrollRef = useRef(null);
+  const theme = Usetheme(state => state.theme)
+  
+
   return (
 
-    <main data-scroll-container ref={scrollRef}>
+    <main data-scroll-container ref={scrollRef} className={`${theme === "light" ? 'bg-white' : 'bg-black'}`}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
           <Route path="*" element={<Error />} />
+          <Route path="/v4" element={<LandingPage />} />
+          <Route path="/" element={<Index />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Project />} />

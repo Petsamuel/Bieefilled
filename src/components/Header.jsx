@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Header() {
+export function Header() {
   const [toggle, setToggle] = useState(true);
   // const [active, setActive] = useState();
 

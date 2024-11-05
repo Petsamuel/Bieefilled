@@ -13,6 +13,8 @@
   --darkmode: black;
 }
 
+
+
 .blured {
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -26,10 +28,69 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
+
+  --image-grayscale: 0;
+  --image-opacity: 100%;
 }
+body.dark {
+  --color-background: #1f2023;
+  --color-foreground: #efefef;
+
+  --image-grayscale: 50%;
+  --image-opacity: 90%;
+}
+
+img,
+video {
+  filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+}
+
+
+/* [data-theme="dark"] {
+  --font-color: #eee;
+  --background-color: #333;
+  /* --link-color: lightblue;
+} */
 
 * {
   scrollbar-width: thin;
   /* scrollbar-color: red; */
   scroll-behavior: smooth;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 20px; /* Increase height if needed */
+  background-size: 60px 100px; /* Adjust background size to make circles bigger */
+  background-image: radial-gradient(
+    circle at 50px -10px,
+    transparent 12px,
+    /* Make the transparent center larger */ #fff 28px
+      /* Increase outer circle size */
+  );
+  border: none;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 30px;
+  background-size: 90px 40px; /* Make circles larger */
+  background-image: radial-gradient(
+    circle at 50px 25px,
+    #fff 25px,
+    /* Make black circle larger */ transparent 20px
+  );
+  border: none;
+  /* Increase shadow for more depth */
 }
