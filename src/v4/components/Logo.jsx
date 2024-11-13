@@ -1,7 +1,7 @@
 import designerImage from '../../assets/Designer.png';
 import designerImage2 from "../../assets/smiles.svg"
 
-export const Logo = ({className}) => {
+export const Logo = ({ className }) => {
     return (
 
         <div className={className}>
@@ -32,8 +32,8 @@ export const Logo = ({className}) => {
                         fontSize="12"
                         textLength="251"
                         startOffset="0"
-                        fill="#1f2937"
-                        font-family="Arial, sans-serif"
+                        fill="#ffff"
+                        font-family="Aeonik, sans-serif"
                         font-weight="bold"
                         spacing="22"
                     >

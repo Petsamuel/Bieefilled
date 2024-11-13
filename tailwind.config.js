@@ -13,6 +13,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        Aeonik: ["Aeonik"],
+        AeonikBold: ["AeonikBold"],
+        poppins: ["Poppins"],
+      },
       animation: {
         first: "moveVertical 10s linear infinite",
         second: "moreVertical 20s ease infinite",

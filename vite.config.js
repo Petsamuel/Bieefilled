@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
+import path from "path";
 
 // https://vitejs.dev/config/
 
@@ -12,6 +13,7 @@ export default ({ mode }) => {
     // To access env vars here use process.env
     plugins: [
       react(),
+
       VitePWA({
         registerType: "autoUpdate",
         includeAssets: ["favicon.ico", "robots.txt", "apple-touch-icon.png"],
@@ -62,6 +64,11 @@ export default ({ mode }) => {
         },
       }),
     ],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
     public_key: process.env.VITE_APP_YOUR_PUBLIC_KEY,
     template_id: process.env.VITE_APP_TEMPLATE_ID,
     mail_service_id: process.env.VITE_APP_MAIL_SERVICE_ID,

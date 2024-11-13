@@ -1,32 +1,36 @@
-import { BackgroundBeams } from "../components/ui/BackgroundBeam"
-import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation"
-// import { FloatingDock } from "../components/ui/FloatingDock";
-import { FloatingDock } from "../components/ui/floating-navbar"
-import { links, navItems } from "../../components/store/data";
-import { BentoGridThirdDemo } from "../components/Grid";
-import { motion } from "framer-motion";
-import { HeroText } from "../components/Hero";
-// import { Usetheme } from "../../../components/store/store";
-export function LandingPage() {
+import React, { useState } from 'react'
+import img from "../../assets/new1.png"
+import { FloatingNav } from '../components/ui/floating-navbar'
+import { navItems } from '../../components/store/data'
+import { HeroText } from '../components/Hero'
+import { About } from '../components/About'
 
+export const LandingPage = () => {
+  
   return (
-    <>
-      <div className="relative">
-        <FloatingDock navItems={navItems} />
-        <main role="main" className="h-screen hero-section bg-opacity-[0.9]  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 ">
-          <BackgroundGradientAnimation className="dark:bg-black bg-gray-50 h-full backdrop-filter backdrop-blur-lg bg-opacity-[100] " >
-            {/* available for collaboration */}
+    <main className="bg-[#0f0f0f] w-full h-screen pt-12 relative">
+      <header>
+        <section className=" w-full h-screen">
+          <FloatingNav navItems={navItems} className="font-Aeonik text-white" />
+          <section>
             <HeroText />
-          </BackgroundGradientAnimation>
-          <section className="my-10 dark:bg-black bg-white">
-            <BentoGridThirdDemo className="my-4" />
-
           </section>
 
-        </main>
-      </div>
-      {/* nav */}
+          <section className='flex flex-row justify-self-center mt-[-10rem]'>
+            {/* <VelocityScroll text={"Creative Developer"} default_velocity={5} /> */}
+            <div className="flex content-center place-content-center">
+              {/* <img src={img} alt="aiii" className='rounded-b-full' /> */}
+            </div>
+          </section>
+        </section>
+        
+      </header>
 
-    </>
-  );
+
+      <section className='mx-8'>
+        <About />
+      </section>
+    </main >
+  )
 }
+
