@@ -4,9 +4,11 @@ import { FloatingNav } from '../components/ui/floating-navbar'
 import { navItems } from '../../components/store/data'
 import { HeroText } from '../components/Hero'
 import { About } from '../components/About'
+import { Services } from '../components/Services'
+import { Project } from "../components/Project"
 
 export const LandingPage = () => {
-  
+
   return (
     <main className="bg-[#0f0f0f] w-full h-screen pt-12 relative">
       <header>
@@ -23,12 +25,16 @@ export const LandingPage = () => {
             </div>
           </section>
         </section>
-        
+
       </header>
-
-
-      <section className='mx-8'>
+      <section className='m-8' id="about">
         <About />
+      </section>
+      <section className='bg-[#0f0f0f]' id="service">
+        <Services />
+      </section>
+      <section className='m-8'>
+        <Project />
       </section>
     </main >
   )

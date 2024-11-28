@@ -52,6 +52,16 @@ export const navItems = [
     // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
+    name: "Services",
+    link: "#service",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Project",
+    link: "#project",
+    // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
     name: "Contact",
     link: "#contact",
     // icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
@@ -274,7 +284,7 @@ export const projects = [
     year: "Nov-2023",
     link: "https://lopwin.com.ng",
     institution: "",
-    description: "an event planning landing page built with WordPress CMS...",
+    description: "professional platform hosting events, webinars, and masterclasses,related to growth strategies, marketing, and professional development. landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php", "ConvertKit"],
     status: false,
     ctaText: "visit",

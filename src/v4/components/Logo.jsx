@@ -23,7 +23,7 @@ export const Logo = ({ className }) => {
                     width="80"
                     height="80"
                     href={designerImage}
-                    clip-path="url(#circleClip)"
+                    clipPath="url(#circleClip)"
                 />
 
                 <text>
@@ -33,8 +33,8 @@ export const Logo = ({ className }) => {
                         textLength="251"
                         startOffset="0"
                         fill="#ffff"
-                        font-family="Aeonik, sans-serif"
-                        font-weight="bold"
+                        fontFamily="Aeonik, sans-serif"
+                        fontWeight="bold"
                         spacing="22"
                     >
                         • MODERN DESIGNS • WEB DEVELOPMENT •

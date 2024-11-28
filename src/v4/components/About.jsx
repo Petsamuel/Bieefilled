@@ -1,37 +1,35 @@
 import React from 'react'
 import { About as about } from '../../components/store/data';
 import img from "../../assets/new1.png"
+import { motion } from "framer-motion"
+import { Heading } from "./Heading"
 
 export const About = () => {
     return (
-        <section className="flex h-screen flex-col font-Aeonik text-center ">
-            <div initial={{ opacity: 0.5, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                    delay: 0.3,
-                    duration: 0.8,
-                    ease: "easeInOut",
-                }} className="relative w-full" >
-                <h1 className='dark:text-white text-black'>About</h1>
-                <h1 className='text-5xl text-bold font-Aeonik uppercase absolute text-center'>ABOUT</h1>
-
-            </div>
-            <div className="my-4 flex lg:flex-row flex-col justify-center gap-4">
-                <div initial={{ opacity: 0.5, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                        delay: 0.3,
-                        duration: 0.8,
-                        ease: "easeInOut",
-                    }} className="basis-1/4">
-                    <img src={img} className=" w-[20rem] border rounded-lg" />
+        <section className="flex lg:h-screen flex-col font-Aeonik text-center pb-5 ">
+            <Heading title="about" />
+            <div className="my-4 flex lg:flex-row flex-col justify-center gap-4 pt-4 ">
+                <div className="basis-1/4 justify-center flex lg:block">
+                    <motion.img src={img} className=" lg:w-[20rem] hidden lg:block border rounded-lg" initial={{ opacity: 0.5, x: -400 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                            delay: 0.3,
+                            duration: 0.8,
+                            ease: "easeIn",
+                        }} />
                 </div>
                 <div className="basis-1/2">
-                    <div className=" leading-6 text-justify text-neutral-700">{about.map((val, index) => (
-                        <span key={index}><p >{val.about}</p> <br />
-                            <p>{val.more}</p>
-                        </span>
-                    ))}</div>
+                    <motion.div className="text-justify text-neutral-700" initial={{ opacity: 0.5, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            delay: 0.3,
+                            duration: 0.8,
+                            ease: "easeInOut",
+                        }}>{about.map((val, index) => (
+                            <span key={index} className="leading-7"><p >{val.about}</p> <br />
+                                <p>{val.more}</p>
+                            </span>
+                        ))}</motion.div>
                 </div>
             </div>
 

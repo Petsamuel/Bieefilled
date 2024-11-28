@@ -25,19 +25,9 @@ module.exports = {
         fourth: "moveVertical 40s linear infinite",
         fifth: "moveInCircle 20s reverse infinite",
         shimmer: "shimmer 2s linear infinite",
-        spotlight: "spotlight 2s ease .75s 1 forwards",
+        "radar-spin": "radar-spin 10s linear infinite",
       },
       keyframes: {
-        spotlight: {
-          "0%": {
-            opacity: 0,
-            transform: "translate(-72%, -62%) scale(0.5)",
-          },
-          "100%": {
-            opacity: 1,
-            transform: "translate(-50%,-40%) scale(1)",
-          },
-        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",
@@ -77,6 +67,14 @@ module.exports = {
           },
           "100%": {
             transform: "translateY(-50%)",
+          },
+        },
+        "radar-spin": {
+          from: {
+            transform: "rotate(20deg)",
+          },
+          to: {
+            transform: "rotate(380deg)",
           },
         },
       },

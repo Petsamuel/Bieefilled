@@ -67,7 +67,7 @@ export const FloatingNav = ({
                 ))}
                 <button
                     className=" text-sm font-medium relative  dark:border-white/[0.2] text-[#43ffa1] px-4 py-2 rounded-full font-AeonikBold">
-                    <span>Hire Me!</span>
+                    <span className="text-[#43ffa1] ">Hire Me!</span>
                 </button>
             </motion.div>
         </AnimatePresence>)
