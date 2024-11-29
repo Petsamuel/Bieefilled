@@ -6,7 +6,7 @@ import {
     useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "../../utils/cn";
-import { Link } from "react-router-dom";
+
 import Logo from "../Logo";
 
 
@@ -53,9 +53,9 @@ export const FloatingNav = ({
                     "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000]  px-8  items-center justify-center space-x-4 text-neutral-900  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 ",
                     className
                 )}>
-                <Logo className="w-[5dvw] pt-2" />
+                <Logo className="w-[15dvw] lg:w-[5dvw] pt-2" />
                 {navItems.map((navItem, idx) => (
-                    <Link
+                    <a
                         key={`link=${idx}`}
                         href={navItem.link}
                         className={cn(
@@ -63,7 +63,7 @@ export const FloatingNav = ({
                         )}>
                         <span className="block sm:hidden">{navItem.icon}</span>
                         <span className="hidden sm:block text-sm">{navItem.name}</span>
-                    </Link>
+                    </a>
                 ))}
                 <button
                     className=" text-sm font-medium relative  dark:border-white/[0.2] text-[#43ffa1] px-4 py-2 rounded-full font-AeonikBold">

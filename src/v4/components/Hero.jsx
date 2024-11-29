@@ -1,6 +1,6 @@
-import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+
 import { motion } from "framer-motion";
-import { Button } from "./Button"
+
 
 
 export function HeroText() {

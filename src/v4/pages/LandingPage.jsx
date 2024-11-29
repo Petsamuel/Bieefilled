@@ -6,6 +6,7 @@ import { HeroText } from '../components/Hero'
 import { About } from '../components/About'
 import { Services } from '../components/Services'
 import { Project } from "../components/Project"
+import { Footer } from '../../Rebrand/components/Footer'
 
 export const LandingPage = () => {
 
@@ -36,6 +37,10 @@ export const LandingPage = () => {
       <section className='m-8'>
         <Project />
       </section>
+
+      <footer className=" lg:m-16 m-6 md:m-8">
+        <Footer />
+      </footer>
     </main >
   )
 }

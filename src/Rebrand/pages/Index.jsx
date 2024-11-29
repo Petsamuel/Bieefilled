@@ -11,10 +11,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import Typewriter from "typewriter-effect";
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { BackgroundBeams } from "../../v4/components/ui/BackgroundBeam";
-// import { GridBackgroundDemo } from "../../v4/components/Hero";
-import { ExpandableCardDemo } from "../components/test";
-// import GitHubCalendar from "react-github-calendar";
+
 
 
 
@@ -244,7 +241,7 @@ export const Index = () => {
                     </footer>
                 </section>
             </div>
-            <BackgroundBeams />
+
 
 
         </>

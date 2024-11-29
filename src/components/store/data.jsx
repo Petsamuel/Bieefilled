@@ -237,7 +237,7 @@ export const projects = [
     stack: ["Wordpress CMS", "Php", "ConvertKit"],
     status: false,
     ctaText: "visit",
-    
+
   },
   {
     image: p3,
@@ -245,7 +245,7 @@ export const projects = [
     year: "Mar 2023 - Present",
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
     institution: "Open Source",
-    description: "KoinFunds: Is a Decentralized crowdfunding platform ...",
+    description: "Koin Funds is an emerging Web3 project focused on Decentralized crowdfunding  ...",
     stack: ["React.JS", "Ether.Js", "Solidity", "Tailwindcss"],
     status: false,
     ctaText: "visit",
@@ -254,7 +254,7 @@ export const projects = [
     image: p4,
     name: "Gruvly Music",
     year: "Jan 2022 - October 2023",
-    link: "bieefilled.vercel.app",
+    link: "github.com/Petsamuel",
     institution: "Private",
     description:
       "Gruvly Music: Platform designed for forward-looking music musical talents...",
@@ -279,7 +279,7 @@ export const projects = [
     year: "Nov-2023",
     link: "https://Hpierson.com/Brochure",
     institution: "private",
-    description: "an event planning landing page built with WordPress CMS...",
+    description: "A  downloadable brochures Landingdetailing their consulting services....",
     stack: ["Wordpress CMS", "PHP"],
     status: false,
     ctaText: "visit",
@@ -290,7 +290,7 @@ export const projects = [
     year: "Ongoing",
     link: "https://Kwenuai.com.ng",
     institution: "private",
-    description: "Ai consulting platform built with react, Flutterwave, TailwindCss ...",
+    description: "KwenuAI is an innovative platform providing AI-driven solutions tailored to enhance business processes and decision-making. The website focuses on leveraging artificial intelligence to optimize operations, automate tasks, and deliver data-driven insights. Built with HTML, CSS, react, Flutterwave, TailwindCss ...",
     stack: ["ReactJs, TailwindCss", "FlutterWave"],
     status: true,
     ctaText: "visit",
@@ -301,7 +301,7 @@ export const projects = [
     year: "Ongoing",
     link: "https://xpenzes.vercel.app/",
     institution: "private",
-    description: "A finance Management platform built with React, Node.js, FireBase, Stripe...",
+    description: "Xpenzes is a financial management platform designed to simplify expense tracking and budgeting. The site likely focuses on providing tools for users to organize and categorize their spending, offering a streamlined solution for personal or business financial planning. built with React, Node.js, FireBase, Stripe...",
     stack: ["ReactJs, TailwindCss", "Stripe"],
     status: true,
     ctaText: "visit",
@@ -376,7 +376,7 @@ export const contactMethods = [
 export const tools = [
   {
     name: "React", svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-    icon: <SiReact />
+    icon: <SiReact className="text-neutral-600" />
   },
   {
     name: "Python",
@@ -407,11 +407,7 @@ export const tools = [
     svg: "https://raw.githubusercontent.com/manuelbieh/logo-file-icons/master/icons/css.svg",
     icon: <FaCss3 />
   },
-  {
-    name: "TailwindCss",
-    svg: "https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/tailwindcss.dark.svg",
-    icon: <SiTailwindcss />
-  },
+
   {
     name: "Bootstrap",
     svg: "https://raw.githubusercontent.com/get-icon/geticon/master/icons/bootstrap.svg",
@@ -441,6 +437,10 @@ export const tools = [
     name: "RAD",
     svg: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
     icon: <SiRadstudio />
+  }, {
+    name: "TailwindCss",
+    svg: "https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/tailwindcss.dark.svg",
+    icon: <SiTailwindcss />
   },
   {
     name: "Next Js",

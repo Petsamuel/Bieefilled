@@ -36,8 +36,7 @@ export const StickyScroll = ({
 
     return (
         (<motion.div
-
-            className="h-[30rem] overflow-y-auto  lg:flex  justify-center relative space-x-[4rem] rounded-md p-10 w-screen"
+            className=" lg:mt-[3rem] h-[30rem] overflow-y-auto font-Aeonik lg:flex  justify-center relative space-x-[4rem] rounded-md p-5 "
             ref={ref}>
             <div className="div relative flex items-start px-4">
                 <div className="max-w-2xl">
@@ -69,7 +68,7 @@ export const StickyScroll = ({
                             }}
                                 animate={{
                                     opacity: activeCard === index ? 1 : 0.3,
-                                }} className="flex gap-3  text-neutral-600">
+                                }} className="flex gap-3  text-neutral-600 hover:text-black">
                                 {item.stack.map((index, _) => (
                                     <p className="py-3 " key={_}>{index}</p>
                                 ))}

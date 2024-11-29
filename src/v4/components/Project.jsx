@@ -6,12 +6,12 @@ import { StickyScroll } from "./ui/sticky-scroll-reveal";
 export const Project = () => {
 
     return (
-        <section>
+        <section className="" id="project">
             <Heading title="Project" />
 
             <div>
                 <StickyScroll content={projects} />
-                
+
             </div>
         </section>
     )

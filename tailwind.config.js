@@ -26,8 +26,14 @@ module.exports = {
         fifth: "moveInCircle 20s reverse infinite",
         shimmer: "shimmer 2s linear infinite",
         "radar-spin": "radar-spin 10s linear infinite",
+        marquee: "marquee var(--duration) linear infinite",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+
         shimmer: {
           from: {
             backgroundPosition: "0 0",
