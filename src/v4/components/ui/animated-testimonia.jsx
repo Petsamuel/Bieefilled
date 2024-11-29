@@ -34,8 +34,8 @@ export const AnimatedTestimonials = ({
     };
     return (
         (
-            <section>
-                <Heading title="Testimonials" smalltext="text-white" />
+            <section className="flex flex-col font-Aeonik  pt-[3em]">
+                <Heading title="Reviews" smalltext="text-white" />
 
                 <div
                     className="max-w-sm md:max-w-4xl mx-auto antialiased px-4 md:px-8 lg:px-12 py-20 font-Aeonik">

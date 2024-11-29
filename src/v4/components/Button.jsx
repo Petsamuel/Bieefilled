@@ -1,19 +1,19 @@
 
-export const Button = () => {
+export const Button = ({ text, link, className }) => {
     return (
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center mt-6'>
             {/* buttons */}
-            <div className=" pt-[15dvh] lg:md:pt-[8rem]">
+            <div className={className}>
                 <a
-                    href="#"
-                    className="border-2  gap-3 relative inline-flex   p-0.5 mb-2 mr-2 overflow-hidden 
-                         font-medium  rounded-full dark:text-white text-black py-1  ease-in-out   animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#ffffff,45%,#e0e0e0,55%,#ffffff)] bg-[length:200%_100%]   transition-colors bg-transparent"
+                    href={link}
+                    className="  gap-3 relative inline-flex   p-0.5 mb-2 mr-2 overflow-hidden 
+                         font-medium  rounded-full dark:text-white text-white py-2  ease-in-out   animate-shimmer items-center justify-center transition-colors bg-transparent"
 
                 >
                     <span className="flex items-center">
 
                         <div className=" items-center gap-2 flex relative px-5 ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-md text-xs  transition-colors focus:outline-none  ">
-                            Available for collaboration
+                            {text}
                         </div>
                     </span>
 

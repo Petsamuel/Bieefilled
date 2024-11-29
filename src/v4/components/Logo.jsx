@@ -1,5 +1,4 @@
 import designerImage from '../../assets/Designer.png';
-import designerImage2 from "../../assets/smiles.svg"
 
 export const Logo = ({ className }) => {
     return (

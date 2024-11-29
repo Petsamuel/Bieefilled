@@ -68,14 +68,14 @@ export const StickyScroll = ({
                             }}
                                 animate={{
                                     opacity: activeCard === index ? 1 : 0.3,
-                                }} className="flex gap-3  text-neutral-600 hover:text-black">
+                                }} className="flex gap-3  text-neutral-600 ">
                                 {item.stack.map((index, _) => (
                                     <p className="py-3 " key={_}>{index}</p>
                                 ))}
                             </motion.div>
                             <div className="flex gap-3 items-center">
-                                <a href={item.link} >
-                                    <BiLinkExternal src="w-5 h-auto  text-neutral-600 hover:text-black" />
+                                <a href={item.link} className="text-black font-bold">
+                                    <BiLinkExternal src="w-5 h-auto text-black hover:text-black" />
                                 </a>
                                 <a href="github.com/petsamuel"> <TbBrandGithubFilled className="w-5 h-auto text-neutral-600 hover:text-black" /></a>
                             </div>
@@ -88,7 +88,7 @@ export const StickyScroll = ({
             <div
 
                 className={cn(
-                    "hidden lg:block h-auto w-[45dvw] rounded-md sticky top-5 overflow-hidden bg-transparent ",
+                    "hidden lg:block h-auto w-[45dvw] rounded-md sticky top-2 overflow-hidden bg-transparent ",
                     contentClassName
                 )}>
 
@@ -99,7 +99,6 @@ export const StickyScroll = ({
                         width={300}
                         height={300}
                         className="h-full w-full object-contain"
-
                     />
                 )}
             </div>

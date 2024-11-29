@@ -11,7 +11,6 @@ export const Project = () => {
 
             <div>
                 <StickyScroll content={projects} />
-
             </div>
         </section>
     )

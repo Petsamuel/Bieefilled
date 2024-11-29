@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { LandingPage } from "./v4/pages/LandingPage";
-// import Loading from "./components/Loading";
-// import { Layout } from "./components/Layout";
+
 import { Blog } from "./pages/Blog";
 import Error from "./components/Error";
 import Home from "./pages/Home";
@@ -14,14 +13,7 @@ import { Index } from "./Rebrand/pages/Index";
 import { Usetheme } from "./components/store/store";
 
 export const App = () => {
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   setLoading(true);
 
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
-  // }, []);
   const scrollRef = useRef(null);
   const theme = Usetheme(state => state.theme)
 
