@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
-import { projects } from "../../../components/store/data";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { BiLinkExternal } from "react-icons/bi";
 
 
 export const StickyScroll = ({
@@ -29,36 +30,19 @@ export const StickyScroll = ({
             return acc;
         }, 0);
         setActiveCard(closestBreakpointIndex);
+
     });
 
-    const backgroundColors = [
-        "var(--slate-900)",
-        "var(--black)",
-        "var(--neutral-900)",
-    ];
-    const linearGradients = [
-        "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-        "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-        "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
-    ];
-
-    // const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
-
-    // useEffect(() => {
-    //     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-    // }, [activeCard]);
 
     return (
         (<motion.div
-            // animate={{
-            //     backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-            // }}
-            className="h-[30rem] overflow-y-auto  flex justify-center relative space-x-[3rem] rounded-md p-10"
+
+            className="h-[30rem] overflow-y-auto  lg:flex  justify-center relative space-x-[4rem] rounded-md p-10 w-screen"
             ref={ref}>
             <div className="div relative flex items-start px-4">
                 <div className="max-w-2xl">
-                    {projects.map((item, index) => (
-                        <div key={item.title + index} className="my-20">
+                    {content.map((item, index) => (
+                        <div key={index} className="my-20">
                             <motion.h2
                                 initial={{
                                     opacity: 0,
@@ -76,32 +60,49 @@ export const StickyScroll = ({
                                 animate={{
                                     opacity: activeCard === index ? 1 : 0.3,
                                 }}
-                                className="text-kg text-neutral-600 max-w-sm mt-10 leading-7">
+                                className="text-kg text-neutral-600 max-w-sm mt-10 leading-7 text-justify">
                                 {item.description}
+
                             </motion.p>
+                            <motion.div initial={{
+                                opacity: 0,
+                            }}
+                                animate={{
+                                    opacity: activeCard === index ? 1 : 0.3,
+                                }} className="flex gap-3  text-neutral-600">
+                                {item.stack.map((index, _) => (
+                                    <p className="py-3 " key={_}>{index}</p>
+                                ))}
+                            </motion.div>
+                            <div className="flex gap-3 items-center">
+                                <a href={item.link} >
+                                    <BiLinkExternal src="w-5 h-auto  text-neutral-600 hover:text-black" />
+                                </a>
+                                <a href="github.com/petsamuel"> <TbBrandGithubFilled className="w-5 h-auto text-neutral-600 hover:text-black" /></a>
+                            </div>
                         </div>
                     ))}
                     <div className="h-40" />
                 </div>
             </div>
+
             <div
-                // style={{ background: backgroundGradient }}
+
                 className={cn(
-                    "hidden lg:block h-60 w-80 rounded-md sticky top-10 overflow-hidden bg-transparent",
+                    "hidden lg:block h-auto w-[45dvw] rounded-md sticky top-5 overflow-hidden bg-transparent ",
                     contentClassName
                 )}>
 
-
-                {content[activeCard]?.image && (
+                {content[activeCard] && content[activeCard].image && (
                     <img
                         src={content[activeCard].image}
                         alt="Image"
                         width={300}
                         height={300}
-                        className="h-full w-full object-cover bg-neutral-600"
+                        className="h-full w-full object-contain"
+
                     />
                 )}
-
             </div>
         </motion.div>)
     );

@@ -2,7 +2,7 @@ import sololearn from "../../assets/sololearn.svg";
 import zuri from "../../assets/zuri.svg";
 import jm from "../../assets/jm.svg";
 import { BsPuzzle } from "react-icons/bs";
-import { TbWritingSign } from "react-icons/tb";
+import { TbWritingSign, TbBrandGithubFilled } from "react-icons/tb";
 import { SiFrontendmentor } from "react-icons/si";
 import {
   FaXTwitter,
@@ -216,82 +216,31 @@ export const Review = [
     link: "https://www.linkedin.com/in/stanley-obayagbo-058ab497",
   },
 ];
-export const links = [
-  {
-    title: "Home",
-    icon: (
-      <TbHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
 
-  {
-    title: "Products",
-    icon: (
-      <TbTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-  {
-    title: "Components",
-    icon: (
-      <TbNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-  {
-    title: "Aceternity UI",
-    icon: (
-      <img
-        src="https://assets.aceternity.com/logo-dark.png"
-        width={20}
-        height={20}
-        alt="Aceternity Logo"
-      />
-    ),
-    href: "#",
-  },
-  {
-    title: "Changelog",
-    icon: (
-      <TbExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
 
-  {
-    title: "Twitter",
-    icon: (
-      <TbBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-  {
-    title: "GitHub",
-    icon: (
-      <TbBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-];
-
+import p1 from "../../assets/p1.png"
+import p2 from "../../assets/p2.png"
+import p3 from "../../assets/p3.png"
+import p4 from "../../assets/p4.png"
+import p5 from "../../assets/p5.png"
+import p6 from "../../assets/p6.png"
+import p7 from "../../assets/p7.jpeg"
 export const projects = [
   // status- completed:true;  on-going:false; stopped:null;
   {
-    image:
-      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+    image: p1,
     name: "League of Professionals",
     year: "Nov-2023",
     link: "https://lopwin.com.ng",
-    institution: "",
+    institution: "business",
     description: "professional platform hosting events, webinars, and masterclasses,related to growth strategies, marketing, and professional development. landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "Php", "ConvertKit"],
     status: false,
     ctaText: "visit",
+    
   },
   {
-    image:
-      "https://drive.google.com/uc?export=view&id=14BI93_0YOKHZC1lH4fUb8iLpGXsTRIRo",
+    image: p3,
     name: "Koinfund",
     year: "Mar 2023 - Present",
     link: "https://koin-funds-git-fork-petsamuel-main-ayeolakenny.vercel.app/",
@@ -301,25 +250,23 @@ export const projects = [
     status: false,
     ctaText: "visit",
   },
-  // {
-  //   image:
-  //     "https://drive.google.com/uc?export=view&id=1MWklGmZ-YPZ0HUAsmpqFTMVxcU8HTBig",
-  //   name: "Gruvly Music",
-  //   year: "Jan 2022 - October 2023",
-  //   link: "bieefilled.vercel.app",
-  //   institution: "Private",
-  //   description:
-  //     "Gruvly Music: Platform designed for forward-looking music musical talents...",
-  //   stack: ["Wordpress CMS", "PHP", "SQL", "API"],
-  //   status: false,
-  // },
   {
-    image:
-      "https://drive.google.com/uc?export=view&id=1cVzwlSy6WDAB3HxMEhZdxnkgL2vkTKtU",
+    image: p4,
+    name: "Gruvly Music",
+    year: "Jan 2022 - October 2023",
+    link: "bieefilled.vercel.app",
+    institution: "Private",
+    description:
+      "Gruvly Music: Platform designed for forward-looking music musical talents...",
+    stack: ["Wordpress CMS", "PHP", "SQL", "API"],
+    status: false,
+  },
+  {
+    image: p2,
     name: "V-arena",
     year: "Oct-2020 - Dec-2022",
     link: "",
-    institution: "",
+    institution: "private",
     description:
       "A Play-To-Earn NFT fighting game built with 2D physics Engine...",
     stack: ["React.JS", "Matter.js", "Kia Wallet", "Node.js"],
@@ -327,34 +274,33 @@ export const projects = [
     ctaText: "visit",
   },
   {
-    image:
-      "https://drive.google.com/uc?export=view&id=1ZW9Zfn2AWhmDuwYCTc2K-qk91bBQNiAB",
+    image: p5,
     name: "Hpierson Brochure",
     year: "Nov-2023",
     link: "https://Hpierson.com/Brochure",
-    institution: "",
+    institution: "private",
     description: "an event planning landing page built with WordPress CMS...",
     stack: ["Wordpress CMS", "PHP"],
     status: false,
     ctaText: "visit",
   },
   {
-    image: "",
+    image: p7,
     name: "KewnuAi",
     year: "Ongoing",
     link: "https://Kwenuai.com.ng",
-    institution: "",
+    institution: "private",
     description: "Ai consulting platform built with react, Flutterwave, TailwindCss ...",
     stack: ["ReactJs, TailwindCss", "FlutterWave"],
     status: true,
     ctaText: "visit",
   },
   {
-    image: "",
+    image: p6,
     name: "Xpenzes",
     year: "Ongoing",
     link: "https://xpenzes.vercel.app/",
-    institution: "",
+    institution: "private",
     description: "A finance Management platform built with React, Node.js, FireBase, Stripe...",
     stack: ["ReactJs, TailwindCss", "Stripe"],
     status: true,

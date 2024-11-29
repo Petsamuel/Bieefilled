@@ -7,7 +7,7 @@ import { Heading } from "./Heading"
 export const About = () => {
     return (
         <section className="flex lg:h-screen flex-col font-Aeonik text-center pb-5 ">
-            <Heading title="about" />
+            <Heading title="About" />
             <div className="my-4 flex lg:flex-row flex-col justify-center gap-4 pt-4 ">
                 <div className="basis-1/4 justify-center flex lg:block">
                     <motion.img src={img} className=" lg:w-[20rem] hidden lg:block border rounded-lg" initial={{ opacity: 0.5, x: -400 }}
