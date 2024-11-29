@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import img from "../../assets/new1.png"
 import { FloatingNav } from '../components/ui/floating-navbar'
-import { navItems } from '../../components/store/data'
+import { navItems, Review } from '../../components/store/data'
 import { HeroText } from '../components/Hero'
 import { About } from '../components/About'
 import { Services } from '../components/Services'
 import { Project } from "../components/Project"
 import { Footer } from '../../Rebrand/components/Footer'
+import { AnimatedTestimonials } from '../components/ui/animated-testimonia'
 
 export const LandingPage = () => {
 
@@ -36,6 +35,9 @@ export const LandingPage = () => {
       </section>
       <section className='m-8'>
         <Project />
+      </section>
+      <section className='bg-[#0f0f0f] py-[3rem]' id="reviews">
+        <AnimatedTestimonials testimonials={Review} />
       </section>
 
       <footer className=" lg:m-16 m-6 md:m-8">

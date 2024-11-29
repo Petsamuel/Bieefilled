@@ -53,7 +53,7 @@ export const FloatingNav = ({
                     "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000]  px-8  items-center justify-center space-x-4 text-neutral-900  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-4 ",
                     className
                 )}>
-                <Logo className="w-[15dvw] lg:w-[5dvw] pt-2" />
+                <Logo className="w-[15dvw] md:w-[5dvw] lg:w-[5dvw] pt-2" />
                 {navItems.map((navItem, idx) => (
                     <a
                         key={`link=${idx}`}

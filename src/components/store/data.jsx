@@ -61,12 +61,7 @@ export const navItems = [
     link: "#project",
     // icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
-  {
-    name: "Contact",
-    link: "#contact",
-    // icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
 
-  },
 ];
 export const socials = [
   {
@@ -185,19 +180,10 @@ export const Experiences = [
   },
 ];
 export const Review = [
+
   {
     image:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAJYAlgMBIgACEQEDEQH/xAAaAAEAAgMBAAAAAAAAAAAAAAAABAUCAwYB/9oACAEBAAAAAOlAAAAAAAGiHvmAAFJQtl3dAAOas6LzzsPQAKncRbfMACFqFkAA0wCVLAAKzWtvQAImEmsno8/IAjU+PRaKG5lU1fcWgCogeXEmjttvN69nVgIlGvN/LXk7l9VpeAFXWZXfMX9bCldLkAIFKz3VtpeZAAxgYpu4ADHDw9yzAAAAAAAf/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAIDBAH/2gAKAgIQAxAAAAAAAAAdhZ2MoAARnXaXZwAOSp0djdnAAnHPpnXZVGQBry8lxTbvx5NNFwF9NtfO1z1Z8OyEgC2u2vim6EgAAAAAAD//xAAxEAACAQMCAwcBCAMAAAAAAAABAgMABBESMQUyURATISIwQWGRM0BCUFJxcoFiobH/2gAIAQEAAT8A/LprmCD7WVVo8Ws/8/pUV9azEBZMHo3h9w4lxN4HMMPOOZqk74trlD6n92G9ChXDrxsiCQ/wPrpCJeK3bttHIaljSaNkfY09lcxnk1DqtCCf3hf6UCUOdipz9KVtSq3UA+sE0Xl8erqfqtZrNZq7jV4XbHmUEg1GNMaDooHrTqFkLfqA/wBVms1mgokIQ7Hf15k1J8is1ms1bJu/9D7hN5ZXGMAnIrNZ8QB7mhjGBt60l7BH+LUei1C811528kX4V60yLMnjUhWJ2RyARUEGjztzf8qUSkGSE+YfhOzVFxGJvCQFDSujjKsGHUH0rmcQKPDLHYVLNLMfO5Px7VCqPKiyMApPjQwAANqLOitoALe2ds1cxvFKwLazvnrmoBJHH3TnUABpb46UnKK4kkSyKVI1nmWkd0bUjFT1FWd8ZWEUvMdm9HiGe+X+HbZW8sIJdz8J7CiPE1dNqnl/fFRNqhjbqgqeJpISiyMh6ipInhco64PZDnvosb61x6N5AZY8qPMvbaXAnTx515qfA83QEn+qd9RJ6mrA64IvgmpJEiRpHOFFTTPPI0je/t0HZw2Au/fnZeX0ry13ljHyw7I5HidXTcVrW7tn0HmUj9j2cMUi2LHYsTV7dm5fC/Zrt2Wlq9y/SMczUqqihVGABgD07ixV8vHhW6exqcSQnS6lTVpdNayZ3Q84q7izcjuvFZsFP7q9uVCLawnyIAGPWhkkAAknYCrbhjv5p/KP00qqihVUADYD1WRHBVlBHQ0/DLVtgyfsaHDQgAWd/fHxml4VbjdnaooIYRiOML6xzRL1qk6Vqk6Vqk6Vl+lAt+W//8QAKBEAAgEDAwMCBwAAAAAAAAAAAQIAERIhAzAxECBBBFETIjJAYXGB/9oACAECAQE/AN66BthuOldhhUdFydixqVOBGQ1wIixkZeR3aKqFB8zXFaG7+TQ+o/qNznGYgogFbproqsKee3SenymOl4/M9Pi73ll+qw8VlQi+wEdy7V7k1SvORPipW4YMGsiCigmO7Pz9x//EACQRAAICAQQCAQUAAAAAAAAAAAECABEDEiEwMSBBgRATMkBh/9oACAEDAQE/AOUC4EEZK64E74kNMPoxpTwaxdDcxHBG5qZHvr1FZW6PllYliPUwnsV8zN+Ig6+I5tyaqYWLKb8ciXuIjaTM++ma9GNT7qUXb+mIoRa8mxg9bT7b1pO4hxsxtjUVAvX7H//Z",
-    name: "Michael Peters",
-    date: "April 18 2022",
-    title: "Head Automation and Innovation, Wema Bank",
-    reviews:
-      "Samuel is brilliant website designer. He demonstrates brilliance and customer focused approach in delivering powerful Web presence and SEO for businesses. I have watched him grow over the years into a goto person for website and design delivery and he is still learning.",
-    link: "https://www.linkedin.com/in/michael-peters-2a497353/",
-  },
-  {
-    image:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAJYAlgMBIgACEQEDEQH/xAAaAAEAAgMBAAAAAAAAAAAAAAAABAUCAwYB/9oACAEBAAAAAOlAAAAAAAGiHvmAAFJQtl3dAAOas6LzzsPQAKncRbfMACFqFkAA0wCVLAAKzWtvQAImEmsno8/IAjU+PRaKG5lU1fcWgCogeXEmjttvN69nVgIlGvN/LXk7l9VpeAFXWZXfMX9bCldLkAIFKz3VtpeZAAxgYpu4ADHDw9yzAAAAAAAf/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAIDBAH/2gAKAgIQAxAAAAAAAAAdhZ2MoAARnXaXZwAOSp0djdnAAnHPpnXZVGQBry8lxTbvx5NNFwF9NtfO1z1Z8OyEgC2u2vim6EgAAAAAAD//xAAxEAACAQMCAwcBCAMAAAAAAAABAgMABBESMQUyURATISIwQWGRM0BCUFJxcoFiobH/2gAIAQEAAT8A/LprmCD7WVVo8Ws/8/pUV9azEBZMHo3h9w4lxN4HMMPOOZqk74trlD6n92G9ChXDrxsiCQ/wPrpCJeK3bttHIaljSaNkfY09lcxnk1DqtCCf3hf6UCUOdipz9KVtSq3UA+sE0Xl8erqfqtZrNZq7jV4XbHmUEg1GNMaDooHrTqFkLfqA/wBVms1mgokIQ7Hf15k1J8is1ms1bJu/9D7hN5ZXGMAnIrNZ8QB7mhjGBt60l7BH+LUei1C811528kX4V60yLMnjUhWJ2RyARUEGjztzf8qUSkGSE+YfhOzVFxGJvCQFDSujjKsGHUH0rmcQKPDLHYVLNLMfO5Px7VCqPKiyMApPjQwAANqLOitoALe2ds1cxvFKwLazvnrmoBJHH3TnUABpb46UnKK4kkSyKVI1nmWkd0bUjFT1FWd8ZWEUvMdm9HiGe+X+HbZW8sIJdz8J7CiPE1dNqnl/fFRNqhjbqgqeJpISiyMh6ipInhco64PZDnvosb61x6N5AZY8qPMvbaXAnTx515qfA83QEn+qd9RJ6mrA64IvgmpJEiRpHOFFTTPPI0je/t0HZw2Au/fnZeX0ry13ljHyw7I5HidXTcVrW7tn0HmUj9j2cMUi2LHYsTV7dm5fC/Zrt2Wlq9y/SMczUqqihVGABgD07ixV8vHhW6exqcSQnS6lTVpdNayZ3Q84q7izcjuvFZsFP7q9uVCLawnyIAGPWhkkAAknYCrbhjv5p/KP00qqihVUADYD1WRHBVlBHQ0/DLVtgyfsaHDQgAWd/fHxml4VbjdnaooIYRiOML6xzRL1qk6Vqk6Vqk6Vl+lAt+W//8QAKBEAAgEDAwMCBwAAAAAAAAAAAQIAERIhAzAxECBBBFETIjJAYXGB/9oACAECAQE/AN66BthuOldhhUdFydixqVOBGQ1wIixkZeR3aKqFB8zXFaG7+TQ+o/qNznGYgogFbproqsKee3SenymOl4/M9Pi73ll+qw8VlQi+wEdy7V7k1SvORPipW4YMGsiCigmO7Pz9x//EACQRAAICAQQCAQUAAAAAAAAAAAECABEDEiEwMSBBgRATMkBh/9oACAEDAQE/AOUC4EEZK64E74kNMPoxpTwaxdDcxHBG5qZHvr1FZW6PllYliPUwnsV8zN+Ig6+I5tyaqYWLKb8ciXuIjaTM++ma9GNT7qUXb+mIoRa8mxg9bT7b1pO4hxsxtjUVAvX7H//Z",
+      "https://lopwin.com.ng/wp-content/uploads/2023/11/Enoch-Afolabi-Host-Winning-2024.jpeg",
     name: "Enoch Afolabi",
     date: "November 30 2023",
     title: `Growth Manager at Moringa School | Business Development | Growth Management | Partnerships Management`,
@@ -207,8 +193,21 @@ export const Review = [
     link: "https://www.linkedin.com/in/enochafolabi/",
   },
   {
+
+
     image:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAJYAlgMBIgACEQEDEQH/xAAaAAEAAgMBAAAAAAAAAAAAAAAABAUCAwYB/9oACAEBAAAAAOlAAAAAAAGiHvmAAFJQtl3dAAOas6LzzsPQAKncRbfMACFqFkAA0wCVLAAKzWtvQAImEmsno8/IAjU+PRaKG5lU1fcWgCogeXEmjttvN69nVgIlGvN/LXk7l9VpeAFXWZXfMX9bCldLkAIFKz3VtpeZAAxgYpu4ADHDw9yzAAAAAAAf/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAIDBAH/2gAKAgIQAxAAAAAAAAAdhZ2MoAARnXaXZwAOSp0djdnAAnHPpnXZVGQBry8lxTbvx5NNFwF9NtfO1z1Z8OyEgC2u2vim6EgAAAAAAD//xAAxEAACAQMCAwcBCAMAAAAAAAABAgMABBESMQUyURATISIwQWGRM0BCUFJxcoFiobH/2gAIAQEAAT8A/LprmCD7WVVo8Ws/8/pUV9azEBZMHo3h9w4lxN4HMMPOOZqk74trlD6n92G9ChXDrxsiCQ/wPrpCJeK3bttHIaljSaNkfY09lcxnk1DqtCCf3hf6UCUOdipz9KVtSq3UA+sE0Xl8erqfqtZrNZq7jV4XbHmUEg1GNMaDooHrTqFkLfqA/wBVms1mgokIQ7Hf15k1J8is1ms1bJu/9D7hN5ZXGMAnIrNZ8QB7mhjGBt60l7BH+LUei1C811528kX4V60yLMnjUhWJ2RyARUEGjztzf8qUSkGSE+YfhOzVFxGJvCQFDSujjKsGHUH0rmcQKPDLHYVLNLMfO5Px7VCqPKiyMApPjQwAANqLOitoALe2ds1cxvFKwLazvnrmoBJHH3TnUABpb46UnKK4kkSyKVI1nmWkd0bUjFT1FWd8ZWEUvMdm9HiGe+X+HbZW8sIJdz8J7CiPE1dNqnl/fFRNqhjbqgqeJpISiyMh6ipInhco64PZDnvosb61x6N5AZY8qPMvbaXAnTx515qfA83QEn+qd9RJ6mrA64IvgmpJEiRpHOFFTTPPI0je/t0HZw2Au/fnZeX0ry13ljHyw7I5HidXTcVrW7tn0HmUj9j2cMUi2LHYsTV7dm5fC/Zrt2Wlq9y/SMczUqqihVGABgD07ixV8vHhW6exqcSQnS6lTVpdNayZ3Q84q7izcjuvFZsFP7q9uVCLawnyIAGPWhkkAAknYCrbhjv5p/KP00qqihVUADYD1WRHBVlBHQ0/DLVtgyfsaHDQgAWd/fHxml4VbjdnaooIYRiOML6xzRL1qk6Vqk6Vqk6Vl+lAt+W//8QAKBEAAgEDAwMCBwAAAAAAAAAAAQIAERIhAzAxECBBBFETIjJAYXGB/9oACAECAQE/AN66BthuOldhhUdFydixqVOBGQ1wIixkZeR3aKqFB8zXFaG7+TQ+o/qNznGYgogFbproqsKee3SenymOl4/M9Pi73ll+qw8VlQi+wEdy7V7k1SvORPipW4YMGsiCigmO7Pz9x//EACQRAAICAQQCAQUAAAAAAAAAAAECABEDEiEwMSBBgRATMkBh/9oACAEDAQE/AOUC4EEZK64E74kNMPoxpTwaxdDcxHBG5qZHvr1FZW6PllYliPUwnsV8zN+Ig6+I5tyaqYWLKb8ciXuIjaTM++ma9GNT7qUXb+mIoRa8mxg9bT7b1pO4hxsxtjUVAvX7H//Z",
+      "https://media.licdn.com/dms/image/v2/D4D03AQHR0I9x1lawJQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719329471618?e=1738195200&v=beta&t=6_Z4bU8ksYbwoUeqG1LKJ5QDfG2nrMb0M1BhrW0qKdc",
+    name: "Michael Peters",
+    date: "April 18 2022",
+    title: "Head Automation and Innovation, Wema Bank",
+    reviews:
+      "Samuel is brilliant website designer. He demonstrates brilliance and customer focused approach in delivering powerful Web presence and SEO for businesses. I have watched him grow over the years into a goto person for website and design delivery and he is still learning.",
+    link: "https://www.linkedin.com/in/michael-peters-2a497353/",
+  },
+
+  {
+    image:
+      "https://media.licdn.com/dms/image/v2/C4D03AQEzId2tDzz7Qw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1661952121356?e=1738195200&v=beta&t=Um4yaHQk0RPJ_TfwmdyO6eNLgRMwDgPeR4BP5X_Ux3I",
     name: "Stanley Obayagbo",
     date: "November 30 2023",
     title: `Programs & Grants Operations | Risk & Quality Management| Data Analyst| Program Coordinator| Agile-Scrum`,
