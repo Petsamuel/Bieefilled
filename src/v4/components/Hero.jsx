@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function HeroText() {
   return (
-    <section className="mb-10 h-full pt-[15dvh]">
+    <section className="mb-10 h-full lg:pt-[8%] pt-[35%]">
       {/* <Button/> */}
       <motion.div initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

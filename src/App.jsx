@@ -12,8 +12,6 @@ import Contact from "./pages/Contact";
 import "./index.css";
 import { Index } from "./Rebrand/pages/Index";
 import { Usetheme } from "./components/store/store";
-// import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-// import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 export const App = () => {
   // const [loading, setLoading] = useState(true);
@@ -26,7 +24,7 @@ export const App = () => {
   // }, []);
   const scrollRef = useRef(null);
   const theme = Usetheme(state => state.theme)
-  
+
 
   return (
 
@@ -34,13 +32,13 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Error />} />
-          <Route path="/v4" element={<LandingPage />} />
-          <Route path="/" element={<Index />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/v3" element={<Index />} />
+          <Route path="/v2" element={<Home />} />
+          <Route path="/v3/about" element={<About />} />
+          <Route path="/v3/projects" element={<Project />} />
+          <Route path="/v3/contact" element={<Contact />} />
+          <Route path="/v3/blog" element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </main>

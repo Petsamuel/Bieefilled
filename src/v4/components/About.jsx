@@ -6,7 +6,7 @@ import { Heading } from "./Heading"
 
 export const About = () => {
     return (
-        <section className="flex lg:h-screen flex-col font-Aeonik text-center pb-5 ">
+        <section className="flex flex-col font-Aeonik text-center pb-5 ">
             <Heading title="About" />
             <div className="my-4 flex lg:flex-row flex-col justify-center gap-4 pt-4 ">
                 <div className="basis-1/4 justify-center flex lg:block">

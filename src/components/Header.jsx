@@ -32,7 +32,7 @@ export function Header() {
           </Link>
           <div className="flex items-center md:order-2">
             <Link
-              to="/blog"
+              to="/v3/blog"
               className="text-white  focus:ring-1  font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 focus:outline-none hover:shadow-sm "
             >
               Blog
@@ -68,7 +68,7 @@ export function Header() {
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
               <li>
                 <Link
-                  to="/home"
+                  to="/v3/home"
                   className="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 hover:text-[#242424]"
                 >
                   Home
@@ -76,7 +76,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/v3/about"
                   id="mega-menu-dropdown-a"
                   className="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-white border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 hover:text-[#242424]"
                 >
@@ -85,7 +85,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  to="/projects"
+                  to="/v3/projects"
                   className="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 hover:text-[#242424]"
                 >
                   Projects
@@ -93,7 +93,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/v3/contact"
                   className="block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 hover:text-[#242424]"
                 >
                   Contact

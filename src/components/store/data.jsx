@@ -71,27 +71,27 @@ export const socials = [
   },
   {
     name: "Twitter",
-    icon: <FaXTwitter className="dark:text-white" />,
+    icon: <FaXTwitter className="dark:white" />,
     link: "https://twitter.com/bieefilled",
   },
   {
     name: "Github",
-    icon: <FaGithub className="text-black dark:text-white" />,
+    icon: <FaGithub className=" dark:text-white" />,
     link: "https://github.com/petsamuel",
   },
   {
     name: "Medium",
-    icon: <FaMedium className="text-black dark:text-white" />,
+    icon: <FaMedium className=" dark:text-white" />,
     link: "https://medium.com/bieefilled",
   },
   {
     name: "Dev To",
-    icon: <FaDev className="dark:text-white text-black" />,
+    icon: <FaDev className="dark:text-white " />,
     link: "https://devto.com/bieefilled",
   },
   {
     name: "UpWork",
-    icon: <SiUpwork className="dark:text-white text-black" />,
+    icon: <SiUpwork className="dark:text-white " />,
     link: "https://www.upwork.com/freelancers/~01d16db2f02d0b5e0d?mp_source=share",
   },
 ];

@@ -10,39 +10,40 @@ import { AnimatedTestimonials } from '../components/ui/animated-testimonia'
 export const LandingPage = () => {
 
   return (
-    <main className="bg-[#0f0f0f] w-full h-screen pt-12 relative">
+    <main className=" w-full  relative">
       <header>
-        <section className=" w-full h-screen">
+        <section className=" w-full h-screen bg-[#0f0f0f] pt-[10%]">
           <FloatingNav navItems={navItems} className="font-Aeonik text-white" />
           <section>
             <HeroText />
           </section>
 
           <section className='flex flex-row justify-self-center mt-[-10rem]'>
-            {/* <VelocityScroll text={"Creative Developer"} default_velocity={5} /> */}
+
             <div className="flex content-center place-content-center">
-              {/* <img src={img} alt="aiii" className='rounded-b-full' /> */}
+
             </div>
           </section>
         </section>
 
       </header>
-      <section className='m-8' id="about">
+      <section className='m-8 py-[5rem]' id="about">
         <About />
       </section>
-      <section className='bg-[#0f0f0f]' id="service">
+      <section className='bg-[#0f0f0f] py-[5rem]' id="service">
         <Services />
       </section>
-      <section className='m-8'>
+      <section className='m-8 py-[5rem]'>
         <Project />
       </section>
-      <section className='bg-[#0f0f0f] py-[3rem]' id="reviews">
+      <section className='bg-[#0f0f0f] py-[1rem]' id="reviews">
         <AnimatedTestimonials testimonials={Review} />
+        <footer className=" lg:m-16 m-6 md:m-8 text-white dark:text-neutral-500">
+          <Footer classname="text-white " />
+        </footer>
       </section>
 
-      <footer className=" lg:m-16 m-6 md:m-8">
-        <Footer />
-      </footer>
+
     </main >
   )
 }

@@ -12,7 +12,7 @@ import { TbSettingsAutomation, TbWritingSign } from "react-icons/tb"
 
 export const Services = () => {
     return (
-        <section className="flex h-screen flex-col font-Aeonik text-center p-5 ">
+        <section className="flex  flex-col font-Aeonik text-center p-5 ">
             <Heading title="Services" smalltext="text-white" />
 
             <div>
