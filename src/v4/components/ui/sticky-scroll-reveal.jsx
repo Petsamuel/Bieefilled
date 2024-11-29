@@ -88,7 +88,7 @@ export const StickyScroll = ({
             <div
 
                 className={cn(
-                    "hidden lg:block h-auto w-[45dvw] rounded-md sticky top-2 overflow-hidden bg-transparent ",
+                    "hidden lg:block h-auto w-[35dvw] rounded-md sticky top-2 overflow-hidden bg-transparent ",
                     contentClassName
                 )}>
 
@@ -98,7 +98,7 @@ export const StickyScroll = ({
                         alt="Image"
                         width={300}
                         height={300}
-                        className="h-full w-full object-contain"
+                        className="h-full w-full object-contain shadow-lg"
                     />
                 )}
             </div>
