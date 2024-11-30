@@ -310,7 +310,7 @@ export const projects = [
     image: p8,
     name: "WikiCat",
     year: "Oct-2021",
-    link: "biee-catwiki.netlify.app",
+    link: "https://biee-catwiki.netlify.app",
     insitution: "opensource",
     description: "Wikicat is a platform design to show the different breads of cat.",
     stack: ["React", "Tailwindcss", "React Quary", "API"],

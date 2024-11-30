@@ -3,8 +3,8 @@ import ErrorSvg from "../assets/error.svg";
 function Error() {
   return (
     <>
-      <section className="flex justify-center pt-10">
-        <img src={ErrorSvg} alt="error" className="w-5/12" />
+      <section className="flex justify-center  h:Screen mb-10 lg:md:pt-[8%] pt-[35dvh] text-center ">
+        <img src={ErrorSvg} alt="error" className="object-contain" />
       </section>
     </>
   );
