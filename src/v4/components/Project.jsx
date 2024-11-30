@@ -6,7 +6,7 @@ import { StickyScroll } from "./ui/sticky-scroll-reveal";
 export const Project = () => {
 
     return (
-        <section className="" id="project">
+        <section className="z-auto" id="project">
             <Heading title="Project" />
 
             <div>

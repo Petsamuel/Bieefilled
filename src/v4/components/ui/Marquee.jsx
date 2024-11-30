@@ -1,5 +1,6 @@
 import { cn } from "../../utils/cn";
 import { tools } from "../../../components/store/data";
+import { Heading } from "../Heading";
 
 
 function Marquee({
@@ -84,6 +85,7 @@ export function MarqueePreview() {
                     <ReviewCard key={review.username} {...review} />
                 ))}
             </Marquee>
+            
             <Marquee reverse pauseOnHover className="[--duration:200s]">
                 {secondRow.map((review) => (
                     <ReviewCard key={review.username} {...review} />

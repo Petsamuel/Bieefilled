@@ -12,11 +12,11 @@ import { TbSettingsAutomation, TbWritingSign } from "react-icons/tb"
 
 export const Services = () => {
     return (
-        <section className="flex  flex-col font-Aeonik text-center p-5 ">
-            <Heading title="Services" smalltext="text-white" />
+        <section className="flex flex-col font-Aeonik text-center">
+            <div className="pt-[2em]">   <Heading title="Services" smalltext="text-white" /></div>
 
-            <div>
-                <div className="relative flex bottom-0 h-[25rem] w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
+            <div className="pt-[5rem]">
+                <div className="relative flex pt-[8dvh] w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
                     <div className="mx-auto w-full max-w-3xl">
                         <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                             <IconContainer text="Web Development" delay={0.2} />
@@ -68,8 +68,10 @@ export const Services = () => {
                     <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
                 </div>
 
-                <MarqueePreview />
 
+            </div>
+            <div className="pt-4 relative ">
+                <MarqueePreview />
             </div>
 
 

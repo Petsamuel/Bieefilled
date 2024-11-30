@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export const Heading = ({ title, smalltext }) => {
     return (
-        <div className="lg:mx-8">
+        <div className="shadow-sm lg:shadow-none z-50 ">
             <motion.div className="relative w-full flex justify-center" initial={{ opacity: 0.5, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{

@@ -38,10 +38,10 @@ export const StickyScroll = ({
         (<motion.div
             className=" lg:mt-[3rem] h-[30rem] overflow-y-auto font-Aeonik lg:flex  justify-center relative space-x-[4rem] rounded-md p-5 "
             ref={ref}>
-            <div className="div relative flex items-start px-4">
-                <div className="max-w-2xl">
+            <div className=" relative flex items-start px-4 ">
+                <div className="lg:max-w-2xl w-fit">
                     {content.map((item, index) => (
-                        <div key={index} className="my-20">
+                        <div key={index} className="py-20">
                             <motion.h2
                                 initial={{
                                     opacity: 0,
@@ -52,14 +52,44 @@ export const StickyScroll = ({
                                 className="text-2xl font-bold text-neutral-600">
                                 {item.name}
                             </motion.h2>
+                            <motion.div initial={{ opacity: 0.5, y: -100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    delay: 0.3,
+                                    duration: 0.8,
+                                    ease: "easeInOut",
+                                }} className="md:lg:hidden mt-3">
+                                {content[activeCard] && content[activeCard].image && (
+                                    <img
+                                        src={content[activeCard].image}
+                                        alt="Image"
+                                        width={300}
+                                        height={300}
+                                        className="h-full w-full object-contain"
+                                    />
+                                )}
+                            </motion.div>
                             <motion.p
-                                initial={{
-                                    opacity: 0,
-                                }}
+                                key={activeCard}
                                 animate={{
+                                    y: 0,
                                     opacity: activeCard === index ? 1 : 0.3,
                                 }}
-                                className="text-kg text-neutral-600 max-w-sm mt-10 leading-7 text-justify">
+                                initial={{
+
+                                    y: -20,
+                                    opacity: 0,
+                                }}
+                                exit={{
+                                    y: 20,
+                                    opacity: 0,
+                                }}
+                                transition={{
+                                    duration: 0.5,
+                                    ease: "easeInOut",
+                                    delay: 0.02 * activeCard,
+                                }}
+                                className="text-kg text-neutral-600 w-full lg:max-w-sm mt-10 leading-7 text-justify">
                                 {item.description}
 
                             </motion.p>
@@ -73,12 +103,19 @@ export const StickyScroll = ({
                                     <p className="py-3 " key={_}>{index}</p>
                                 ))}
                             </motion.div>
-                            <div className="flex gap-3 items-center">
-                                <a href={item.link} className="text-black font-bold">
-                                    <BiLinkExternal src="w-5 h-auto text-black hover:text-black" />
+                            <motion.div initial={{
+                                opacity: 0,
+                            }}
+                                animate={{
+                                    opacity: activeCard === index ? 1 : 0.3,
+                                }} className="flex gap-2 items-center w-full">
+                                <a href="github.com/petsamuel"> <TbBrandGithubFilled className="w-5 h-auto text-neutral-600 hover:text-neutral-600" /></a>
+                                <a href={item.link} className="text-neutral-600 font-bold flex  items-center">
+                                    <BiLinkExternal src="w-10 h-10 text-neutral-600 hover:text-neutral-600 " />&nbsp; Visit
                                 </a>
-                                <a href="github.com/petsamuel"> <TbBrandGithubFilled className="w-5 h-auto text-neutral-600 hover:text-black" /></a>
-                            </div>
+
+
+                            </motion.div>
                         </div>
                     ))}
                     <div className="h-40" />

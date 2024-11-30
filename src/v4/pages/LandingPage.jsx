@@ -32,10 +32,11 @@ export const LandingPage = () => {
       <section className='m-8 py-[5rem]' id="about">
         <About />
       </section>
-      <section className='bg-[#0f0f0f] py-[5rem] h-screen' id="service">
+      <section className='bg-[#0f0f0f] h-[580px]' id="service">
         <Services />
       </section>
-      <section className='m-8 py-[5rem]'>
+
+      <section className='my-8 py-[5rem]'>
         <Project />
       </section>
       <section className='bg-[#0f0f0f] py-[1rem]' id="reviews">
