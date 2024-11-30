@@ -109,7 +109,7 @@ export const StickyScroll = ({
                                 animate={{
                                     opacity: activeCard === index ? 1 : 0.3,
                                 }} className="flex gap-2 items-center w-full">
-                                <a href="github.com/petsamuel"> <TbBrandGithubFilled className="w-5 h-auto text-neutral-600 hover:text-neutral-600" /></a>
+                                <a href={item.github ? item.github :"github.com/petsamuel"}> <TbBrandGithubFilled className="w-5 h-auto text-neutral-600 hover:text-neutral-600" /></a>
                                 <a href={item.link} className="text-neutral-600 font-bold flex  items-center">
                                     <BiLinkExternal src="w-10 h-10 text-neutral-600 hover:text-neutral-600 " />&nbsp; Visit
                                 </a>

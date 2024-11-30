@@ -224,6 +224,7 @@ import p4 from "../../assets/p4.png"
 import p5 from "../../assets/p5.png"
 import p6 from "../../assets/p6.png"
 import p7 from "../../assets/p7.jpeg"
+import p8 from "../../assets/p7.png"
 export const projects = [
   // status- completed:true;  on-going:false; stopped:null;
   {
@@ -297,7 +298,7 @@ export const projects = [
   {
     image: p6,
     name: "Xpenzes",
-    year: "Ongoing",
+    year: "2024",
     link: "https://xpenzes.vercel.app/",
     institution: "private",
     description: "Xpenzes is a financial management platform designed to simplify expense tracking and budgeting. built with React, Node.js, FireBase, Stripe...",
@@ -305,6 +306,18 @@ export const projects = [
     status: true,
     ctaText: "visit",
   },
+  {
+    image: p8,
+    name: "WikiCat",
+    year: "Oct-2021",
+    link: "biee-catwiki.netlify.app",
+    insitution: "opensource",
+    description: "Wikicat is a platform design to show the different breads of cat.",
+    stack: ["React", "Tailwindcss", "React Quary", "API"],
+    status: true,
+    ctaText: "visit",
+    github: "https://github.com/Petsamuel/catwiki"
+  }
 ];
 
 export const contactMethods = [
