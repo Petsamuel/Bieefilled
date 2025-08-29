@@ -52,7 +52,7 @@ export const Header = () => {
                          font-medium  rounded-full dark:text-black  py-2 hover:ring-green-900 ease-in-out hover:ring-2 border ring-gray-300  animate-shimmer items-center justify-center border-slate-800 bg-[linear-gradient(110deg,#000000,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]   transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
 
                         >
-                            <span className=" items-center gap-2 flex relative px-5 ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-md text-xs animate-shimmer transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-black">
+                            <span className=" items-center gap-2 flex relative px-5 ease-in duration-75  rounded-md group-hover:bg-opacity-0  lg:text-md text-xs animate-shimmer transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white">
                                 Hire Me
                             </span>
                         </a>
