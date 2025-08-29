@@ -11,7 +11,7 @@ export const Heading = ({ title, smalltext }) => {
                     duration: 0.8,
                     ease: "easeInOut",
                 }} >
-                <h1 className={`'dark:text-white text-black font-AeonikBold uppercase'  ${smalltext}`}>{title}</h1>
+                <h1 className={`'dark:text-black text-black font-AeonikBold uppercase'  ${smalltext}`}>{title}</h1>
                 <h1 className={`'font-black text-7xl top-0 font-AeonikBold  absolute text-center -z-0 text-neutral-400 opacity-20 uppercase -mt-5 `}>{title}</h1>
 
             </motion.div>

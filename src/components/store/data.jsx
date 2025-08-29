@@ -226,19 +226,68 @@ import p6 from "../../assets/p6.png"
 import p7 from "../../assets/p7.jpeg"
 import p8 from "../../assets/p7.png"
 export const projects = [
-  // status- completed:true;  on-going:false; stopped:null;
-  {
-    image: p1,
+ {
+    image: "",
     name: "League of Professionals",
     year: "Nov-2023",
     link: "https://lopwin.com.ng",
-    institution: "business",
-    description: "professional platform hosting events, webinars, and masterclasses,related to growth strategies, marketing, and professional development. landing page built with WordPress CMS...",
-    stack: ["Wordpress CMS", "Php", "ConvertKit"],
+    institution: "Business",
+    description:
+      "Professional platform hosting events, webinars, and masterclasses related to growth strategies, marketing, and professional development. Landing page built with WordPress CMS.",
+    stack: ["WordPress CMS", "PHP", "ConvertKit"],
     status: false,
-    ctaText: "visit",
-
+    ctaText: "Visit",
   },
+  {
+    image: "",
+    name: "Appraisio",
+    year: "2024",
+    link: "https://appraisio.vercel.app", // replace with your hosted link
+    institution: "SaaS",
+    description:
+      "A SaaS platform focused on appraisals with empathy-driven workflows, helping organizations and individuals evaluate performance with clarity and care.",
+    stack: ["React", "Next.js", "Node.js", "MongoDB"],
+    status: true,
+    ctaText: "Try Appraisio",
+  },
+  {
+    image: "",
+    name: "Snapmasa",
+    year: "2024",
+    link: "https://snapmasa.vercel.app", // replace with your hosted link
+    institution: "Tool",
+    description:
+      "A tool that converts Markdown tables into polished formats like Word documents, HTML tables, or rendered screenshots for professional use.",
+    stack: ["React", "TailwindCSS"],
+    status: true,
+    ctaText: "Check It Out",
+  },
+  {
+    image: "",
+    name: "Quotia",
+    year: "2024",
+    link: "https://quotia.vercel.app",
+    institution: "API",
+    description:
+      "An API that scrapes and delivers quotes from platforms like Goodreads and 'Quotes to Scrape' asynchronously, built with FastAPI and aiohttp.",
+    stack: ["FastAPI", "aiohttp", "BeautifulSoup", "Vercel"],
+    status: true,
+    ctaText: "Explore API",
+  },
+  {
+    image: "",
+    name: "Viblify (Extension)",
+    year: "2025",
+    link: "https://petsamuel.github.io/Viblify/", // put actual store link
+    institution: "Browser Extension",
+    description:
+      "Unicode text styling extension for editable fields across Twitter, LinkedIn, Facebook, etc. Features theme toggling, instant preview, and a character counter.",
+    stack: ["JavaScript", "Manifest v3", "CSS"],
+    status: true,
+    ctaText: "Add to Edge",
+  },
+
+  
   {
     image: p3,
     name: "Koinfund",
@@ -481,21 +530,24 @@ export const tools = [
   },
 ];
 
-export const About = [{
-  about: `I am Peter Samuel, a seasoned Software Engineer with a diverse technical background that cut across web development, SEO, and database management. My expertise spans multiple programming languages, including JavaScript, TypeScript, PHP, and Python. I'm current with the latest development frameworks and tools, ensuring I can deliver cutting-edge solutions.`,
+export const About = [
+  {
+    about: `I'm a full-stack software engineer with a strong bias toward frontend. I focus on crafting seamless user experiences and performant web applications. I specialize in React, Next.js, React Native, and Tailwind CSS, while also integrating backend services with Node.js, NestJS, Firebase, Firestore, Postgres, MongoDB, MySQL, and FastAPI.`,
 
-  more: `My technical proficiency covers a wide range of areas, allowing me to tackle complex projects effectively. I excel in web development, have a strong understanding of SEO principles, and am skilled in database management.
-  
-  Beyond my technical abilities, I possess strong interpersonal skills and excel at communicating effectively with diverse stakeholders. This combination allows me to bridge the gap between complex technical concepts and business objectives.
+    more: `I also build browser extensions, e-commerce platforms, and SaaS tools. My work is driven by clarity, performance, and simplicity, ensuring every product I touch is not only functional but delightful to use.`
+  },
+  {
+    extra: [
+      "My target clients are:",
+      "",
+      "- Startup founders looking to launch or scale MVPs \n",
+      "- Tech-forward businesses needing fast, clean, scalable UIs \n",
+      "- Agencies that need reliable frontend expertise on contract \n",
+      "- Non-tech clients who need simplified digital solutions with aesthetic, functional builds. \n"
+    ]
+  }
+];
 
-  I have extensive experience collaborating with people from diverse cultural backgrounds, which has honed my ability to tailor solutions to meet specific client requirements.
-
-  I thrive in fast-paced environments that demand creativity and innovative problem-solving. I am always willing to go the extra mile to ensure the success of any project.`
-
-}, {
-  extra: `One of my proudest accomplishments to date has been developing a custom multilingual application for a specific e-commerce client, where I spearheaded the design and implementation process of the software. This project showcases my ability to lead complex initiatives and deliver tailored solutions that meet unique business needs.
-
-  My technical skills, interpersonal abilities, and passion for innovation and problem-solving make me a valuable asset to any team. I am eager to constantly learn and grow, and I look forward to continuing to provide exceptional results for my clients.`}];
 
 export const Stack = [
   {
@@ -506,6 +558,10 @@ export const Stack = [
   {
     name: "Web Development",
     icon: [<FaReact color="#da9797" />],
+  },
+  {
+    name: "React Native (Mobile)",
+    icon: <SiReact color="#61dafb" />,
   },
   {
     name: "E-commerce",
@@ -527,7 +583,7 @@ export const Stack = [
   {
     name: "Mentorship",
     icon: <SiFrontendmentor className="text-black dark:text-[#da9797]" />
-  }
+  },
 
 
 ];

@@ -24,8 +24,8 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Error />} />
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/v3" element={<Index />} />
+          <Route path="/v3" element={<LandingPage />} />
+          <Route path="/" element={<Index />} />
           <Route path="/v2" element={<Home />} />
           <Route path="/v3/about" element={<About />} />
           <Route path="/v3/projects" element={<Project />} />

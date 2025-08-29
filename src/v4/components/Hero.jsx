@@ -11,7 +11,7 @@ export function HeroText() {
           delay: 0.3,
           duration: 0.8,
           ease: "easeInOut",
-        }} className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-4xl md:text-5xl lg:text-7xl  py-2 md:py-10 relative z-20 font-bold tracking-tight font-AeonikBold text-white">
+        }} className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 text-4xl md:text-5xl lg:text-7xl  py-2 md:py-10 relative z-20 font-bold tracking-tight font-AeonikBold text-black dark:text-black">
         {`I'm`} Samuel Peters <br />
         <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-900 to-[#43ffa1] pt-4 pb-2b lg:md:text-5xl">
           <p className="font-AeonikBold">Creative Web Developer. </p>

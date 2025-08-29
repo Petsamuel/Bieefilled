@@ -19,12 +19,7 @@ import 'swiper/css/autoplay';
 export const Index = () => {
     const [trigger, setTrigger] = useState();
     const [back2Top, setBack2Top] = useState();
-    // const scrollRef = useRef();
-    // const { scroll } = useLocomotiveScroll({
-    //     smooth: true,
-    //     // Enable debugging
-    //     debug: true,
-    // });
+
 
     function scrollHandler() {
         if (window.scrollY >= 250) {
@@ -33,19 +28,6 @@ export const Index = () => {
             setBack2Top(false);
         }
     }
-
-    // useEffect(() => {
-    //     if (scroll) {
-    //         console.log('Scroll object:', scroll);
-    //         console.log('Scroll methods:', Object.keys(scroll));
-    //         if (typeof scroll.update === 'function') {
-    //             scroll.update();
-    //             scrollHandler
-    //         } else {
-    //             console.error('scroll.update is not a function');
-    //         }
-    //     }
-    // }, [scroll]);
 
     useEffect(() => {
         // Add scroll event listener
@@ -66,15 +48,15 @@ export const Index = () => {
                     </header>
 
                     <main className="max-h-content" >
-                        <section className="lg:mx-16 lg:m-16 m-6 md:m-8" >
+                        <section className="lg:mx-16 lg:m-16 m-6 md:m-8 text-black" >
                             <Stacks />
                         </section>
                         <section className="my-12 font-[Inter] text-md lg:m-16 m-6 md:m-8" id="Resume" data-scroll data-scroll-speed={2}>
                             <div class="quote h-14">
 
-                                <span className=" mb-5 lg:text-3xl flex  sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal">
+                                <span className=" mb-5 lg:text-3xl flex sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal text-black">
 
-                                    <span className="flex  px-6 sm:text-sm text-xs italic  gap-1"> <p>"</p>
+                                    <span className="flex  px-6 sm:text-sm text-xs italic  gap-1 text-black"> <p>"</p>
                                         <Typewriter
                                             options={{ loop: true }}
                                             onInit={(writer) => {
@@ -100,7 +82,7 @@ export const Index = () => {
                             </div>
 
                             {About.map((value, index) => (
-                                <p key={index} className="text-justify">
+                                <p key={index} className="text-justify text-black">
                                     {value.about}
                                     {trigger ? (
                                         <span>
@@ -122,12 +104,12 @@ export const Index = () => {
                                         }}
                                         type="button"
                                         value="Readmore..."
-                                        className="text-md cursor-pointer font-bold py-3"
+                                        className="text-md cursor-pointer font-bold py-3 text-black"
                                     />
 
                                 </>)}
                         </section>
-                        <section className="lg:mx-16 mx-6 md:mx-8" id="Resume" data-scroll data-scroll-speed={10}>
+                        <section className="lg:mx-16 mx-6 md:mx-8 text-black" id="Resume" data-scroll data-scroll-speed={10}>
                             <p className="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Resume</p>
                             <div className="pb-8">
                                 {Experiences.map((value, index) => (
@@ -142,8 +124,8 @@ export const Index = () => {
                             </div>
                         </section>
 
-                        <section id="Portfolio" className="lg:mx-16 mx-6 md:mx-8">
-                            <p className=" font-black py-8 text-2xl font-['Inter'] uppercase ">Portfolio</p>
+                        <section id="Portfolio" className="lg:mx-16 mx-6 md:mx-8 text-black">
+                            <p className=" font-black py-8 text-2xl font-['Inter'] uppercase ">Projects</p>
                             <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
                                 {projects.map((value, index) => (
                                     <div className=" cursor-pointer py-2" key={index}>
@@ -161,7 +143,7 @@ export const Index = () => {
                             </div>
                         </section>
                         {/* reviews */}
-                        <section className="lg:m-16 m-6 md:m-8" id="Reviews">
+                        <section className="lg:m-16 m-6 md:m-8 text-black" id="Reviews">
                             <p className="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Reviews</p>
                             <div className="pb-8 ">
                                 {Review.map((value, index) => (
@@ -177,7 +159,7 @@ export const Index = () => {
                         </section>
                         {/* tools */}
 
-                        <section id="tools" className=" my-9 ">
+                        <section id="tools" className=" my-9 text-black">
                             <div className="">
                                 <Swiper
                                     modules={[Autoplay, Navigation,]}
@@ -206,7 +188,7 @@ export const Index = () => {
                         />
                     </section> */}
 
-                        <section id="Articles" className="lg:mx-16 mx-6 md:m-8">
+                        <section id="Articles" className="lg:mx-16 mx-6 md:m-8 text-black">
                             <p className=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
                             <div className="pb-4 font-['Inter'] text-sm">
                                 {Post.map((value, index) => (
@@ -230,13 +212,13 @@ export const Index = () => {
                     </main>
 
 
-                    <div className="relative lg:m-16 mx-6 md:mx-8">
+                    <div className="relative lg:m-16 mx-6 md:mx-8 text-black">
                         <a href="#Home" className={!back2Top ? "hidden" :
                             " hover:text-3xl hover:scale-90 active:scale-90 fixed text-2xl animate-bounce rounded-full bottom-10 right-5"} id="back2Top"><FaRegArrowAltCircleUp /></a>
 
                     </div>
 
-                    <footer className=" lg:m-16 m-6 md:m-8">
+                    <footer className=" lg:m-16 m-6 md:m-8 text-black">
                         <Footer />
                     </footer>
                 </section>

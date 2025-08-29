@@ -41,7 +41,7 @@ export const LandingPage = () => {
       </section>
       <section className='bg-[#0f0f0f] py-[1rem]' id="reviews">
         <AnimatedTestimonials testimonials={Review} />
-        <footer className=" lg:m-16 m-6 md:m-8 text-white dark:text-neutral-500">
+        <footer className=" lg:m-16 m-6 md:m-8 text-white dark:text-black">
           <Footer classname="text-white " />
         </footer>
       </section>

@@ -7,7 +7,7 @@ export const Button = ({ text, link, className }) => {
                 <a
                     href={link}
                     className="  gap-3 relative inline-flex   p-0.5 mb-2 mr-2 overflow-hidden 
-                         font-medium  rounded-full dark:text-white text-white py-2  ease-in-out   animate-shimmer items-center justify-center transition-colors bg-transparent"
+                         font-medium  rounded-full dark:text-black text-white py-2  ease-in-out   animate-shimmer items-center justify-center transition-colors bg-transparent"
 
                 >
                     <span className="flex items-center">
