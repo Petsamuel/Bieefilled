@@ -262,6 +262,18 @@ export const projects = [
     status: true,
     ctaText: "Check It Out",
   },
+   {
+    image: "",
+    name: "MyVar",
+    year: "2025",
+    link: "https://myver-sigma.vercel.app",
+    institution: "Fin-Tech",
+    description:
+      "Myver is built to help users send, save, split and spend more easily whether in groups or solo. Offering a clean and intuitive interface hosted on Vercel.",
+    stack: ["React", "Next.js", "TailwindCSS", "Vercel"],
+    status: true,
+    ctaText: "Try MyVar",
+  },
   {
     image: "",
     name: "Quotia",
