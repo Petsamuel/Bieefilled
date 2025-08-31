@@ -47,7 +47,8 @@ export const Header = () => {
                              Sponsor <span><SiBuymeacoffee color="green" /></span> Sponsore
                         </button> */}
                         <a
-                            href="https://www.buymeacoffee.com/bieefilled"
+                            // href="https://www.buymeacoffee.com/bieefilled"
+                            href="https://www.linkedin.com/in/bieefilled"
                             className="cursor-pointer  gap-3 relative inline-flex   p-0.5 mb-2 mr-2 overflow-hidden 
                          font-medium  rounded-full dark:text-black  py-2 hover:ring-green-900 ease-in-out hover:ring-2 border ring-gray-300  animate-shimmer items-center justify-center border-slate-800 bg-[linear-gradient(110deg,#000000,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]   transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
 
