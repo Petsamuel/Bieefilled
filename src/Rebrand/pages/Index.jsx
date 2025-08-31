@@ -9,17 +9,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from 'swiper/modules';
 // import {  useLocomotiveScroll } from 'react-locomotive-scroll';
 import Typewriter from "typewriter-effect";
+import { getQuotes } from "../../service/api";
 import 'swiper/css';
 import 'swiper/css/autoplay';
-
-
-
 
 
 export const Index = () => {
     const [trigger, setTrigger] = useState();
     const [back2Top, setBack2Top] = useState();
 
+    const [quotes, setQuotes] = useState([]);
+    useEffect(() => {
+        const fetchQuotes = async () => {
+            const data = await getQuotes();
+            setQuotes(data.quotes);
+        };
+        fetchQuotes();
+    }, []);
 
     function scrollHandler() {
         if (window.scrollY >= 250) {
@@ -28,6 +34,7 @@ export const Index = () => {
             setBack2Top(false);
         }
     }
+    
 
     useEffect(() => {
         // Add scroll event listener
@@ -56,26 +63,20 @@ export const Index = () => {
 
                                 <span className=" mb-5 lg:text-3xl flex sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal text-black">
 
-                                    <span className="flex  px-6 sm:text-sm text-xs italic  gap-1 text-black"> <p>"</p>
-                                        <Typewriter
+                                    <span className="flex  px-6 sm:text-sm text-xs italic gap-1 text-black "> 
+                                       {quotes.length > 0 && <Typewriter
                                             options={{ loop: true }}
                                             onInit={(writer) => {
-                                                writer.typeString("The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt");
-                                                writer.pauseFor(5000);
-                                                writer.deleteAll();
-
-                                                writer.typeString("Your attitude determines your altitude. Rise above the challenges with a positive mindset and soar to new heights. - Zig Ziglar");
-                                                writer.pauseFor(5000);
-                                                writer.deleteAll();
-                                                writer.typeString("The only limit to our realization of tomorrow will be our doubts of today. - Franklin D.Roosevelt");
-                                                writer.pauseFor(5000);
-                                                writer.deleteAll();
-
-                                                writer.typeString("Don't watch the clock; do what it does. Keep going. - Sam Levenson");
-                                                writer.pauseFor(5000).start();
+                                            if (quotes.length > 0) {
+                                                quotes.forEach((quote) => {
+                                                    writer.typeString(`${quote.text} - ${quote.author}`)
+                                                        .pauseFor(5000)
+                                                        .deleteAll();
+                                                });
+                                                writer.start();
+                                            }
                                             }}
-                                        />
-
+                                        />}
                                     </span>
                                 </span>
 
@@ -113,7 +114,7 @@ export const Index = () => {
                             <p className="text-2xl font-extrabold py-8 font-['Inter'] uppercase">Resume</p>
                             <div className="pb-8">
                                 {Experiences.map((value, index) => (
-                                    <div className="font-[Inter] text-sm cursor-pointer">
+                                    <div className="font-[Inter] text-sm cursor-pointer" key={index}>
                                         <div>{value.date}</div>
                                         <div className="font-extrabold uppercase">{value.institution}</div>
                                         <div>{value.title}</div>
@@ -192,10 +193,10 @@ export const Index = () => {
                             <p className=" font-black py-8 text-2xl font-['Inter'] uppercase">Articles</p>
                             <div className="pb-4 font-['Inter'] text-sm">
                                 {Post.map((value, index) => (
-                                    <div className="flex">
+                                    <div className="flex" key={index}>
                                         <div className=" flex cursor-pointer hover:text-lg hover:scale-95 active:scale-90  py-4 " key={index}>
 
-                                            <a class="flex " href={value.href}>{1 + index}. {value.title}  <span className="text-[10px] text-gray-400 mx-2">
+                                            <a className="flex " href={value.href}>{1 + index}. {value.title}  <span className="text-[10px] text-gray-400 mx-2">
                                                 <FaExternalLinkAlt />
 
                                             </span>
