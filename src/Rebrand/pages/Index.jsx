@@ -23,6 +23,8 @@ import { Avatar } from "@radix-ui/themes";
 export const Index = () => {
   const [trigger, setTrigger] = useState();
   const [back2Top, setBack2Top] = useState();
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [showAllArticles, setShowAllArticles] = useState(false);
 
   const [quotes, setQuotes] = useState([]);
   useEffect(() => {
@@ -181,7 +183,7 @@ export const Index = () => {
                 Projects
               </p>
               <div className="pb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 font-['Inter'] text-sm">
-                {projects.map((value, index) => (
+                {(showAllProjects ? projects : projects.slice(0, 3)).map((value, index) => (
                   <a
                     href={value.link}
                     target="_blank"
@@ -227,6 +229,14 @@ export const Index = () => {
                   </a>
                 ))}
               </div>
+              {projects.length > 3 && (
+                <button
+                  onClick={() => setShowAllProjects(!showAllProjects)}
+                  className="mt-4 mb-6 text-xs font-bold uppercase border border-black px-5 py-2 hover:bg-black hover:text-white transition-colors font-['Inter'] tracking-widest"
+                >
+                  {showAllProjects ? "View Less ↑" : `View More (${projects.length - 3} more) ↓`}
+                </button>
+              )}
             </section>
             {/* reviews */}
             <section className="lg:m-16 m-6 md:m-8 text-black" id="Reviews">
@@ -307,24 +317,62 @@ export const Index = () => {
               <p className=" font-black py-8 text-2xl font-['Inter'] uppercase">
                 Articles
               </p>
-              <div className="pb-4 font-['Inter'] text-sm">
-                {Post.map((value, index) => (
-                  <div className="flex" key={index}>
-                    <div
-                      className=" flex cursor-pointer hover:text-lg hover:scale-95 active:scale-90  py-4 "
-                      key={index}
-                    >
-                      <a className="flex " href={value.href}>
-                        {1 + index}. {value.title}{" "}
-                        <span className="text-[10px] text-gray-400 mx-2">
-                          <FaExternalLinkAlt />
-                        </span>
-                      </a>
-                      <hr className="my-2 h-[0px]" />
+              <div className="pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 font-['Inter']">
+                {(showAllArticles ? Post : Post.slice(0, 3)).map((value, index) => (
+                  <a
+                    key={index}
+                    href={value.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-card group relative overflow-hidden border border-gray-200 block"
+                  >
+                    {/* Cover image */}
+                    <div className="relative h-40 overflow-hidden bg-gray-100">
+                      <img
+                        src={value.featured_img}
+                        alt={value.title}
+                        className="project-img w-full h-full object-cover"
+                        onError={(e) => {
+                          e.target.style.display = "none";
+                          e.target.nextSibling.style.display = "flex";
+                        }}
+                      />
+                      {/* Fallback placeholder — hidden unless image errors */}
+                      <div
+                        style={{ display: "none" }}
+                        className="absolute inset-0 flex items-center justify-center text-4xl font-black text-gray-300 uppercase tracking-widest select-none bg-gray-100"
+                      >
+                        {value.title.charAt(0)}
+                      </div>
+                      {/* Index badge */}
+                      <span className="absolute top-2 left-2 bg-black text-white text-[10px] font-bold px-2 py-0.5 font-['Inter']">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                     </div>
-                  </div>
+
+                    {/* Content */}
+                    <div className="p-4">
+                      <div className="flex items-start justify-between gap-2">
+                        <p className="font-extrabold uppercase text-xs leading-tight line-clamp-2">
+                          {value.title}
+                        </p>
+                        <FaExternalLinkAlt className="text-[10px] text-gray-400 flex-shrink-0 mt-0.5 group-hover:text-black transition-colors" />
+                      </div>
+                      <p className="text-[11px] text-gray-500 mt-2 leading-relaxed line-clamp-3">
+                        {value.description}
+                      </p>
+                    </div>
+                  </a>
                 ))}
               </div>
+              {Post.length > 3 && (
+                <button
+                  onClick={() => setShowAllArticles(!showAllArticles)}
+                  className="mt-4 mb-6 text-xs font-bold uppercase border border-black px-5 py-2 hover:bg-black hover:text-white transition-colors font-['Inter'] tracking-widest"
+                >
+                  {showAllArticles ? "View Less ↑" : `View More (${Post.length - 3} more) ↓`}
+                </button>
+              )}
             </section>
           </main>
 

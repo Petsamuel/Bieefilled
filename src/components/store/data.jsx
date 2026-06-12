@@ -279,17 +279,18 @@ export const projects = [
     ctaText: "Visit",
   },
   {
-    image: "",
-    name: "Digit-FX",
+    image: "/flur.png",
+    name: "Flur Technology",
     year: "2025",
-    link: "https://digit-fx.vercel.app/login",
+    link: "https://myver-sigma.vercel.app",
     institution: "Fin-Tech",
     description:
-      "An FX platform for a fintech company, enabling seamless foreign exchange transactions and currency management.",
-    stack: ["Next.js"],
+      "Myver is built to help users send, save, split and spend more easily whether in groups or solo. Offering a clean and intuitive interface hosted on Vercel.",
+    stack: ["React", "Next.js", "TailwindCSS", "Vercel"],
     status: true,
-    ctaText: "Visit",
+    ctaText: "Try MyVar",
   },
+  
   {
     image: "/image copy 2.png",
     name: "Vantpay",
@@ -302,6 +303,7 @@ export const projects = [
     status: true,
     ctaText: "Visit",
   },
+  
   {
     image: "/image copy.png",
     name: "Snapmasa",
@@ -314,17 +316,17 @@ export const projects = [
     status: true,
     ctaText: "Check It Out",
   },
-   {
+  {
     image: "",
-    name: "MyVar",
+    name: "Digit-FX",
     year: "2025",
-    link: "https://myver-sigma.vercel.app",
+    link: "https://digit-fx.vercel.app/login",
     institution: "Fin-Tech",
     description:
-      "Myver is built to help users send, save, split and spend more easily whether in groups or solo. Offering a clean and intuitive interface hosted on Vercel.",
-    stack: ["React", "Next.js", "TailwindCSS", "Vercel"],
+      "An FX platform for a fintech company, enabling seamless foreign exchange transactions and currency management.",
+    stack: ["Next.js"],
     status: true,
-    ctaText: "Try MyVar",
+    ctaText: "Visit",
   },
   {
     image: "",
