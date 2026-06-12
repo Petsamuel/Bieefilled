@@ -128,11 +128,22 @@ export const certification = [
   },
 ];
 export const Experiences = [
+  {
+    institution: "CREDLANCHE LIMITED",
+    date: "December 2025 - Present",
+    title: "Software Engineer",
+    location: "Remote",
+    link: "https://credlanche.com",
+    skills: "Collaboration · Analytical Skills · FrontEnd Development",
+    description:
+      "Working as a Frontend Engineer, building and maintaining scalable frontend solutions.",
+  },
 
   {
-    institution: "H. PIERSON ASSOCIATES LIMITED ",
+    institution: "H. PIERSON ASSOCIATES LIMITED",
     date: "Jul 2022 - Jul 2023",
     title: "Fullstack Developer",
+    link: "https://hpierson.com",
     skills: "Collaboration · Website Development · Maintenance",
     description:
       "Build and maintain various Websites",
@@ -141,6 +152,7 @@ export const Experiences = [
     institution: "HNG Internship · Internship",
     date: "Oct-2020 - Dec-2022",
     title: "Frontend Developer",
+    link: "https://hng.tech",
     skills: "Collaboration  · Analytical Skills · FrontEnd Development",
     description:
       "I developed web applications using javascript framework (REACT), collaborated with other developers to improve web application performance, and gained valuable experience in web development and teamwork.",
@@ -150,6 +162,7 @@ export const Experiences = [
     institution: "Zuri Team, Inc. · Internship",
     date: "May 2022 - Aug 2022",
     title: " Full-stack Django Developer ",
+    link: "https://zuri.tech",
     skills: "Collaboration · Python · Mysqli · CMS · FullStack Development",
     description:
       "I developed web applications using Django framework, collaborated with other developers to improve web application performance, and gained valuable experience in web development and teamwork.",
@@ -158,6 +171,7 @@ export const Experiences = [
     institution: "Bingreach Digitals",
     date: "Aug-2021 - jan-2022",
     title: "Jnr Wordpress Developer",
+    link: "https://bingreachdigital.com",
     skills: "Systems Design · Analytical Skills · User Interface Design",
     description:
       " I worked as a Junior WordPress Developer and developed over 20 pages including a dashboard, charts, kanban board, calendar, and pre-order e-commerce and marketing pages. I gained valuable experience and worked collaboratively with other developers and teams.",
@@ -166,6 +180,7 @@ export const Experiences = [
     institution: "Yaba College Of Technology",
     date: "Sept-2019 - May-2022",
     title: "Computer Science Deploma",
+    link: "",
     skills: "Systems Design · Analytical Skills · User Interface Design",
     description:
       " I gained a solid understanding of programming, algorithms, data structures, and computer systems. I also worked on various projects including developing software applications, creating websites, and designing databases.",
@@ -174,6 +189,7 @@ export const Experiences = [
     institution: "Green Nobel Technologies",
     date: "Jan 2018 - Jul 2022",
     title: "Frontend Developer",
+    link: "",
     skills: "HTML, CSS, JavaScript",
     description:
       "I worked as a Frontend Developer."

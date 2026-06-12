@@ -32,7 +32,10 @@ export const Header = () => {
                 <div className="flex  gap-y-2 lg:items-center items-start font-['Inter']">
                     <div className="flex justify-center items-center  ">
                         <a
-                            href="https://docs.google.com/document/d/1OMDfHk0rFGpbTEdlQWUivNgdG-4GYvoV/edit?usp=sharing&ouid=116822055537140001259&rtpof=true&sd=true"
+                            href="/Samuel-Peters-Resume.pdf"
+                            download
+                            rel="noopener noreferrer"
+                            
                             className="cursor-pointer w-max items-center gap-3 relative flex  ijustify-center p-0.5 mb-2 mr-2 overflow-hidden 
                          font-medium rounded-full  py-2 hover:ring-green-900    transition-all ease-in-out hover:ring-2 border  ring-gray-300 hover:scale-95 active:scale-90 text-black"
 

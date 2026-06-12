@@ -66,7 +66,7 @@ export const Index = () => {
           </header>
 
           <main className="max-h-content">
-            <section className="lg:mx-16 lg:m-16 m-6 md:m-8 text-black">
+            <section className="lg:mx-16 lg:my-4 text-black">
               <Stacks />
             </section>
             <section
@@ -75,7 +75,7 @@ export const Index = () => {
               data-scroll
               data-scroll-speed={2}
             >
-              <div class="quote h-14">
+              <div class="quote h-14 lg:block hidden">
                 <span className=" mb-5 lg:text-3xl flex sm:text-2xl md:text-2xl  lg:text-justify items-center text-center justify-center lg:justify-normal text-black">
                   <span className="flex  px-6 sm:text-sm text-xs italic gap-1 text-black ">
                     {quotes.length > 0 && (
@@ -138,8 +138,8 @@ export const Index = () => {
               <div className="pb-8">
                 {Experiences.map((value, index) => (
                  <>
-                  <div className="flex gap-4 w-full p-2" key={index}>
-                    <div className="bg-gray-100 text-black cursor-pointer hover:bg-gray-200 items-center flex justify-center  h-[3rem]">
+                  <div className="flex gap-4 w-full p-2 " key={index}>
+                    <div className="bg-gray-100 text-black cursor-pointer  items-center flex justify-center h-[3rem]">
                       <Avatar
                         size="3"
                         radius="full"
@@ -147,10 +147,21 @@ export const Index = () => {
                         fallback={getInitials(value.institution)}
                       />
                     </div>
-                    <div className="font-[Inter] text-sm cursor-pointer hover:bg-gray-50">
+                    <div className="font-[Inter] text-sm cursor-pointer ">
                       <div>{value.date}</div>
                       <div className="font-extrabold uppercase">
-                        {value.institution}
+                        {value.link ? (
+                          <a
+                            href={value.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline hover:text-blue-600 transition-colors"
+                          >
+                            {value.institution}
+                          </a>
+                        ) : (
+                          value.institution
+                        )}
                       </div>
                       <div>{value.title}</div>
                       <div>{value.skills}</div>
