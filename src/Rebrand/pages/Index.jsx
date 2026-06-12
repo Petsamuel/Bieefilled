@@ -180,29 +180,52 @@ export const Index = () => {
               <p className=" font-black py-8 text-2xl font-['Inter'] uppercase ">
                 Projects
               </p>
-              <div className="pb-4 flex flex-col gap-6  font-['Inter'] text-sm">
+              <div className="pb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 font-['Inter'] text-sm">
                 {projects.map((value, index) => (
-                  <div className=" cursor-pointer py-2" key={index}>
-                    <a href={value.link} className="font-extrabold uppercase">
-                      {value.name}{" "}
-                      <span className="text-[10px] text-gray-400 mx-2 absolute">
-                        <FaExternalLinkAlt />
-                      </span>
-                    </a>
-                    <div className="">{value.institution}</div>
-                    <div className="flex items-center space-x-2 flex-wrap">
-                      {value.stack.map((val, index) => (
-                        <div
-                          key={index}
-                          className=" text-xs font-light py-2 rounded-lg items-center flex hover:scale-95 active:scale-90 "
-                        >
-                          <span>{val}</span>
-                        </div>
-                      ))}
+                  <a
+                    href={value.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={index}
+                    className="project-card group relative overflow-hidden border border-gray-200 block"
+                  >
+                    {/* Image area */}
+                    {value.image ? (
+                      <div className="relative h-44 overflow-hidden bg-gray-100">
+                        <img
+                          src={value.image}
+                          alt={value.name}
+                          className="project-img w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-44 bg-gray-100 flex items-center justify-center text-4xl font-black text-gray-300 uppercase tracking-widest select-none">
+                        {value.name.charAt(0)}
+                      </div>
+                    )}
+
+                    {/* Content */}
+                    <div className="p-4">
+                      <div className="flex items-start justify-between gap-2">
+                        <span className="font-extrabold uppercase text-xs leading-tight">
+                          {value.name}
+                        </span>
+                        <FaExternalLinkAlt className="text-[10px] text-gray-400 flex-shrink-0 mt-0.5 group-hover:text-black transition-colors" />
+                      </div>
+                      <div className="text-xs text-gray-500 mt-1">{value.institution}</div>
+                      <div className="flex flex-wrap gap-1 mt-3">
+                        {value.stack.map((val, i) => (
+                          <span
+                            key={i}
+                            className="text-[10px] border border-gray-300 px-2 py-0.5 font-light"
+                          >
+                            {val}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 ))}
-                <hr />
               </div>
             </section>
             {/* reviews */}

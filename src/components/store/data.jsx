@@ -242,32 +242,68 @@ import p6 from "../../assets/p6.png"
 import p7 from "../../assets/p7.jpeg"
 import p8 from "../../assets/p7.png"
 export const projects = [
- {
-    image: "",
-    name: "League of Professionals",
-    year: "Nov-2023",
-    link: "https://lopwin.com.ng",
-    institution: "Business",
+//  {
+//     image: "",
+//     name: "League of Professionals",
+//     year: "Nov-2023",
+//     link: "https://lopwin.com.ng",
+//     institution: "Business",
+//     description:
+//       "Professional platform hosting events, webinars, and masterclasses related to growth strategies, marketing, and professional development. Landing page built with WordPress CMS.",
+//     stack: ["WordPress CMS", "PHP", "ConvertKit"],
+//     status: false,
+//     ctaText: "Visit",
+//   },
+  // {
+  //   image: "",
+  //   name: "Appraisio",
+  //   year: "2024",
+  //   link: "https://appraisio.vercel.app", // replace with your hosted link
+  //   institution: "SaaS",
+  //   description:
+  //     "A SaaS platform focused on appraisals with empathy-driven workflows, helping organizations and individuals evaluate performance with clarity and care.",
+  //   stack: ["React", "Next.js", "Node.js", "MongoDB"],
+  //   status: true,
+  //   ctaText: "Try Appraisio",
+  // },
+  {
+    image: "/image.png",
+    name: "Payroll Lending",
+    year: "2025",
+    link: "https://payrollending-web-dev.digitvant.com/",
+    institution: "Fin-Tech · SME",
     description:
-      "Professional platform hosting events, webinars, and masterclasses related to growth strategies, marketing, and professional development. Landing page built with WordPress CMS.",
-    stack: ["WordPress CMS", "PHP", "ConvertKit"],
-    status: false,
+      "A payroll lending platform for SMEs, enabling businesses to access salary-backed credit facilities with a seamless digital experience.",
+    stack: ["Next.js"],
+    status: true,
     ctaText: "Visit",
   },
   {
     image: "",
-    name: "Appraisio",
-    year: "2024",
-    link: "https://appraisio.vercel.app", // replace with your hosted link
-    institution: "SaaS",
+    name: "Digit-FX",
+    year: "2025",
+    link: "https://digit-fx.vercel.app/login",
+    institution: "Fin-Tech",
     description:
-      "A SaaS platform focused on appraisals with empathy-driven workflows, helping organizations and individuals evaluate performance with clarity and care.",
-    stack: ["React", "Next.js", "Node.js", "MongoDB"],
+      "An FX platform for a fintech company, enabling seamless foreign exchange transactions and currency management.",
+    stack: ["Next.js"],
     status: true,
-    ctaText: "Try Appraisio",
+    ctaText: "Visit",
   },
   {
-    image: "",
+    image: "/image copy 2.png",
+    name: "Vantpay",
+    year: "2025",
+    link: "https://vantpay.io/",
+    institution: "Fin-Tech",
+    description:
+      "A fintech payment gateway for seamlessly sending and receiving money across borders.",
+    stack: ["Next.js"],
+    status: true,
+    ctaText: "Visit",
+  },
+  {
+    image: "/image copy.png",
     name: "Snapmasa",
     year: "2024",
     link: "https://snapmasa.vercel.app", // replace with your hosted link

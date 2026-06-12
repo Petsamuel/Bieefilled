@@ -57,6 +57,23 @@ video {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
+/* Project card: grayscale by default, full color on hover */
+.project-card .project-img {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.project-card:hover .project-img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+.project-card {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.project-card:hover {
+  border-color: #000;
+  box-shadow: 4px 4px 0px 0px #000;
+}
+
 /* [data-theme="dark"] {
   --font-color: #eee;
   --background-color: #333;
